@@ -2,39 +2,25 @@
     Page
     ========================================================================== */
     .page-container {
-      width: 100%;
-			height: 100vh;
-			float: left;
-      display: flex;
-      flex-flow: row wrap;
-			justify-content: space-between;
-			border: 2px solid $brand-black;
+      display: grid;
+			border: 3px solid $brand-black;
+			grid-template-columns: 1fr;
     }
-		.nav-container {
-			padding: 1em;
+		.side-content {
+			border-top: 3px solid $brand-black;
+			order: 2;
+			header {
+				padding: 2em 2em 0 2em;
+			}
 		}
     .main-container {
-			float: left;
 			order: 1;
-			width: 100%;
-    }
-    .side-content {
-      width: 100%;
-			float: left;
-      align-items: stretch;
-      order: 2;
-      header {
-        padding: 1em;
-      }
-			border-top: 2px solid $brand-black;
-
+			padding: 2em;
     }
 
 		.images-container {
-			width: 100%;
-			float: left;
+			border-top: 3px solid $brand-black;
 			order: 3;
-			border-top: 2px solid $brand-black;
 			.images-list {
 				list-style: none;
 				padding: 0;
@@ -42,12 +28,9 @@
 				grid-template-columns: 1fr 1fr;
 				justify-content: center;
 				justify-items: center;
-				li {
-				}
 			}
 		}
 		.articles-container {
-			width: 100%;
 			padding: 2em;
 			order: 4;
 			background-color: $brand-black;
@@ -57,13 +40,8 @@
 				color: $brand-neutroLight;
 			}
 		}
-	  .home-content {
-	    width: 100%;
-			float: left;
-	    padding: 0 1em;
-	  }
 	  .home-clients {
-	    padding: 0 1em;
+	    padding: 0 2em;
 	  }
 	  .client-item {
 			font-size: em(24);
@@ -77,14 +55,15 @@
     MQ
     ========================================================================== */
 
-    @media (min-width: $break-small) {
+    @media (min-width: $break-medium) {
+			.page-container {
+				grid-template-columns: 3fr 4fr;
+			}
 			.main-container {
-        width: 50%;
-				border-left: 2px solid $brand-black;
+				border-left: 3px solid $brand-black;
 				order: 2;
 			}
 			.side-content {
-        width: 50%;
 				order: 1;
 				border: 0;
 			}
@@ -94,19 +73,16 @@
 				}
 			}
 			.images-container {
+				grid-column: span 3;
 				.images-list {
-					grid-template-columns: 1fr 1fr 1fr;
+					grid-template-columns: repeat(3,1fr);
 				}
 			}
     }
     @media (min-width: $break-large) {
       .main-container {
-        width: 60%;
-				float: left;
       }
       .side-content {
-        width: 40%;
-				float: left;
 				border-top: 0;
       }
 			.home-clients {
@@ -116,7 +92,7 @@
 			}
 			.images-container {
 				.images-list {
-					grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+					grid-template-columns: repeat(4,1fr);
 				}
 			}
 
