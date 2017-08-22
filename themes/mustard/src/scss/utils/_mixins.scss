@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/*
+ * Mixin for clearfix
+ * @include clearfix;
+*/
+@mixin clearfix {
+	&:before,
+	&:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+
+	&:after {
+	    clear: both;
+	}
+}
+
+@mixin border-box-sizing {
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+}
+
+$global-font-size: 100%;
+$global-font-size-px: 16px;
+
+// =Helpers
+// ------------------------------------------------------
+@function stripUnit($number) {
+    @return $number / ($number * 0 + 1);
+}
+@function unitlessZero($number) {
+    $value: $number;
+
+    @if (type-of($value) == number) and stripUnit($value) == 0 {
+        $value: stripUnit($value);
+    }
+
+    @return $value;
+}
+
+@function rootFontSize($html-font-size) {
+    @return (stripUnit($html-font-size) * 16)/100;
+}
+
+
+// =px to rem
+// ------------------------------------------------------
+@function em($val) {
+    @return (stripUnit($val) / rootFontSize($global-font-size)) + 0em;
+}

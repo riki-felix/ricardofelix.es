@@ -1,0 +1,123 @@
+/*  ==========================================================================
+    Page
+    ========================================================================== */
+    .page-container {
+      width: 100%;
+			height: 100vh;
+			float: left;
+      display: flex;
+      flex-flow: row wrap;
+			justify-content: space-between;
+			border: 2px solid $brand-black;
+    }
+		.nav-container {
+			padding: 1em;
+		}
+    .main-container {
+			float: left;
+			order: 1;
+			width: 100%;
+    }
+    .side-content {
+      width: 100%;
+			float: left;
+      align-items: stretch;
+      order: 2;
+      header {
+        padding: 1em;
+      }
+			border-top: 2px solid $brand-black;
+
+    }
+
+		.images-container {
+			width: 100%;
+			float: left;
+			order: 3;
+			border-top: 2px solid $brand-black;
+			.images-list {
+				list-style: none;
+				padding: 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				justify-content: center;
+				justify-items: center;
+				li {
+				}
+			}
+		}
+		.articles-container {
+			width: 100%;
+			padding: 2em;
+			order: 4;
+			background-color: $brand-black;
+			color: $brand-neutroLight;
+			text-align: center;
+			a {
+				color: $brand-neutroLight;
+			}
+		}
+	  .home-content {
+	    width: 100%;
+			float: left;
+	    padding: 0 1em;
+	  }
+	  .home-clients {
+	    padding: 0 1em;
+	  }
+	  .client-item {
+			font-size: em(24);
+			font-weight: 700;
+	    color: $brand-black;
+			padding: 0;
+			line-height: 1.4;
+			display: inline-block;
+	  }
+/*  ==========================================================================
+    MQ
+    ========================================================================== */
+
+    @media (min-width: $break-small) {
+			.main-container {
+        width: 50%;
+				border-left: 2px solid $brand-black;
+				order: 2;
+			}
+			.side-content {
+        width: 50%;
+				order: 1;
+				border: 0;
+			}
+			.home-clients {
+				.client-item {
+					font-size: em(28);
+				}
+			}
+			.images-container {
+				.images-list {
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+			}
+    }
+    @media (min-width: $break-large) {
+      .main-container {
+        width: 60%;
+				float: left;
+      }
+      .side-content {
+        width: 40%;
+				float: left;
+				border-top: 0;
+      }
+			.home-clients {
+				.client-item {
+					font-size: em(36);
+				}
+			}
+			.images-container {
+				.images-list {
+					grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+				}
+			}
+
+    }

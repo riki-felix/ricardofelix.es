@@ -1,0 +1,61 @@
+/*	==========================================================================
+  	Typography
+  	========================================================================== */
+
+		h1,
+		.h1 {
+			font-size: em(40);
+			font-weight: 400;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		h2,
+		.h2 {
+			font-size: em(20);
+			font-weight: 600;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		h3,
+		.h3 {
+			font-size: em(16);
+			font-weight: 700;
+			line-height: 1.4;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			clear: both;
+		}
+
+		p {
+			font-size: em(16);
+			font-weight: 400;
+			line-height: 1.4;
+			margin: 0 0 1.4em 0;
+			padding: 0;
+			a {
+				color: $brand-primary;
+			}
+		}
+		.heading-tagline {
+			font-weight: 700;
+		}
+		address { margin: 0 0 1.5em; }
+
+		b,
+		strong { font-weight: 700; }
+
+		small {
+			font-size: .5em;
+			line-height: 1;
+		}
+
+/*	==========================================================================
+  	MQ
+  	========================================================================== */
+  	@media (min-width: $break-medium) {}

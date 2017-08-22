@@ -1,0 +1,174 @@
+/*  ==========================================================================
+    General
+    ========================================================================== */
+    html {
+      height: 100%;
+    }
+    body {
+      font-family: $f-sans;
+      font-weight: 400;
+      height: 100%;
+      text-rendering: optimizeLegibility;
+      margin: 0;
+      padding: 0;
+      color: $brand-black;
+    }
+
+/*  ==========================================================================
+    Images
+    ========================================================================== */
+
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+
+/*  ==========================================================================
+    Underline From Left
+    ========================================================================== */
+    .link-underline,
+    p a {
+      display: inline-block;
+      vertical-align: bottom;
+      transform: translateZ(0);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0);
+      backface-visibility: hidden;
+      position: relative;
+      overflow: hidden;
+			text-decoration: none;
+			.content-module & {
+				text-decoration: underline;
+			}
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $brand-primary;
+        height: 2px;
+        transition-property: right;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+      &:hover:before,
+      &:focus:before,
+      &:active:before {
+        right: 0;
+      }
+    }
+    .link-underline-reverse {
+      @extend .link-underline;
+    }
+    .link-underline-reverse:before {
+      @extend .link-underline;
+      right: 0;
+    }
+    .link-underline-reverse:hover:before, .link-underline-reverse:focus:before, .link-underline-reverse:active:before {
+      right: 100%;
+    }
+
+    a {
+      color: $brand-black;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+
+/* ==========================================================================
+   Alignment
+   ========================================================================== */
+.alignleft {}
+.alignright {}
+.aligncenter {}
+
+/* ==========================================================================
+   Posts and pages
+   ========================================================================== */
+.sticky {}
+.bypostauthor {}
+.hentry {}
+.byline,
+.updated {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.site-main .gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-caption {
+}
+
+.site-main .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+
+.site-main .gallery dd,
+.site-main .gallery figcaption {
+  margin: 0;
+}
+
+.site-main .gallery-columns-4 .gallery-item {
+}
+
+.site-main .gallery-columns-4 .gallery-item img {
+}
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}

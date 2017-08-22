@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+  $f-sans:                 'aktiv-grotesk-std', sans-serif;
+  $f-serif:                serif;
+
+  $brand-black:            #1a1a1a;
+  $brand-primary:          $brand-black;
+
+  $brand-neutro:           #666;
+  $brand-neutroLight:      lighten($brand-neutro,50%);
+  $brand-neutroDark:       darken($brand-neutro,10%);
+
+  $break-small:            em(468);
+  $break-medium:           em(720);
+  $break-large:            em(1280);
+  $break-xlarge:           em(1600);
+
+  @include border-box-sizing;

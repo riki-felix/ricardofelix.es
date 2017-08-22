@@ -1,0 +1,5 @@
+baseURL = "https://ricardofelix.es/"
+languageCode = "es-ES"
+title = "Diseño digital, identidad y front-end."
+theme = "mustard"
+googleAnalytics = "UA-15641392-3"

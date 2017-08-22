@@ -1,0 +1,17 @@
+/*!
+Theme Name: Mustard
+*/
+
+@import "utils/helpers";
+@import "utils/mixins";
+@import "utils/variables";
+@import "utils/general";
+
+@import "base/typography";
+
+@import "layout/header";
+@import "layout/layout";
+@import "layout/footer";
+
+@import "pages/page-posts";
+@import "pages/page";
