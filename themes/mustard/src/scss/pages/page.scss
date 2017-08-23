@@ -110,3 +110,10 @@
 			}
 
     }
+		@media (min-width: $break-xlarge) {
+			.images-container {
+				.images-list {
+					grid-template-columns: repeat(5,1fr);
+				}
+			}
+		}
