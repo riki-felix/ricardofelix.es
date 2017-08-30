@@ -29,17 +29,23 @@
     ========================================================================== */
     .link-underline,
     p a {
-      display: inline-block;
-      vertical-align: bottom;
-      transform: translateZ(0);
       box-shadow: 0 0 2px rgba(0, 0, 0, 0);
       backface-visibility: hidden;
-      position: relative;
+			display: inline-block;
+			line-height: 1.4;
       overflow: hidden;
+			position: relative;
 			text-decoration: none;
+			transform: translateZ(0);
+			vertical-align: bottom;
 			.content-module & {
-				text-decoration: underline;
+				font-weight: 700;
+				line-height: 1.6;
+				&:before {
+	        height: 2px;
+				}
 			}
+
       &:before {
         content: "";
         position: absolute;
@@ -48,7 +54,7 @@
         right: 100%;
         bottom: 0;
         background: $brand-primary;
-        height: 2px;
+        height: 3px;
         transition-property: right;
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
@@ -66,7 +72,9 @@
       @extend .link-underline;
       right: 0;
     }
-    .link-underline-reverse:hover:before, .link-underline-reverse:focus:before, .link-underline-reverse:active:before {
+    .link-underline-reverse:hover:before,
+		.link-underline-reverse:focus:before,
+		.link-underline-reverse:active:before {
       right: 100%;
     }
 
