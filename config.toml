@@ -1,5 +1,9 @@
 baseURL = "https://ricardofelix.es/"
 languageCode = "es-ES"
-title = "Diseño digital, identidad y front-end."
+title = "Ricardo Félix"
 theme = "mustard"
 googleAnalytics = "UA-15641392-3"
+
+[params]
+  subtitle = "Diseño digital, identidad y front-end."
+  author = "Ricardo Félix"

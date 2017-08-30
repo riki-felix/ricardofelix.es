@@ -42,14 +42,14 @@
 		}
 	  .home-clients {
 	    padding: 0 2em;
-	  }
-	  .client-item {
-			font-size: em(24);
-			font-weight: 700;
-	    color: $brand-black;
-			padding: 0;
-			line-height: 1.4;
-			display: inline-block;
+			p {
+				font-size: em(24);
+				font-weight: 700;
+				color: $brand-black;
+				padding: 0;
+				line-height: 1.4;
+				display: inline-block;
+			}
 	  }
 		.page-footer {
 			border-right: 3px solid $brand-black;
@@ -81,7 +81,7 @@
 				border: 0;
 			}
 			.home-clients {
-				.client-item {
+				p {
 					font-size: em(28);
 				}
 			}
@@ -99,7 +99,7 @@
 				border-top: 0;
       }
 			.home-clients {
-				.client-item {
+				p {
 					font-size: em(36);
 				}
 			}
