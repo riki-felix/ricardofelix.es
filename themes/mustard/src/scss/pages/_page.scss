@@ -10,13 +10,22 @@
 			border-top: 3px solid $brand-black;
 			order: 2;
 			header {
-				padding: 2em 2em 0 2em;
+				padding: 2em 1em 0 1em;
+			}
+			.side-content--description {
+				padding: 0 1em;
 			}
 		}
     .main-container {
 			order: 1;
-			padding: 2em;
+			padding: 0;
+			header {
+				padding: 2em 1em 0 1em;
+			}
     }
+		.section-description {
+			padding: 0 1em;
+		}
 
 		.images-container {
 			border-top: 3px solid $brand-black;
@@ -51,7 +60,7 @@
 				display: inline-block;
 			}
 	  }
-		
+
 /*  ==========================================================================
     MQ
     ========================================================================== */
@@ -59,19 +68,31 @@
     @media (min-width: $break-medium) {
 			.page-container {
 				grid-template-columns: 3fr 4fr;
+				header {
+					padding: 2em 2em 0 2em;
+				}
 			}
 			.main-container {
 				border-left: 3px solid $brand-black;
 				order: 2;
+				header {
+					padding: 2em 2em 0 2em;
+				}
 			}
 			.side-content {
 				order: 1;
 				border: 0;
+				.side-content--description {
+					padding: 0 2em;
+				}
 			}
 			.home-clients {
 				p {
 					font-size: em(28);
 				}
+			}
+			.section-description {
+				padding: 0 2em;
 			}
 			.images-container {
 				grid-column: span 3;

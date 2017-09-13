@@ -5,8 +5,8 @@
 		 border-right: 3px solid $brand-black;
 		 border-bottom: 3px solid $brand-black;
 		 border-left: 3px solid $brand-black;
-		 padding: 2em;
-		 text-align: right;
+		 padding: 2em 1em;
+		 text-align: left;
 		 .footer-disclaimer {
 			 font-size: em(14);
 			 a {
@@ -21,4 +21,10 @@
 /* ==========================================================================
    MQ
    ========================================================================== */
-   @media (min-width: $break-medium) {}
+   @media (min-width: $break-medium) {
+		 .page-footer {
+			 padding: 2em;
+
+			 text-align: right;
+		 }
+	 }
