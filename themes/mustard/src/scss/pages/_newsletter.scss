@@ -6,11 +6,11 @@
 		display: flex;
 		flex-flow: column wrap;
 		justify-content: flex-start;
-		align-items: flex-start;
+		align-items: stretch;
 		margin-bottom: .5em;
 	}
 	.form-input {
-		flex: 1 1 auto;
+		flex: 0 0 auto;
 		border: 0;
 		border-bottom: 1px solid $brand-black;
 		font-size: 1em;
@@ -18,11 +18,15 @@
 		padding: .5em 0;
 		margin: 0 0 1em 0;
 		background-color: transparent;
+		appearance: none;
+
 		&.mce_inline_error {
 			border-color:#ff6e42;
 		}
 	}
 	.button {
+		flex: 0 0 auto;
+		align-self: flex-start;
 		background-color: $brand-black;
 		padding: .5em 1em;
 		color: #fff;
@@ -32,6 +36,7 @@
 		cursor: pointer;
 		transition: all .4s ease-out;
 		border-bottom: 4px solid transparent;
+		appearance: none;
 
 		&:hover {
 			background-color: rgba($brand-black,.5);
@@ -65,14 +70,18 @@
     MQ
     ========================================================================== */
 
-		@media (min-width: $break-small) {
+
+		@media (min-width: $break-medium) {
 			#mc_embed_signup {
+				margin: 0 2em 2em 2em;
+				padding: 2em;
 				.form-items {
 					flex-flow: row wrap;
-					justify-content: space-around;
+					justify-content: space-between;
 					align-items: baseline;
 				}
 				.form-input {
+					flex: 1 1 auto;
 					margin: 0 1em 1em 1em;
 				}
 				.mc-field-group {
@@ -84,10 +93,15 @@
 			}
 
 		}
-		@media (min-width: $break-medium) {
+		@media (min-width: $break-large) {
 			#mc_embed_signup {
 				margin: 0 2em 2em 2em;
 				padding: 2em;
+				.form-items {
+					flex-flow: row wrap;
+					justify-content: space-around;
+					align-items: baseline;
+				}
 			}
 
 		}
