@@ -33,4 +33,31 @@ description: "Una selección semanal de cosas variadas. Herramientas, apps, enla
 </div>
 
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type='text/javascript'>
+	(function($) {
+		window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+		$.extend( $.validator.messages, {
+			required: "Campo obligatorio.",
+			remote: "Por favor, rellena este campo.",
+			email: "Por favor, escribe una dirección de correo válida.",
+			url: "Por favor, escribe una URL válida.",
+			date: "Por favor, escribe una fecha válida.",
+			dateISO: "Por favor, escribe una fecha (ISO) válida.",
+			number: "Por favor, escribe un número válido.",
+			digits: "Por favor, escribe sólo dígitos.",
+			creditcard: "Por favor, escribe un número de tarjeta válido.",
+			equalTo: "Por favor, escribe el mismo valor de nuevo.",
+			extension: "Por favor, escribe un valor con una extensión aceptada.",
+			maxlength: $.validator.format( "Por favor, no escribas más de {0} caracteres." ),
+			minlength: $.validator.format( "Por favor, no escribas menos de {0} caracteres." ),
+			rangelength: $.validator.format( "Por favor, escribe un valor entre {0} y {1} caracteres." ),
+			range: $.validator.format( "Por favor, escribe un valor entre {0} y {1}." ),
+			max: $.validator.format( "Por favor, escribe un valor menor o igual a {0}." ),
+			min: $.validator.format( "Por favor, escribe un valor mayor o igual a {0}." ),
+			nifES: "Por favor, escribe un NIF válido.",
+			nieES: "Por favor, escribe un NIE válido.",
+			cifES: "Por favor, escribe un CIF válido."
+		} );
+		}(jQuery));
+		var $mcj = jQuery.noConflict(true);
+</script>
