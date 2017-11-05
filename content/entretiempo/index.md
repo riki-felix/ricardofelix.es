@@ -27,7 +27,7 @@ description: "Una selección semanal de cosas variadas. Herramientas, apps, enla
 			<div style="position: absolute; left: -5000px;" aria-hidden="true">
 				<input type="text" name="b_b412bc73aa573137010a43e4a_dfb47feb72" tabindex="-1" value="">
 			</div>
-			<small class="referal">No voy a mandar spam ni dar tu email para listas comerciales. Newsletter powered by <a href="http://eepurl.com/c3abDH" title="MailChimp - email marketing made easy and fun">MailChimp</a></small>
+			<small class="referal">No voy a mandar spam ni dar tu email para listas comerciales. El contenido de cada edición no está patrocinado por ningún medio, marca o agencia de promoción. Newsletter creado con <a href="http://eepurl.com/c3abDH" title="MailChimp - email marketing made easy and fun">MailChimp</a></small>
 
 	</form>
 </div>
