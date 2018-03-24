@@ -13,9 +13,7 @@
 	</div>
 	<div class="main-container">
 		<header>
-			<h3>
-				<a href="{{ .Site.BaseURL }}">Ricardo Félix →</a>
-			</h3>
+			{{ partial "menu.html" . }}
 		</header>
 		<section>
 			{{ .Content }}
