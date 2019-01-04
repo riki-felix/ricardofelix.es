@@ -3,11 +3,9 @@
     ========================================================================== */
     .page-container {
       display: grid;
-			border: 3px solid $brand-black;
 			grid-template-columns: 1fr;
     }
 		.side-content {
-			border-top: 3px solid $brand-black;
 			order: 2;
 			header {
 				padding: 2em 1em 0 1em;
@@ -28,7 +26,6 @@
 		}
 
 		.images-container {
-			border-top: 3px solid $brand-black;
 			order: 3;
 			.images-list {
 				list-style: none;
@@ -42,11 +39,11 @@
 		.articles-container {
 			padding: 2em;
 			order: 4;
-			background-color: $brand-black;
-			color: $brand-neutroLight;
+			background-color: #000;
+			color: #fff;
 			text-align: center;
 			a {
-				color: $brand-neutroLight;
+				color: #fff;
 			}
 		}
 	  .home-clients {
@@ -54,7 +51,7 @@
 			p {
 				font-size: em(24);
 				font-weight: 700;
-				color: $brand-black;
+				color: #fff;
 				padding: 0;
 				line-height: 1.4;
 				display: inline-block;
@@ -67,13 +64,12 @@
 
     @media (min-width: $break-medium) {
 			.page-container {
-				grid-template-columns: 3fr 4fr;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
 				header {
 					padding: 2em 2em 0 2em;
 				}
 			}
 			.main-container {
-				border-left: 3px solid $brand-black;
 				order: 2;
 				header {
 					padding: 2em 2em 0 2em;
@@ -82,6 +78,7 @@
 			.side-content {
 				order: 1;
 				border: 0;
+        grid-column: 1 / span 2;
 				.side-content--description {
 					padding: 0 2em;
 				}

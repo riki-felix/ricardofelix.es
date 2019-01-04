@@ -7,11 +7,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^4.0.1"
   },
   "dependencies": {
+    "browser-sync": "^2.26.3",
     "graceful-fs": "^4.1.11",
     "minimatch": "^3.0.4"
   }

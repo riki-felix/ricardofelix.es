@@ -4,9 +4,9 @@
 
 		h1,
 		.h1 {
-			font-size: em(40);
+			font-size: em(24);
 			font-weight: 400;
-			line-height: 1.5;
+			line-height: 1.2;
 			margin: 0;
 			padding: 0;
 		}
@@ -33,13 +33,13 @@
 		}
 
 		p {
-			font-size: em(16);
+			font-size: em(20);
 			font-weight: 400;
 			line-height: 1.4;
 			margin: 0 0 1.4em 0;
 			padding: 0;
 			a {
-				color: $brand-primary;
+				color: #fff;
 				text-decoration: none;
 			}
 		}

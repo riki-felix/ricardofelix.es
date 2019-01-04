@@ -2,9 +2,6 @@
    Footer
    ========================================================================== */
 	 .page-footer {
-		 border-right: 3px solid $brand-black;
-		 border-bottom: 3px solid $brand-black;
-		 border-left: 3px solid $brand-black;
 		 margin-bottom: .5em;
 		 padding: 2em 1em;
 		 text-align: left;
@@ -24,7 +21,6 @@
    ========================================================================== */
    @media (min-width: $break-medium) {
 		 .page-footer {
-			 text-align: right;
 			 padding: 2em;
 		 }
 	 }

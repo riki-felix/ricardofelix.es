@@ -1,23 +1,57 @@
 var gulp         = require("gulp"),
     sass         = require("gulp-sass"),
-    autoprefixer = require("gulp-autoprefixer")
+    autoprefixer = require("gulp-autoprefixer"),
+    projectURL   = 'http://localhost:1313/';
+
+
+const browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
 
 		// Compile SCSS files to CSS
-		gulp.task("scss", function () {
+		gulp.task("scss", function (done) {
 		    gulp.src("src/scss/*.scss")
 		        .pipe(sass({
 		            outputStyle : "compressed"
 		        }))
-		        .pipe(autoprefixer({
-		            browsers : ["last 2 versions"]
-		        }))
+		        .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
+            .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
 		        .pipe(gulp.dest("static/css"))
+            done();
 		})
+    // Browsers you care about for autoprefixing.
+    // Browserlist https        ://github.com/ai/browserslist
+    const AUTOPREFIXER_BROWSERS = [
+        'last 2 version',
+        '> 1%',
+        'ie >= 9',
+        'ie_mob >= 10',
+        'ff >= 30',
+        'chrome >= 34',
+        'safari >= 7',
+        'opera >= 23',
+        'ios >= 7',
+        'android >= 4',
+        'bb >= 10'
+      ];
+
+    // Sync browser
+    const browsersync = done => {
+     	browserSync.init({
+     		proxy: projectURL,
+     		open: true,
+     		injectChanges: true,
+     		watchEvents: [ 'change', 'add', 'unlink', 'addDir', 'unlinkDir' ]
+     	});
+     	done();
+     };
+
+     // Helper function to allow browser reload with Gulp 4.
+     const reload = done => {
+     	browserSync.reload();
+     	done();
+     };
 
 		// Watch asset folder for changes
-		gulp.task("watch", ["scss"], function () {
-		    gulp.watch("src/scss/**/*", ["scss"])
-		})
-
-		// Set watch as default task
-		gulp.task("default", ["watch"])
+		gulp.task('default', gulp.parallel('scss', browsersync,function(done) {
+		    gulp.watch("src/scss/**/*", gulp.series('scss'));
+        done();
+		}));

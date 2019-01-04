@@ -11,8 +11,9 @@
       text-rendering: optimizeLegibility;
       margin: 0;
       padding: 0;
-      color: $brand-black;
+      color: #f1f1f1;
 			padding: .5em;
+      background-color: #171e26;
     }
 
 /*  ==========================================================================
@@ -54,7 +55,7 @@
         left: 0;
         right: 100%;
         bottom: 0;
-        background: $brand-primary;
+        background: #fff;
         height: 3px;
         transition-property: right;
         transition-duration: 0.3s;
@@ -80,104 +81,8 @@
     }
 
     a {
-      color: $brand-black;
+      color: #fff;
       &:hover {
-        color: $brand-primary;
+        color: #fff;
       }
     }
-
-/* ==========================================================================
-   Alignment
-   ========================================================================== */
-.alignleft {}
-.alignright {}
-.aligncenter {}
-
-/* ==========================================================================
-   Posts and pages
-   ========================================================================== */
-.sticky {}
-.bypostauthor {}
-.hentry {}
-.byline,
-.updated {
-  display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-  display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {}
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-.wp-caption {
-  border: 1px solid #ccc;
-  margin-bottom: 1.5em;
-  max-width: 100%;
-}
-
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin: 1.2% auto 0;
-  max-width: 98%;
-}
-
-.wp-caption-text {
-  text-align: center;
-}
-
-.wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
-}
-
-.site-main .gallery {
-  margin-bottom: 1.5em;
-}
-
-.gallery-caption {
-}
-
-.site-main .gallery a img {
-  border: none;
-  height: auto;
-  max-width: 90%;
-}
-
-.site-main .gallery dd,
-.site-main .gallery figcaption {
-  margin: 0;
-}
-
-.site-main .gallery-columns-4 .gallery-item {
-}
-
-.site-main .gallery-columns-4 .gallery-item img {
-}
-
-embed,
-iframe,
-object {
-  max-width: 100%;
-}
-
-figure {
-  padding: 0;
-  margin: 0;
-}
