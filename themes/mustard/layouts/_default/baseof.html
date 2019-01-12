@@ -1,0 +1,77 @@
+{{ $baseurl := .Site.BaseURL }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  	<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/images/favicon/apple-touch-icon.png">
+  	<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/images/favicon/favicon-32x32.png">
+  	<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}/images/favicon/favicon-16x16.png">
+  	<link rel="manifest" href="{{ .Site.BaseURL }}/images/favicon/manifest.json">
+  	<link rel="mask-icon" href="{{ .Site.BaseURL }}/images/favicon/safari-pinned-tab.svg" color="#f1f1f1">
+  	<meta name="theme-color" content="#1a1a1a">
+
+
+    {{ with .Title | default .Site.Title }}
+    <title>{{ . }}</title>
+    <meta property="og:title" content="{{ . }}" />
+    <meta name="twitter:title" content="{{ . }}" />
+    {{ end }}
+
+    {{ with .Description | default .Site.Params.subtitle }}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}">
+    <meta name="twitter:description" content="{{ . | truncate 200 }}">
+    {{ end }}
+
+    <meta name="author" content="{{ .Site.Params.author }}"/>
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+
+    {{ if .IsPage }}
+    <meta property="og:type" content="article" />
+    {{ with .Site.Params.facebook }}
+    <meta property="og:article:author" content="https://facebook.com/{{ . }}" />
+    {{ end }}
+    {{ else }}
+    <meta property="og:type" content="website" />
+    {{ end }}
+    <!-- Hugo Version number -->
+    {{ .Hugo.Generator -}}
+  	<link rel="stylesheet" href="https://use.typekit.net/qwf5eea.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.min.css" />
+    {{ if eq .URL "/" }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+  	{{ template "_internal/google_analytics.html" . }}
+  </head>
+  <body>
+  {{ block "header.html" . }}
+  	<header class="globalNavBar">
+  		<h1>Ricardo Félix</h1>
+  		{{ partial "menu.html" . }}
+	   </header>
+  {{end}}
+
+    <main>
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+
+  {{ block "footer.html" . }}
+    <footer class="pageFooter">
+      <div class="cell">
+        <p>De vez en cuando envío un mail con novedades de mi trabajo y cosas de <a href="{{ .Site.BaseURL }}entretiempo">entretiempo</a>.</p>
+        {{ partial "newsletter.html" . }}
+      </div>
+      <div class="cell">
+        <p>
+          © {{ now.Format "2006"}}. Web creada con <a href="https://gohugo.io/" target="_blank">Hugo</a>, hosting en <a href="https://www.netlify.com/" target="_blank">Netlify</a>. Fuentes de <a href="https://typekit.com/colophons/qwf5eea" target="_blank">Typekit</a>.
+        </p>
+      </div>
+    </footer>
+  {{end}}
+
+  </body>
+</html>

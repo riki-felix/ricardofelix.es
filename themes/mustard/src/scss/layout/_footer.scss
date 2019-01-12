@@ -1,17 +1,16 @@
 /* ==========================================================================
    Footer
    ========================================================================== */
-	 .page-footer {
-		 margin-bottom: .5em;
-		 padding: 2em 1em;
+	 .pageFooter {
+		 display: grid;
+		 grid-template-columns:1fr;
 		 text-align: left;
-		 .footer-disclaimer {
-			 font-size: em(14);
+		 .cell {
+			 p {
+				 font-size: em(14);
+			 }
 			 a {
 				 font-weight: 700;
-				 &:before {
- 	        height: 2px;
- 				}
 			 }
 		 }
 	 }
@@ -20,7 +19,4 @@
    MQ
    ========================================================================== */
    @media (min-width: $break-medium) {
-		 .page-footer {
-			 padding: 2em;
-		 }
 	 }

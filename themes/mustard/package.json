@@ -14,6 +14,7 @@
   "dependencies": {
     "browser-sync": "^2.26.3",
     "graceful-fs": "^4.1.11",
+    "gulp-rename": "^1.4.0",
     "minimatch": "^3.0.4"
   }
 }

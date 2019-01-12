@@ -1,32 +1,7 @@
-{{ partial "header.html" . }}
-
-
-	<main id="primary" class="page-container">
-		<div class="side-content">
-			<header>
-				<p>Diseño digital, identidad y front-end. Trabajo con clientes y proyectos donde puedo involucrarme, conocer el negocio y conseguir objetivos conjuntamente.</p>
-				<p>Desde 2018 soy profesor de Proyectos de diseño gráfico en Kunsthal, aportando la experiencia y aprendizaje continuo en la creación de productos digitales.</p>
-				<p><a href="mailto:studio@ricardofelix.es" target="_blank" rel="noopener noreferrer">Mail</a>
-				<p>También publico un newsletter, <a href="{{ .Site.BaseURL }}entretiempo">Entretiempo</a>.</p>
-			</header>
-
+{{ define "main"}}
+<section class="layout--grid">
+	<div class="layout">
+		<p>Diseño y desarrollo productos digitales trabjando con y para el cliente.</p>
 		</div>
-
-		<div class="main-container">
-			<header>
-				{{ partial "menu.html" . }}
-			</header>
-
-			<div class="content-module section-description">
-				<section>
-					<h1>Ricardo Félix</h1>
-				</section>
-			</div>
-		</div>
-
-
-	</main>
-
-
-
-{{ partial "footer.html" . }}
+	</section>
+{{end}}

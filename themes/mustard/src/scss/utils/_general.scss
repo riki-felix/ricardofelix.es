@@ -5,15 +5,14 @@
       height: 100%;
     }
     body {
-      font-family: $f-sans;
+      background-color: $color--dark;
+      color: $color--light;
+      font-family: $font--primary;
       font-weight: 400;
       height: 100%;
-      text-rendering: optimizeLegibility;
       margin: 0;
       padding: 0;
-      color: #f1f1f1;
-			padding: .5em;
-      background-color: #171e26;
+      text-rendering: optimizeLegibility;
     }
 
 /*  ==========================================================================
@@ -31,23 +30,16 @@
     ========================================================================== */
     .link-underline,
     p a {
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
       backface-visibility: hidden;
 			display: inline-block;
+      font-weight: 400;
 			line-height: 1.4;
       overflow: hidden;
 			position: relative;
 			text-decoration: none;
 			transform: translateZ(0);
 			vertical-align: bottom;
-			.content-module & {
-				font-weight: 700;
-				line-height: 1.6;
-				&:before {
-	        height: 2px;
-				}
-			}
-
       &:before {
         content: "";
         position: absolute;
@@ -55,8 +47,8 @@
         left: 0;
         right: 100%;
         bottom: 0;
-        background: #fff;
-        height: 3px;
+        background:  $color--light;
+        height: 1px;
         transition-property: right;
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
@@ -81,8 +73,10 @@
     }
 
     a {
-      color: #fff;
-      &:hover {
-        color: #fff;
+      color: $color--light;
+      &:hover,
+      &:visited,
+      &:active {
+        color: $color--light;
       }
     }

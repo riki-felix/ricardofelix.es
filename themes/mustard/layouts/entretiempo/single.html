@@ -1,30 +1,21 @@
-{{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL }}
-<main class="page-container">
-	<div class="side-content">
-		<header>
+{{ define "main"}}
+	<section class="layout--grid">
+		<div class="layout">
 			<h1 class="h3">{{ .Title }}</h1>
-		</header>
-		<div class="side-content--description">
 			<p>
 				{{ .Description }}
 			</p>
 			<h3>En capítulos anteriores.</h3>
 			<script
-			language="javascript"
-			src="//ricardofelix.us8.list-manage.com/generate-js/?u=b412bc73aa573137010a43e4a&fid=9805&show=20"
-			type="text/javascript">
+				language="javascript"
+				src="//ricardofelix.us8.list-manage.com/generate-js/?u=b412bc73aa573137010a43e4a&fid=9805&show=20"
+				type="text/javascript">
 			</script>
 		</div>
-
-	</div>
-	<div class="main-container">
-		<header>
-				{{ partial "menu.html" . }}
-		</header>
-		<section>
+	</section>
+	<section>
+		<div class="layout">
 			{{ .Content }}
-		</section>
-	</div>
-</main>
-{{ partial "footer.html" . }}
+		</div>
+	</section>
+{{ end }}

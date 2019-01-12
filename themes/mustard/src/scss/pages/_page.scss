@@ -1,126 +1,14 @@
 /*  ==========================================================================
     Page
     ========================================================================== */
-    .page-container {
-      display: grid;
-			grid-template-columns: 1fr;
-    }
-		.side-content {
-			order: 2;
-			header {
-				padding: 2em 1em 0 1em;
-			}
-			.side-content--description {
-				padding: 0 1em;
-			}
-		}
-    .main-container {
-			order: 1;
-			padding: 0;
-			header {
-				padding: 2em 1em 0 1em;
-			}
-    }
-		.section-description {
-			padding: 0 1em;
-		}
-
-		.images-container {
-			order: 3;
-			.images-list {
-				list-style: none;
-				padding: 0;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				justify-content: center;
-				justify-items: center;
-			}
-		}
-		.articles-container {
-			padding: 2em;
-			order: 4;
-			background-color: #000;
-			color: #fff;
-			text-align: center;
-			a {
-				color: #fff;
-			}
-		}
-	  .home-clients {
-	    padding: 0 1em;
-			p {
-				font-size: em(24);
-				font-weight: 700;
-				color: #fff;
-				padding: 0;
-				line-height: 1.4;
-				display: inline-block;
-			}
-	  }
 
 /*  ==========================================================================
     MQ
     ========================================================================== */
 
     @media (min-width: $break-medium) {
-			.page-container {
-				grid-template-columns: 1fr 1fr 1fr 1fr;
-				header {
-					padding: 2em 2em 0 2em;
-				}
-			}
-			.main-container {
-				order: 2;
-				header {
-					padding: 2em 2em 0 2em;
-				}
-			}
-			.side-content {
-				order: 1;
-				border: 0;
-        grid-column: 1 / span 2;
-				.side-content--description {
-					padding: 0 2em;
-				}
-			}
-			.home-clients {
-				padding: 0 2em;
-				p {
-					font-size: em(28);
-				}
-			}
-			.section-description {
-				padding: 0 2em;
-			}
-			.images-container {
-				grid-column: span 3;
-				.images-list {
-					grid-template-columns: repeat(3,1fr);
-				}
-			}
     }
     @media (min-width: $break-large) {
-      .main-container {
-      }
-      .side-content {
-				border-top: 0;
-      }
-			.home-clients {
-				p {
-					font-size: em(36);
-				}
-			}
-			.images-container {
-				.images-list {
-					grid-template-columns: repeat(4,1fr);
-				}
-			}
-
     }
 		@media (min-width: $break-xlarge) {
-			.images-container {
-				.images-list {
-					grid-template-columns: repeat(5,1fr);
-				}
-			}
 		}

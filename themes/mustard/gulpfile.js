@@ -1,7 +1,9 @@
 var gulp         = require("gulp"),
     sass         = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
-    projectURL   = 'http://localhost:1313/';
+    projectURL   = 'http://localhost:1313/',
+    rename       = require('gulp-rename');
+;
 
 
 const browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
@@ -13,7 +15,7 @@ const browserSync = require( 'browser-sync' ).create(); // Reloads browser and i
 		            outputStyle : "compressed"
 		        }))
 		        .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
-            .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
+            .pipe( rename( { suffix: '.min' } ) )
 		        .pipe(gulp.dest("static/css"))
             done();
 		})
@@ -33,25 +35,8 @@ const browserSync = require( 'browser-sync' ).create(); // Reloads browser and i
         'bb >= 10'
       ];
 
-    // Sync browser
-    const browsersync = done => {
-     	browserSync.init({
-     		proxy: projectURL,
-     		open: true,
-     		injectChanges: true,
-     		watchEvents: [ 'change', 'add', 'unlink', 'addDir', 'unlinkDir' ]
-     	});
-     	done();
-     };
-
-     // Helper function to allow browser reload with Gulp 4.
-     const reload = done => {
-     	browserSync.reload();
-     	done();
-     };
-
 		// Watch asset folder for changes
-		gulp.task('default', gulp.parallel('scss', browsersync,function(done) {
+		gulp.task('default', gulp.parallel('scss',function(done) {
 		    gulp.watch("src/scss/**/*", gulp.series('scss'));
         done();
 		}));

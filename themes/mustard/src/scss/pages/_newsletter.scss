@@ -1,7 +1,4 @@
 #mc_embed_signup {
-	background-color: rgba($brand-black,.05);
-	padding: 2em 1em;
-
 	.form-items {
 		display: flex;
 		flex-flow: column wrap;
@@ -11,13 +8,13 @@
 	}
 	.form-input {
 		flex: 0 0 auto;
+		background-color: #fff;
 		border: 0;
-		border-bottom: 1px solid $brand-black;
+		border-bottom: 1px solid $color--dark;
 		font-size: 1em;
 		font-weight: 700;
 		padding: .5em 0;
 		margin: 0 0 1em 0;
-		background-color: transparent;
 		appearance: none;
 
 		&.mce_inline_error {
@@ -27,7 +24,7 @@
 	.button {
 		flex: 0 0 auto;
 		align-self: flex-start;
-		background-color: $brand-black;
+		background-color: $color--primary;
 		padding: .5em 1em;
 		color: #fff;
 		font-size: 1em;
@@ -39,8 +36,8 @@
 		appearance: none;
 
 		&:hover {
-			background-color: rgba($brand-black,.5);
-			border-bottom: 4px solid rgba($brand-black,.3);
+			background-color: rgba($color--dark,.5);
+			border-bottom: 4px solid rgba($color--dark,.3);
 		}
 	}
 	.mc-field-group {
@@ -58,7 +55,7 @@
 	}
 	.referal {
 		padding: 2em 0 0 0;
-		color: rgba($brand-black, .5);
+		color: rgba($color--dark, .5);
 		display: inline-block;
 		a {
 			color: inherit;
@@ -80,9 +77,8 @@
 				}
 				&:first-child {
 					padding: 1em;
-					background-color: rgba($brand-black,.05);
 					margin: 0 0 2em 0;
-					border-left: 4px solid rgba($brand-black,.25);
+					border-left: 4px solid rgba($color--primary,.25);
 				}
 			}
 		}
@@ -93,8 +89,6 @@
 
 		@media (min-width: $break-medium) {
 			#mc_embed_signup {
-				margin: 0 2em 2em 2em;
-				padding: 2em;
 				.form-items {
 					flex-flow: row wrap;
 					justify-content: space-between;
@@ -115,8 +109,6 @@
 		}
 		@media (min-width: $break-large) {
 			#mc_embed_signup {
-				margin: 0 2em 2em 2em;
-				padding: 2em;
 				.form-items {
 					flex-flow: row wrap;
 					justify-content: space-around;

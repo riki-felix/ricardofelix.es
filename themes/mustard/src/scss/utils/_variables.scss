@@ -2,15 +2,11 @@
    Variables
    ========================================================================== */
 
-  $f-sans:                 'aktiv-grotesk-std','Helvetica Neue',Helvetica,sans-serif;
-  $f-serif:                serif;
+  $font--primary:          'aktiv-grotesk-std','Helvetica Neue',Helvetica,sans-serif;
 
-  $brand-black:            #171e26;
-  $brand-primary:          $brand-black;
-
-  $brand-neutro:           #666;
-  $brand-neutroLight:      lighten($brand-neutro,50%);
-  $brand-neutroDark:       darken($brand-neutro,10%);
+  $color--dark:            #171e26;
+  $color--light:           #A4ADB2;
+  $color--primary:         #002fa7;
 
   $break-small:            em(468);
   $break-medium:           em(720);
