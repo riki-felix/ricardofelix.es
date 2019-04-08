@@ -52,6 +52,6 @@ $global-font-size-px: 16px;
 
 // =px to rem
 // ------------------------------------------------------
-@function em($val) {
-    @return (stripUnit($val) / rootFontSize($global-font-size)) + 0em;
+@function rem($val) {
+    @return (stripUnit($val) / rootFontSize($global-font-size)) + 0rem;
 }

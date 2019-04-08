@@ -3,3 +3,9 @@
   flex-flow: row nowrap;
   align-items: center;
 }
+.brandLogo__link {
+  .brandLogo {
+    fill: $color--light;
+    width: rem(28);
+  }
+}
