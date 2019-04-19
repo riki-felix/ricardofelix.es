@@ -11,7 +11,9 @@ Theme Name: Mustard
 
 @import "layout/header";
 @import "layout/footer";
+@import "layout/main";
 @import "components/nav";
 
 @import "pages/page";
 @import "pages/newsletter";
+@import "pages/single";

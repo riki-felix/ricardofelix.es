@@ -1,9 +1,23 @@
 .globalNavBar {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }
 .brandLogo__link {
+  padding:  0 1rem;
+  margin: 1rem 0;
+  display: block;
+  text-align: center;
+  position: relative;
+  transition: all .2s ease-out;
+  opacity: 1;
+  &:hover {
+    transform: rotateY(180deg);
+    opacity: 0;
+    .brandLogo {
+    }
+  }
   .brandLogo {
     fill: $color--light;
     width: rem(28);
