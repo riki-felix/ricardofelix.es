@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{ .Content }}
+  <section class="layout design__section">
+    {{ range .Paginator.Pages }}
+    <article class="design__article">
+      <a class="title__link link-underline-reverse" href="{{.Permalink}}">{{.Title}}</a>
+    </article>
+    {{ end }}
+  </section>
+{{ end }}

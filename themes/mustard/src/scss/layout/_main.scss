@@ -1,0 +1,12 @@
+.layout--grid {
+  .layout {
+    display: grid;
+    &.notes {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+      grid-auto-flow: dense;
+      gap: rem(16);
+      margin: 2rem 0;
+    }
+  }
+}

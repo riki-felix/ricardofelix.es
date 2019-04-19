@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <section class="layout--grid">
+    <div class="layout notes">
+        {{ range first 1 .Paginator.Pages }}
+        <article class="notes__article recent__note">
+          <a href="{{.Permalink}}" class="note__title" rel="noopener">{{.Title}}</a>
+          <p class="header__legend">
+            Nota {{.Params.postNumber}}
+            <time datetime="{{.PublishDate.Format "02 Jan 2006 15:04"}}">
+              {{dateFormat "02 Jan 2006" .PublishDate.Local}}
+            </time>
+          </p>
+          <p>
+            {{ .Description }}
+          </p>
+          {{ .Content }}
+        </article>
+        {{ end }}
+        {{ range first 5 (after 1 .Paginator.Pages) }}
+        <article class="notes__article">
+          <svg class="articleCard__hole" height="24" width="24">
+           <circle cx="12" cy="12" r="12" fill="white" />
+          </svg>
+          <a href="{{.Permalink}}" class="note__title" rel="noopener">{{.Title}}</a>
+          <p class="header__legend">
+            Nota {{.Params.postNumber}}
+            <time datetime="{{.PublishDate.Format "02 Jan 2006 15:04"}}">
+              {{dateFormat "02 Jan 2006" .PublishDate.Local}}
+            </time>
+          </p>
+        </article>
+        {{ end }}
+    </div>
+  </section>
+{{ end }}

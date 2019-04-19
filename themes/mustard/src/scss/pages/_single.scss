@@ -1,0 +1,22 @@
+.article {
+  width: 75%;
+  margin: 0 auto;
+  &.design {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__header {
+    grid-column: span 2;
+    text-align: center;
+    padding: 4rem .5rem;
+    .articleHeader__heading {
+
+    }
+  }
+  &__image {
+    grid-column: 1 / 2;
+  }
+  &__content {
+    grid-column: 2 / 3;
+  }
+}
