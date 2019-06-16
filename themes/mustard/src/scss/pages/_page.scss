@@ -5,20 +5,11 @@
       .layout {
         height: 100vh;
         display: grid;
-        $grid-gap: 2px;
 
-        grid-template-columns: repeat(20,calc(5vw - #{$grid-gap}));
+        grid-template-columns: repeat(20,1fr);
         grid-auto-rows: calc(6vw);
-        gap: $grid-gap;
+        gap: rem(4);
         grid-auto-flow: dense;
-
-        @for $i from 1 through 24 {
-          img:nth-of-type(#{$i}) {
-            grid-column: span random(5) + 1;
-            grid-row: span random(5) + 1;
-            padding: random(3) / 2 + vw;
-          }
-        }
 
         .heroText {
           grid-column: 6 / 16;
@@ -32,11 +23,20 @@
       }
     }
 
+/*  ==========================================================================
+    Page simple
+    ========================================================================== */
+    .simple__page {
+      .layout {
+        max-width: rem(700);
+        margin: 0 auto;
+      }
+    }
 
 /*  ==========================================================================
     Page design
     ========================================================================== */
-    .design__section{
+    .design__page{
       padding: 4rem 1rem;
     }
     .design__article {
@@ -45,7 +45,9 @@
         font-size: rem(92);
         line-height: 1;
         padding: 0;
-        margin-bottom: 2rem;
+        display: inline-block;
+        margin: 1rem 0;
+        text-decoration: none;
       }
     }
 /*  ==========================================================================

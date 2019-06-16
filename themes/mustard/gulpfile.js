@@ -1,42 +1,73 @@
-var gulp         = require("gulp"),
-    sass         = require("gulp-sass"),
-    autoprefixer = require("gulp-autoprefixer"),
-    projectURL   = 'http://localhost:1313/',
-    rename       = require('gulp-rename');
-;
+// Load plugins
+const autoprefixer = require("autoprefixer");
+const del = require("del");
+const gulp = require("gulp");
+const postcss = require("gulp-postcss");
+const cssnano = require("cssnano");
+const imagemin = require("gulp-imagemin");
+const newer = require("gulp-newer");
+const plumber = require("gulp-plumber");
+const rename = require("gulp-rename");
+const sass = require("gulp-sass");
 
+// Clean assets
+function clean() {
+  return del(["./static/css/**/*"]);
+}
 
-const browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
+// Optimize Images
+function images() {
+  return gulp
+    .src("./src/img/**/*")
+    .pipe(newer("./img"))
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: false,
+              collapseGroups: true
+            }
+          ]
+        })
+      ])
+    )
+    .pipe(gulp.dest("./img"));
+}
 
-		// Compile SCSS files to CSS
-		gulp.task("scss", function (done) {
-		    gulp.src("src/scss/*.scss")
-		        .pipe(sass({
-		            outputStyle : "compressed"
-		        }))
-		        .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
-            .pipe( rename( { suffix: '.min' } ) )
-		        .pipe(gulp.dest("static/css"))
-            done();
-		})
-    // Browsers you care about for autoprefixing.
-    // Browserlist https        ://github.com/ai/browserslist
-    const AUTOPREFIXER_BROWSERS = [
-        'last 2 version',
-        '> 1%',
-        'ie >= 9',
-        'ie_mob >= 10',
-        'ff >= 30',
-        'chrome >= 34',
-        'safari >= 7',
-        'opera >= 23',
-        'ios >= 7',
-        'android >= 4',
-        'bb >= 10'
-      ];
+// CSS task
+function css() {
+  return gulp
+    .src("./src/scss/**/*.scss")
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(postcss([autoprefixer({
+      browsers: "last 2 versions",
+      cascade: true
+    })]))
+    .pipe(gulp.dest("./static/css/"))
+    .pipe(postcss([cssnano()]))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("./static/css/"));
+}
 
-		// Watch asset folder for changes
-		gulp.task('default', gulp.parallel('scss',function(done) {
-		    gulp.watch("src/scss/**/*", gulp.series('scss'));
-        done();
-		}));
+// Watch files
+function watchFiles() {
+  gulp.watch("./src/scss/**/*.scss", css);
+  gulp.watch("./src/img/**/*", images);
+}
+
+// define complex tasks
+const build = gulp.series(clean, gulp.parallel(css, images));
+const watch = gulp.parallel(watchFiles);
+
+// export tasks
+exports.images = images;
+exports.css = css;
+exports.clean = clean;
+exports.build = build;
+exports.watch = watch;
+exports.default = build;

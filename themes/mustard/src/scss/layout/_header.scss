@@ -3,6 +3,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 .brandLogo__link {
   padding:  0 1rem;
@@ -19,7 +20,7 @@
     }
   }
   .brandLogo {
-    fill: $color--light;
+    fill: $color--dark;
     width: rem(28);
   }
 }

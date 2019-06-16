@@ -18,9 +18,6 @@
         {{ end }}
         {{ range first 5 (after 1 .Paginator.Pages) }}
         <article class="notes__article">
-          <svg class="articleCard__hole" height="24" width="24">
-           <circle cx="12" cy="12" r="12" fill="white" />
-          </svg>
           <a href="{{.Permalink}}" class="note__title" rel="noopener">{{.Title}}</a>
           <p class="header__legend">
             Nota {{.Params.postNumber}}

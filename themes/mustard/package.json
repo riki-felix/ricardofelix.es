@@ -1,20 +1,22 @@
 {
   "name": "mustard",
   "version": "1.0.0",
-  "description": "",
+  "description": "Package for ricardofelix.es",
   "main": "gulpfile.js",
   "keywords": [],
-  "author": "",
+  "author": "Ricardo Félix",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-sass": "^4.0.1"
-  },
-  "dependencies": {
+    "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.3",
-    "graceful-fs": "^4.1.11",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "minimatch": "^3.0.4"
+    "gulp-sass": "^4.0.2"
   }
 }

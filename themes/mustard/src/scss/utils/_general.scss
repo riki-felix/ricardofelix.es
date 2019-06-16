@@ -5,8 +5,9 @@
       height: 100%;
     }
     body {
-      background-color: $color--dark;
-      color: $color--light;
+      background-color: $color--light;
+      background-color: white;;
+      color: $color--dark;
       font-family: $font--primary;
       font-weight: 300;
       min-height: 100%;
@@ -25,59 +26,11 @@
       max-width: 100%;
     }
 
-/*  ==========================================================================
-    Underline From Left
-    ========================================================================== */
-    .link-underline,
-    p a {
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-      backface-visibility: hidden;
-			display: inline-block;
-      font-weight: 400;
-			line-height: 1.4;
-      overflow: hidden;
-			position: relative;
-			text-decoration: none;
-			transform: translateZ(0);
-			vertical-align: bottom;
-      &:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        right: 100%;
-        bottom: 0;
-        background:  $color--light;
-        height: 1px;
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
-      }
-      &:hover:before,
-      &:focus:before,
-      &:active:before {
-        right: 0;
-        opacity: 0;
-      }
-    }
-    .link-underline-reverse {
-      @extend .link-underline;
-    }
-    .link-underline-reverse:before {
-      @extend .link-underline;
-      right: 0;
-    }
-    .link-underline-reverse:hover:before,
-		.link-underline-reverse:focus:before,
-		.link-underline-reverse:active:before {
-      right: 100%;
-    }
-
     a {
-      color: $color--light;
+      color: $color--dark;
       &:hover,
       &:visited,
       &:active {
-        color: $color--light;
+        color: $color--dark;
       }
     }
