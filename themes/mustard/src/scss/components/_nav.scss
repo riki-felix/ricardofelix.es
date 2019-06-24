@@ -7,15 +7,46 @@
 				display: flex;
 				padding: 0;
 				margin: 0;
+				position: relative;
 				li {
 					margin: 0 1rem;
 				}
 				a {
 					font-size: rem(20);
 					text-decoration: none;
+					display: block;
+					transition: transform .2s ease;
+					padding: .15rem .5rem;
 					&:hover {
-						text-decoration: underline;
 					}
+					&:focus {
+						outline: 1px dotted $color--primary;
+					}
+					&.active {
+					}
+				}
+				[aria-label] {
+				}
+
+				[aria-label]:after {
+					content: attr(aria-label);
+					display: none;
+					position: absolute;
+					bottom: -2rem;
+					left: 50%;
+					z-index: 5000;
+					pointer-events: none;
+					white-space: nowrap;
+					text-decoration: none;
+					text-indent: 0;
+					text-align: center;
+					transform: translateX(-50%);
+					overflow: visible;
+					font-size: rem(15);
+				}
+
+				[aria-label]:hover:after, [aria-label]:focus:after {
+					display: block;
 				}
 			}
 		}

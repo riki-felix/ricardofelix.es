@@ -1,1 +1,30 @@
 googleAnalytics = "UA-15641392-3"
+
+[menu]
+  [[menu.main]]
+    identifier = "diseno"
+    name = "Diseño"
+    pre = "Ver los proyectos e historias con clientes"
+  	url = "/diseno/"
+  	weight = 1
+
+  [[menu.main]]
+    identifier = "informacion"
+    name = "Información"
+    pre = "Toda la información sobre Ricardo Félix y su estudio"
+  	url = "/informacion/"
+  	weight = 2
+
+  [[menu.main]]
+    identifier = "notas"
+    name = "Notas"
+    pre = "Notas, textos y cosas que se me ocurren"
+  	url = "/notas/"
+  	weight = 3
+
+  [[menu.main]]
+    identifier = "entretiempo"
+    name = "Entretiempo"
+    pre = "Mi newsletter personal, conoce de que va la cosa"
+  	url = "/entretiempo/"
+  	weight = 4

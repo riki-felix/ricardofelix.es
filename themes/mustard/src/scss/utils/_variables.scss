@@ -6,11 +6,11 @@
 
   $color--dark:            #171e26;
   $color--light:           #A4ADB2;
-  $color--primary:         #002fa7;
+  $color--primary:         #A0A0A0;
 
   $break-small:            em(468);
   $break-medium:           em(720);
   $break-large:            em(1280);
   $break-xlarge:           em(1600);
 
-  @include border-box-sizing;
+  $notchSize: 8px;

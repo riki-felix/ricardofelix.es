@@ -4,6 +4,11 @@ date: 2019-01-5T19:08:37+02:00
 draft: false
 description: "Una comedia romántica"
 ---
+<div class="article__image">
+{{< img src="test.jpg" alt="Screenshot of the Onion homepage" >}}
+</div>
+<div class="article__content">
+<p>
 Mi relación con Debut es una comedia romántica, tiene todos los componentes necesarios para emocionar, crear ilusión, empatizar, disgustarte y como no... reirte.
 
 Es uno de esos proyectos que, después de la primera reunión de kick off, me tienen conquistado. Sobre todo si la reunión es tomando una cerveza con un perfecto desconocido y el proyecto todavía estaba en una fase con muchas incognitas por resolver.

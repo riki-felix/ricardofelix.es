@@ -1,13 +1,18 @@
 /*  ==========================================================================
     General
     ========================================================================== */
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
     html {
       height: 100%;
+      box-sizing: border-box;
     }
     body {
       background-color: $color--light;
       background-color: white;;
-      color: $color--dark;
+      color: $color--primary;
       font-family: $font--primary;
       font-weight: 300;
       min-height: 100%;
@@ -27,10 +32,10 @@
     }
 
     a {
-      color: $color--dark;
+      color: $color--primary;
       &:hover,
       &:visited,
       &:active {
-        color: $color--dark;
+        color: $color--primary;
       }
     }
