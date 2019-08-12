@@ -2,21 +2,32 @@
     Main menu
     ========================================================================== */
 		.globalNav {
+			display: flex;
+			flex: row wrap;
+			align-items: center;
 			&__menu {
 				list-style: none;
 				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				align-content: center;
 				padding: 0;
 				margin: 0;
 				position: relative;
+				width: 100%;
 				li {
 					margin: 0 1rem;
 				}
-				a {
-					font-size: rem(20);
-					text-decoration: none;
+				a,
+				&:visited {
+					font-size: rem(18);
+					color: $color--light;
 					display: block;
+					line-height: 1;
+					padding: 0 .5rem;
+					text-decoration: none;
 					transition: transform .2s ease;
-					padding: .15rem .5rem;
+					vertical-align: bottom;
 					&:hover {
 					}
 					&:focus {
@@ -25,24 +36,23 @@
 					&.active {
 					}
 				}
-				[aria-label] {
-				}
+				[aria-label] {}
 
 				[aria-label]:after {
 					content: attr(aria-label);
 					display: none;
+					font-size: rem(15);
 					position: absolute;
-					bottom: -2rem;
-					left: 50%;
-					z-index: 5000;
+						bottom: 0;
+						right: 0;
+						z-index: 5000;
+					overflow: visible;
+					padding: 0 1rem;
 					pointer-events: none;
-					white-space: nowrap;
 					text-decoration: none;
 					text-indent: 0;
-					text-align: center;
-					transform: translateX(-50%);
-					overflow: visible;
-					font-size: rem(15);
+					font-style: italic;
+					white-space: nowrap;
 				}
 
 				[aria-label]:hover:after, [aria-label]:focus:after {

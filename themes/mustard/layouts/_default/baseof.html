@@ -27,7 +27,6 @@
     <meta name="author" content="{{ .Site.Params.author }}"/>
     <meta property="og:site_name" content="{{ .Site.Title }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
-    <script type="text/javascript" src="//fast.fonts.net/jsapi/ef316d9e-7d0a-470d-a316-35ed0d948f6e.js"></script>
 
     {{ if .IsPage }}
     <meta property="og:type" content="article" />
@@ -46,7 +45,7 @@
 
   	{{ template "_internal/google_analytics.html" . }}
   </head>
-  <body>
+  <body class="pageLayout">
   {{ block "header.html" . }}
   	<header class="globalNavBar">
       <a href="{{ .Site.BaseURL }}" aria-label="Enlaza con la página principal" class="brandLogo__link">

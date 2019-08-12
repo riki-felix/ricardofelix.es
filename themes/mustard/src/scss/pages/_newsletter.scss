@@ -82,38 +82,3 @@
 				}
 			}
 		}
-/*  ==========================================================================
-    MQ
-    ========================================================================== */
-
-
-		@media (min-width: $break-medium) {
-			#mc_embed_signup {
-				.form-items {
-					flex-flow: row wrap;
-					justify-content: space-between;
-					align-items: baseline;
-				}
-				.form-input {
-					flex: 1 1 auto;
-					margin: 0 1em 1em 1em;
-				}
-				.mc-field-group {
-					div.mce_inline_error {
-						padding: 0 1em;
-						text-align: center;
-					}
-				}
-			}
-
-		}
-		@media (min-width: $break-large) {
-			#mc_embed_signup {
-				.form-items {
-					flex-flow: row wrap;
-					justify-content: space-around;
-					align-items: baseline;
-				}
-			}
-
-		}

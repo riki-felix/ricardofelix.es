@@ -10,15 +10,20 @@
       box-sizing: border-box;
     }
     body {
-      background-color: $color--light;
-      background-color: white;;
-      color: $color--primary;
+      background: $color--dark;
+      color: $color--light;
       font-family: $font--primary;
       font-weight: 300;
       min-height: 100%;
       margin: 0;
       padding: 0;
       text-rendering: optimizeLegibility;
+    }
+
+    .pageLayout {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
     }
 
 /*  ==========================================================================
@@ -32,10 +37,14 @@
     }
 
     a {
-      color: $color--primary;
+      color: $color--dark;
       &:hover,
       &:visited,
       &:active {
         color: $color--primary;
       }
     }
+
+/*  ==========================================================================
+    Fun!
+    ========================================================================== */

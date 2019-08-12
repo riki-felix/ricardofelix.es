@@ -2,15 +2,14 @@
    Variables
    ========================================================================== */
 
-  $font--primary:          'Plantin MT W01', Times, serif;
+  $font--primary:          "Value Serif", monospace;
 
-  $color--dark:            #171e26;
-  $color--light:           #A4ADB2;
-  $color--primary:         #A0A0A0;
+  $color--dark:            #000000; //171e26
+  $color--light:           #fff;
+  $color--primary:         #12656b;
+  $color--secondary:       #8f91a2;
 
   $break-small:            em(468);
   $break-medium:           em(720);
   $break-large:            em(1280);
   $break-xlarge:           em(1600);
-
-  $notchSize: 8px;

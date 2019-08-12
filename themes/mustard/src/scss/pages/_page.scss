@@ -3,11 +3,11 @@
     ========================================================================== */
     .home--grid {
       .layout {
+        padding: 0 5rem;
         .heroText {
-          grid-column: 6 / 16;
-          grid-row-start: 4;
-          text-align: center;
-          z-index: 1;
+          font-size: rem(120);
+          font-weight: 600;
+          line-height: 1;
         }
       }
     }
