@@ -11,7 +11,7 @@ googleAnalytics = "UA-15641392-3"
   [[menu.main]]
     identifier = "informacion"
     name = "Información"
-    pre = "Toda la información sobre Ricardo Félix y su estudio"
+    pre = "Toda la información sobre el estudio"
   	url = "/informacion/"
   	weight = 2
 
@@ -25,6 +25,6 @@ googleAnalytics = "UA-15641392-3"
   [[menu.main]]
     identifier = "entretiempo"
     name = "Entretiempo"
-    pre = "Mi newsletter personal, conoce de que va la cosa"
+    pre = "Mi newsletter personal, cosas variadas"
   	url = "/entretiempo/"
   	weight = 4

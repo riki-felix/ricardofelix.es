@@ -1,15 +1,11 @@
 {{ define "main"}}
-	<section class="layout--grid">
-		<div class="layout">
-			<article class="article design">
-				<header class="article__header">
-					<h1 class="articleHeader__heading">{{ .Title }}</h1>
-					<p>
-						{{ .Description }}
-					</p>
-				</header>
-				{{ .Content }}
-			</article>
-		</div>
+	<section class="article design">
+		<header class="article__header">
+			<h1 class="articleHeader__heading">{{ .Title }}</h1>
+			<p class="heading_tagline">
+				{{ .Description }}
+			</p>
+		</header>
+		{{ .Content }}
 	</section>
 {{ end }}

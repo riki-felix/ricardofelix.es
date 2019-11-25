@@ -24,7 +24,7 @@ html {
 body {
   background: #000000;
   color: #fff;
-  font-family: "Value Serif", monospace;
+  font-family: "Neue Frutiger Variable W05", Helvetica, Arial, sans-serif;
   font-weight: 300;
   min-height: 100%;
   margin: 0;
@@ -48,11 +48,11 @@ img {
 }
 
 a {
-  color: #000000;
+  color: #fff;
 }
 
 a:hover, a:visited, a:active {
-  color: #12656b;
+  color: #1D25F1;
 }
 
 /*  ==========================================================================
@@ -63,21 +63,34 @@ a:hover, a:visited, a:active {
   	========================================================================== */
 h1,
 .h1 {
-  font-size: 3.5rem;
-  font-weight: 300;
+  font-size: 2.25rem;
   line-height: 1.2;
   letter-spacing: 1px;
   margin: .5rem 0 1rem 0;
   padding: 0;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1000px) {
+  h1,
+  .h1 {
+    font-size: 3.5rem;
+  }
 }
 
 h2,
 .h2 {
-  font-size: 1.125rem;
-  font-weight: 400;
+  font-size: 0.8125rem;
   line-height: 1.2;
-  margin: 0;
+  margin: 0.25rem 0 1rem 0;
   padding: 0;
+}
+
+@media (min-width: 1000px) {
+  h2,
+  .h2 {
+    font-size: 1.25rem;
+  }
 }
 
 h3,
@@ -136,7 +149,7 @@ small {
 }
 
 .brandLogo__link:hover {
-  background-color: #12656b;
+  background-color: #1D25F1;
 }
 
 .brandLogo__link:hover .brandLogo {
@@ -144,8 +157,8 @@ small {
 }
 
 .brandLogo__link:hover ~ .globalNav {
-  background: -webkit-gradient(linear, left top, right top, from(#12656b), to(#000000));
-  background: linear-gradient(90deg, #12656b, #000000);
+  background: -webkit-gradient(linear, left top, right top, from(#1D25F1), to(#000000));
+  background: linear-gradient(90deg, #1D25F1, #000000);
   background-size: 400% 400%;
   -webkit-animation: gradientAnimation 10s ease infinite;
           animation: gradientAnimation 10s ease infinite;
@@ -187,15 +200,26 @@ small {
   display: grid;
   grid-template-columns: 1fr;
   padding: 4rem 1rem;
+  text-align: center;
 }
 
 .pageFooter .cell p {
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
 }
 
 .pageFooter .cell a {
-  font-style: italic;
-  font-weight: 400;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  padding: 1px .25rem 4px .25rem;
+  line-height: 1.2;
+  font-size: 0.8125rem;
+  display: inline-block;
+  margin: 0 .15rem;
+}
+
+.pageFooter .cell a:hover {
+  background-color: #1D25F1;
+  color: #fff;
 }
 
 .layout--grid .layout {
@@ -223,6 +247,7 @@ small {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .globalNav__menu {
@@ -232,8 +257,8 @@ small {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -250,7 +275,7 @@ small {
 }
 
 .globalNav__menu a, .globalNav__menu:visited {
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   color: #fff;
   display: block;
   line-height: 1;
@@ -264,7 +289,7 @@ small {
 }
 
 .globalNav__menu a:focus, .globalNav__menu:visited:focus {
-  outline: 1px dotted #12656b;
+  outline: 1px dotted #1D25F1;
 }
 
 .globalNav__menu [aria-label]:after {
@@ -280,7 +305,6 @@ small {
   pointer-events: none;
   text-decoration: none;
   text-indent: 0;
-  font-style: italic;
   white-space: nowrap;
 }
 
@@ -295,39 +319,12 @@ small {
   padding: 0 5rem;
 }
 
-.home--grid .layout .heroText {
-  font-size: 7.5rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
 /*  ==========================================================================
     Page simple
     ========================================================================== */
 .simple__page .layout {
   max-width: 43.75rem;
   margin: 0 auto;
-}
-
-/*  ==========================================================================
-    Page design
-    ========================================================================== */
-.design__page {
-  padding: 4rem 1rem;
-}
-
-.design__article {
-  text-align: center;
-}
-
-.design__article .title__link {
-  font-size: 5.75rem;
-  font-weight: 700;
-  line-height: 1;
-  padding: 0;
-  display: inline-block;
-  margin: 1rem 0;
-  text-decoration: none;
 }
 
 /*  ==========================================================================
@@ -374,7 +371,7 @@ small {
 }
 
 .articleCard__hole circle {
-  fill: #12656b;
+  fill: #1D25F1;
 }
 
 #mc_embed_signup .form-items {
@@ -420,7 +417,7 @@ small {
           flex: 0 0 auto;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  background-color: #12656b;
+  background-color: #1D25F1;
   padding: .5em 1em;
   color: #fff;
   font-size: 1em;
@@ -485,17 +482,51 @@ small {
 .display_archive .campaign:first-child {
   padding: 1em;
   margin: 0 0 2em 0;
-  border-left: 4px solid rgba(18, 101, 107, 0.25);
+  border-left: 4px solid rgba(29, 37, 241, 0.25);
 }
 
 .article {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
 }
 
-.article.design {
+.article.design h2 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  display: inline-block;
+  margin-left: -1rem;
+}
+
+.article.design .layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: .25rem;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 320px));
+  margin-bottom: 3rem;
+}
+
+.article.design .layout .itemImage {
+  background-color: #000000;
+  padding: 1rem;
+}
+
+.article.design .layout .itemImage.highlight {
+  grid-column: span 2;
+}
+
+.article.design .layout .itemImage img {
+  background-color: #000000;
+  -webkit-transition: -webkit-transform .4s ease;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+}
+
+.article.design .layout .itemImage img:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  border: 4px solid #000000;
 }
 
 .article__header {
@@ -504,8 +535,14 @@ small {
   padding: 4rem .5rem;
 }
 
-.article__header .articleHeader__heading {
-  font-weight: 600;
+.article__header .heading_tagline {
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 1000px) {
+  .article__header .heading_tagline {
+    font-size: 1.0625rem;
+  }
 }
 
 .article__image {

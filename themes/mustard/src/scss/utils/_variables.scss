@@ -2,14 +2,20 @@
    Variables
    ========================================================================== */
 
-  $font--primary:          "Value Serif", monospace;
+  $font--primary:          "Neue Frutiger Variable W05", Helvetica, Arial, sans-serif;
 
   $color--dark:            #000000; //171e26
   $color--light:           #fff;
-  $color--primary:         #12656b;
+  $color--primary:         #1D25F1;
   $color--secondary:       #8f91a2;
 
   $break-small:            em(468);
   $break-medium:           em(720);
   $break-large:            em(1280);
   $break-xlarge:           em(1600);
+  
+  $breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+  ); 

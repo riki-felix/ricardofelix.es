@@ -5,13 +5,23 @@
 		 display: grid;
 		 grid-template-columns:1fr;
 		 padding: 4rem 1rem;
+		 text-align: center;
 		 .cell {
 			 p {
-				 font-size: rem(15);
+				 font-size: rem(13);
 			 }
 			 a {
-				 font-style: italic;
-				 font-weight: 400;
+				 background-color: #fff;
+				 border-radius: rem(5);
+				 padding: 1px .25rem 4px .25rem;
+				 line-height: 1.2;
+				 font-size: rem(13);
+				 display: inline-block;
+				 margin: 0 .15rem;
+				 &:hover {
+					 background-color: $color--primary;
+					 color: $color--light;
+				 }
 			 }
 		 }
 	 }
