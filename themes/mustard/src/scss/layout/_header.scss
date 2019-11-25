@@ -1,7 +1,23 @@
 .globalNavBar {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 2rem;
+  padding: 1rem 0;
+  @include respond-to('large') {
+    grid-template-columns: auto 1fr;
+  }
+  &:hover {
+    background: linear-gradient(180deg, $color--primary, #000000);
+    background-size: 350% 350%;
+    background-repeat: no-repeat;
+    animation: gradientAnimation 10s ease infinite;
+
+    @keyframes gradientAnimation {
+        0%{background-position:0% 100%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+  }
 }
 .brandLogo__link {
   padding:  0 1rem;
@@ -10,23 +26,6 @@
   text-align: center;
   position: relative;
   opacity: 1;
-  &:hover {
-    background-color: $color--primary;
-    .brandLogo {
-      fill: $color--dark;
-    }
-    ~ .globalNav {
-      background: linear-gradient(90deg, $color--primary, #000000);
-      background-size: 400% 400%;
-      animation: gradientAnimation 10s ease infinite;
-
-      @keyframes gradientAnimation {
-         0%{background-position:0% 100%}
-         50%{background-position:100% 50%}
-         100%{background-position:0% 50%}
-      }
-    }
-  }
   .brandLogo {
     fill: $color--light;
     width: rem(34);

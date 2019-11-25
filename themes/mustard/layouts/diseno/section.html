@@ -1,8 +1,8 @@
 {{ define "main" }}
   {{ .Content }}
   <section class="layout design__page">
-    {{ range .Paginator.Pages }}
-    <article class="design__article">
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <article class="designPage__article">
       <a class="title__link" href="{{.Permalink}}">{{.Title}}</a>
     </article>
     {{ end }}

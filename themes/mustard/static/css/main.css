@@ -52,7 +52,7 @@ a {
 }
 
 a:hover, a:visited, a:active {
-  color: #1D25F1;
+  color: #ff6000;
 }
 
 /*  ==========================================================================
@@ -69,6 +69,7 @@ h1,
   margin: .5rem 0 1rem 0;
   padding: 0;
   text-transform: uppercase;
+  font-variation-settings: "wght" 900;
 }
 
 @media (min-width: 1000px) {
@@ -81,6 +82,7 @@ h1,
 h2,
 .h2 {
   font-size: 0.8125rem;
+  font-variation-settings: "wght" 100;
   line-height: 1.2;
   margin: 0.25rem 0 1rem 0;
   padding: 0;
@@ -135,31 +137,22 @@ small {
 
 .globalNavBar {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 2rem;
+  padding: 1rem 0;
 }
 
-.brandLogo__link {
-  padding: 0 1rem;
-  margin: 0;
-  display: block;
-  text-align: center;
-  position: relative;
-  opacity: 1;
+@media (min-width: 1000px) {
+  .globalNavBar {
+    grid-template-columns: auto 1fr;
+  }
 }
 
-.brandLogo__link:hover {
-  background-color: #1D25F1;
-}
-
-.brandLogo__link:hover .brandLogo {
-  fill: #000000;
-}
-
-.brandLogo__link:hover ~ .globalNav {
-  background: -webkit-gradient(linear, left top, right top, from(#1D25F1), to(#000000));
-  background: linear-gradient(90deg, #1D25F1, #000000);
-  background-size: 400% 400%;
+.globalNavBar:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff6000), to(#000000));
+  background: linear-gradient(180deg, #ff6000, #000000);
+  background-size: 350% 350%;
+  background-repeat: no-repeat;
   -webkit-animation: gradientAnimation 10s ease infinite;
           animation: gradientAnimation 10s ease infinite;
 }
@@ -186,6 +179,15 @@ small {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.brandLogo__link {
+  padding: 0 1rem;
+  margin: 0;
+  display: block;
+  text-align: center;
+  position: relative;
+  opacity: 1;
 }
 
 .brandLogo__link .brandLogo {
@@ -218,7 +220,7 @@ small {
 }
 
 .pageFooter .cell a:hover {
-  background-color: #1D25F1;
+  background-color: #ff6000;
   color: #fff;
 }
 
@@ -247,27 +249,26 @@ small {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
 }
 
 .globalNav__menu {
+  width: 100%;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
   padding: 0;
   margin: 0;
+  gap: 1rem;
   position: relative;
-  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .globalNav__menu {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: auto;
+  }
 }
 
 .globalNav__menu li {
@@ -289,7 +290,7 @@ small {
 }
 
 .globalNav__menu a:focus, .globalNav__menu:visited:focus {
-  outline: 1px dotted #1D25F1;
+  outline: 1px dotted #ff6000;
 }
 
 .globalNav__menu [aria-label]:after {
@@ -297,9 +298,9 @@ small {
   display: none;
   font-size: 0.9375rem;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 5000;
+  bottom: -1rem;
+  left: 0;
+  z-index: 1;
   overflow: visible;
   padding: 0 1rem;
   pointer-events: none;
@@ -325,6 +326,24 @@ small {
 .simple__page .layout {
   max-width: 43.75rem;
   margin: 0 auto;
+}
+
+/*  ==========================================================================
+    Page design
+    ========================================================================== */
+.design__page {
+  padding: 1rem;
+}
+
+.designPage__article .title__link {
+  font-size: 5.75rem;
+  text-decoration: none;
+  font-variation-settings: "wght" 900;
+  color: #fff;
+}
+
+.designPage__article .title__link:hover {
+  color: #ff6000;
 }
 
 /*  ==========================================================================
@@ -371,7 +390,7 @@ small {
 }
 
 .articleCard__hole circle {
-  fill: #1D25F1;
+  fill: #ff6000;
 }
 
 #mc_embed_signup .form-items {
@@ -417,7 +436,7 @@ small {
           flex: 0 0 auto;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  background-color: #1D25F1;
+  background-color: #ff6000;
   padding: .5em 1em;
   color: #fff;
   font-size: 1em;
@@ -482,7 +501,7 @@ small {
 .display_archive .campaign:first-child {
   padding: 1em;
   margin: 0 0 2em 0;
-  border-left: 4px solid rgba(29, 37, 241, 0.25);
+  border-left: 4px solid rgba(255, 96, 0, 0.25);
 }
 
 .article {

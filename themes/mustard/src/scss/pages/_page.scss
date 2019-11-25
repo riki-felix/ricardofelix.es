@@ -15,6 +15,23 @@
         max-width: rem(700);
         margin: 0 auto;
       }
+    }  
+/*  ==========================================================================
+    Page design
+    ========================================================================== */
+    .design__page {
+      padding: 1rem;
+    }
+    .designPage__article {
+      .title__link {
+        font-size: rem(92);
+        text-decoration: none;
+        font-variation-settings: "wght" 900;
+        color: $color--light;
+        &:hover {
+          color: $color--primary;
+        }
+      }
     }    
 /*  ==========================================================================
     Page notes

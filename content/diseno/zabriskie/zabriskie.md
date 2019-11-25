@@ -1,6 +1,6 @@
 ---
 title: "Zabriskie"
-date: 2019-01-5T19:08:37+02:00
+publishdate: 2019-2-1T19:08:37+02:00
 draft: false
 description: "Libros y libres"
 ---
