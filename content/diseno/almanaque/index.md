@@ -7,7 +7,12 @@ description: "Proyectos e ideas del pasado"
 
 ## 2019
 <div class="layout">
-    <div class="itemImage">{{< img src="images/booklet_trenat_rfs.jpg" alt="Foto del booklet abierto de Trenat " >}}</div>
+    <div class="itemImage">
+        {{< img src="images/booklet_trenat_rfs.jpg" alt="Foto del booklet abierto de Trenat " >}}
+        {{< figure class="grid two" figcaption="Inevitable" >}}
+            {{< img src="images/booklet_trenat_rfs.jpg" alt="Foto del booklet abierto de Trenat" >}}
+        {{< /figure >}}
+    </div>
     <div class="itemImage highlight">{{< img src="images/booklets_trenat_rfs.jpg" alt="Foto del booklet de trenat abierto" >}}</div>
 </div>
 

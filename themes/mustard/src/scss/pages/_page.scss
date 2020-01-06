@@ -23,54 +23,84 @@
       padding: 1rem;
     }
     .designPage__article {
+      text-align: center;
       .title__link {
-        font-size: rem(92);
+        font-size: rem(30);
         text-decoration: none;
         font-variation-settings: "wght" 900;
         color: $color--light;
         &:hover {
           color: $color--primary;
         }
+        &:focus {
+          outline: 1px dotted $color--primary;
+        }
+      }
+      [aria-label]:after {
+        content: attr(aria-label);
+        color: rgba($color--primary,.25);
+        display: none;
+        font-size: rem(200);
+        font-variation-settings: "wght" 900;
+        position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50% , -50%) rotate(0deg);
+          z-index: -1;
+        line-height: 1;
+        overflow: hidden;
+        padding: .5rem 1rem;
+        pointer-events: none;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      [aria-label]:hover:after, [aria-label]:focus:after {
+        display: inline-block;
       }
     }    
 /*  ==========================================================================
     Page notes
     ========================================================================== */
     .notes__article {
-      // background-color: rgba($color--light,.1);
       padding: 1rem 2rem;
       position: relative;
-      grid-column: 2 / 3;
-      &:nth-child(1) {
-        grid-column: 1 / 2;
+      grid-column: 1 / 3;
+      display: grid;
+      grid-template-columns: rem(24) 2fr  auto;
+      align-items: center;
+      gap: 1rem;
+      &.recent__note {
+        grid-column: 1 / 3;
         text-align: center;
-        grid-row: 1 / span 3;
-        justify-self: center;
-        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
       }
     }
-    .header__legend {
+    .article__number {
       font-size: rem(13);
       text-transform: uppercase;
-      margin: 0 0 .5rem 0;
-      padding: 0;
       line-height: 1;
-      time {
-        font-style: italic;
-        text-transform: none;
-      }
+      margin: 0;
+      padding: 0;
+      transform: rotate(270deg);
+
     }
-    .note__title {
-      font-size: rem(36);
+    .article__time {
+      text-transform: none;
+      color: $color--secondary;
+      font-size: rem(13);
+    }
+    .article__title {
+      font-size: rem(20);
       display: block;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
       text-decoration: none;
     }
-    .articleCard__hole {
-      position: absolute;
-        right: -.75rem;
-        top: -.75rem;
-      circle {
-        fill: $color--primary;
-      }
+    .article__link {
+      color: $color--light;
+      text-decoration: none;
+      margin: 0;
     }

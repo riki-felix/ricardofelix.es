@@ -4,14 +4,12 @@ date: 2019-01-5T19:08:37+02:00
 draft: false
 type: "informacion"
 ---
-Desde mis inicios profesionales he trabajado como diseñador ayudando a personas y negocios en el desarrollo de sus proyectos. Siempre he estado ligado con las tecnologías y estrategias digitales, desarrollando productos y transformando experiencias.
-
-Tras más de 12 años en Barcelona trabajando con profesionales, agencias y estudios de diferentes disciplinas, en 2016 comencé con mi propio estudio, rfs, orientado al diseño y desarrollo de experiencias digitales. Proyectos basados en la colaboración y el aprendizaje continuo entre estudio, cliente y personas usuarias.
-Amante de la música y la comida, fuentes constantes de inspiración, me muevo entre Donostia y Barcelona, combinando el diseño, la docencia y la formación, tanto propia como de mis colaboradores.
-
-Escríbeme para hablar de trabajo, también para saludar o hacer alguna consulta. [Mail](mailto:studio@ricardofelix.es)
-Vida laboral
-
-<div class="someclass" id="someid">
-    **Insert markdown here
-</div>
+- 2018
+- 2015
+- 2013
+- 2011
+- 2010
+- 2005
+- 2002
+- 1999
+- 1980

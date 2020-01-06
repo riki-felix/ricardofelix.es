@@ -1,12 +1,11 @@
 .layout--grid {
   .layout {
     display: grid;
+    &.design__page {}
     &.notes {
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: auto;
-      grid-auto-flow: dense;
-      gap: rem(16);
-      margin: 2rem 0;
+      grid-template-columns: 1fr;
+      margin: 2rem auto;
+      max-width: rem(900);
     }
   }
 }

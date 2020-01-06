@@ -3,9 +3,15 @@
     <div class="layout notes">
         {{ range first 1 .Paginator.Pages }}
         <article class="notes__article recent__note">
-          <a href="{{.Permalink}}" class="note__title" rel="noopener">{{.Title}}</a>
-          <p class="header__legend">
-            Nota {{.Params.postNumber}}
+          <p class="article__number">
+            N{{.Params.postNumber}}
+          </p>
+          <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
+            <h2 class="article__title">
+              {{.Title}}
+            </h2>
+          </a>
+          <p class="article__legend">
             <time datetime="{{.PublishDate.Format "02 Jan 2006 15:04"}}">
               {{dateFormat "02 Jan 2006" .PublishDate.Local}}
             </time>
@@ -18,13 +24,17 @@
         {{ end }}
         {{ range first 5 (after 1 .Paginator.Pages) }}
         <article class="notes__article">
-          <a href="{{.Permalink}}" class="note__title" rel="noopener">{{.Title}}</a>
-          <p class="header__legend">
-            Nota {{.Params.postNumber}}
-            <time datetime="{{.PublishDate.Format "02 Jan 2006 15:04"}}">
-              {{dateFormat "02 Jan 2006" .PublishDate.Local}}
-            </time>
-          </p>
+         <p class="article__number">
+          N{{.Params.postNumber}}
+         </p>
+         <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
+            <h2 class="article__title">
+              {{.Title}}
+            </h2>
+          </a>
+          <time class="article__time" datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+            {{ .PublishDate.Day }} {{ index $.Site.Data.meses (printf "%d" .PublishDate.Month) }} {{ .PublishDate.Year }}
+          </time>
         </article>
         {{ end }}
     </div>

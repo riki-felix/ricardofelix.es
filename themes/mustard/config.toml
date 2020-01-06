@@ -1,4 +1,5 @@
 googleAnalytics = "UA-15641392-3"
+languageCode = "es-ES"
 
 [menu]
   [[menu.main]]
@@ -21,10 +22,3 @@ googleAnalytics = "UA-15641392-3"
     pre = "Notas, textos y cosas que se me ocurren"
   	url = "/notas/"
   	weight = 3
-
-  [[menu.main]]
-    identifier = "entretiempo"
-    name = "Entretiempo"
-    pre = "Mi newsletter personal, cosas variadas"
-  	url = "/entretiempo/"
-  	weight = 4

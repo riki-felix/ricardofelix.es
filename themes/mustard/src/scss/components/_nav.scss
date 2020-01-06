@@ -2,37 +2,28 @@
     Main menu
     ========================================================================== */
 		.globalNav {
-			display: flex;
-			flex: row wrap;
-			align-items: center;
 			&__menu {
 				width: 100%;
 				list-style: none;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: auto;
-				justify-items: center;
+				display: flex;
+				justify-content: center;
 				padding: 0;
 				margin: 0;
-				gap: 1rem;
 				position: relative;
-				@include respond-to('large') {
-					grid-template-columns: 1fr 1fr 1fr 1fr;
-					width: auto;
-				}
 				li {
-					margin: 0 1rem;
+					margin: 0;
 				}
 				a,
 				&:visited {
-					font-size: rem(15);
+					font-size: rem(17);
 					color: $color--light;
 					display: block;
 					line-height: 1;
-					padding: 0 .5rem;
+					padding: .5rem 1rem;
 					text-decoration: none;
 					transition: transform .2s ease;
 					vertical-align: bottom;
+					text-align: center;
 					&:hover {
 					}
 					&:focus {
@@ -41,26 +32,27 @@
 					&.active {
 					}
 				}
-				[aria-label] {}
-
 				[aria-label]:after {
 					content: attr(aria-label);
+					color: $color--secondary;
 					display: none;
-					font-size: rem(15);
+					font-size: rem(13);
 					position: absolute;
-						bottom: -1rem;
-						left: 0;
+						bottom: -1.25rem;
+						left: 50%;
+						transform: translateX(-50%);
 						z-index: 1;
 					overflow: visible;
-					padding: 0 1rem;
+					padding: .5rem 1rem;
 					pointer-events: none;
 					text-decoration: none;
 					text-indent: 0;
 					white-space: nowrap;
+					text-align: center;
 				}
 
 				[aria-label]:hover:after, [aria-label]:focus:after {
-					display: block;
+					display: inline-block;
 				}
 			}
 		}
