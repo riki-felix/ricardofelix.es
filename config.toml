@@ -10,3 +10,7 @@ googleAnalytics = "UA-15641392-3"
 
 [permalinks]
   notas = "/:section/:slug"
+  diseno = "/:section/:slug"
+
+[markup.goldmark.renderer]
+  unsafe = true

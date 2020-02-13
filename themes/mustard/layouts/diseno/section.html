@@ -2,7 +2,7 @@
   {{ .Content }}
   <section class="layout design__page">
     {{ range .Pages.ByPublishDate.Reverse }}
-    <article class="designPage__article">
+    <article class="designPage__article {{ .Title }}">
       <a class="title__link" href="{{.Permalink}}" aria-label="{{ .Description }}">{{.Title}}</a>
     </article>
     {{ end }}
