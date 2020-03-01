@@ -10,8 +10,10 @@
       box-sizing: border-box;
     }
     body {
-      background: $color--dark;
-      color: $color--light;
+      // background: $color--dark;
+      // color: $color--light;
+      background: $color--light;
+      color: $color--dark;
       font-family: $font--primary;
       font-weight: 300;
       min-height: 100%;
@@ -41,7 +43,8 @@
     }
 
     a {
-      color: $color--light;
+      // color: $color--light;
+      color: $color--dark;
       &:hover,
       &:active {
         color: $color--primary;

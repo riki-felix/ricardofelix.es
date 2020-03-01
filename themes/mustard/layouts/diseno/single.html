@@ -1,11 +1,13 @@
 {{ define "main"}}
-	<section class="article design">
+	<article class="designSingle__article">
 		<header class="article__header">
 			<h1 class="articleHeader__heading">{{ .Title }}</h1>
 			<p class="heading_tagline">
 				{{ .Description }}
 			</p>
 		</header>
-		{{ .Content }}
-	</section>
+		<section class="layout">
+			{{ .Content }}
+		</section>
+	</article>
 {{ end }}

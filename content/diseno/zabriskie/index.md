@@ -3,7 +3,10 @@ title: "Zabriskie"
 publishdate: 2019-2-1T19:08:37+02:00
 draft: false
 description: "Libros y libres"
+images: [/images/bottle_xanum_rfs.jpg]
 ---
+![image alt text](bottle_xanum_rfs.jpg)
+{{<img src="images/bottle_xanum_rfs.jpg" alt="" >}}
 Sabéis aquello de "tengo unos amigos que van a abrir un negocio, pero es muy pequeño..." Todos sabemos que ese "pero" implica siempre varias condiciones:
 * No hay presupuesto
 * Tienen prisa

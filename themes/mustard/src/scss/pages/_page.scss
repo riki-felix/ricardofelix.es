@@ -19,47 +19,69 @@
 /*  ==========================================================================
     Page design
     ========================================================================== */
-    .design__page {
-      padding: 1rem;
+    .design__section {
+      padding: 0 1rem;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
-    .designPage__article {
+    .designSection__item {
       text-align: center;
+      &:last-child {
+        .title__link {
+          font-variation-settings: "wght" 300;
+          margin-top: 4rem;
+        }
+      }
       .title__link {
+        color: $color--dark;
+        // color: $color--light;
+        display: inline-block;
         font-size: rem(30);
         text-decoration: none;
         font-variation-settings: "wght" 900;
-        color: $color--light;
+        line-height: 1;
+        padding: .15rem 1rem .5rem 1rem;
         &:hover {
-          color: $color--primary;
+          color: $color--dark;
         }
         &:focus {
           outline: 1px dotted $color--primary;
         }
       }
       [aria-label]:after {
+        background-color: $color--primary;
         content: attr(aria-label);
-        color: rgba($color--primary,.25);
-        display: none;
-        font-size: rem(200);
+        color: $color--light;
+        font-size: 15vw;
         font-variation-settings: "wght" 900;
-        position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50% , -50%) rotate(0deg);
-          z-index: -1;
-        line-height: 1;
-        overflow: hidden;
-        padding: .5rem 1rem;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        letter-spacing: -.25rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        line-height: .9;
+        padding: .5rem;
         pointer-events: none;
         text-align: center;
         text-transform: uppercase;
-        width: 100%;
+        width: 100vw;
+        visibility: hidden;
+        z-index: -1;
       }
-
+      
       [aria-label]:hover:after, [aria-label]:focus:after {
-        display: inline-block;
+        visibility: visible;
+        opacity: 1;
       }
-    }    
+    }
+
 /*  ==========================================================================
     Page notes
     ========================================================================== */
@@ -100,7 +122,6 @@
       text-decoration: none;
     }
     .article__link {
-      color: $color--light;
       text-decoration: none;
       margin: 0;
     }

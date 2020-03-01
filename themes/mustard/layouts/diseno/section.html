@@ -1,10 +1,10 @@
 {{ define "main" }}
   {{ .Content }}
-  <section class="layout design__page">
+  <section class="design__section page{{ .Type }}">
     {{ range .Pages.ByPublishDate.Reverse }}
-    <article class="designPage__article {{ .Title }}">
+    <div class="designSection__item">
       <a class="title__link" href="{{.Permalink}}" aria-label="{{ .Description }}">{{.Title}}</a>
-    </article>
+    </div>
     {{ end }}
   </section>
 {{ end }}

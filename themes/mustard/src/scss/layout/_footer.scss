@@ -11,7 +11,6 @@
 				 font-size: rem(13);
 			 }
 			 a {
-				 background-color: #fff;
 				 border-radius: rem(5);
 				 padding: 1px .25rem 4px .25rem;
 				 line-height: 1.2;
@@ -19,7 +18,7 @@
 				 display: inline-block;
 				 margin: 0 .15rem;
 				 &:hover {
-					 background-color: $color--primary;
+					 background-color: $color--secondary;
 					 color: $color--light;
 				 }
 			 }

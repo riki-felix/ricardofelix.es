@@ -46,7 +46,7 @@
 
   	{{ template "_internal/google_analytics.html" . }}
   </head>
-  <body class="pageLayout">
+  <body class="pageLayout content__{{ .Type }}">
   {{ block "header.html" . }}
   	<header class="globalNavBar">
       <a href="{{ .Site.BaseURL }}" aria-label="Enlaza con la página principal" class="brandLogo__link">

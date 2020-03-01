@@ -1,6 +1,5 @@
 googleAnalytics = "UA-15641392-3"
 languageCode = "es-ES"
-
 [menu]
   [[menu.main]]
     identifier = "diseno"
@@ -22,3 +21,4 @@ languageCode = "es-ES"
     pre = "Notas, textos y cosas que se me ocurren"
   	url = "/notas/"
   	weight = 3
+

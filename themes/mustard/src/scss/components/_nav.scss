@@ -16,7 +16,8 @@
 				a,
 				&:visited {
 					font-size: rem(17);
-					color: $color--light;
+					// color: $color--light;
+					color: $color--dark;
 					display: block;
 					line-height: 1;
 					padding: .5rem 1rem;
@@ -34,9 +35,10 @@
 				}
 				[aria-label]:after {
 					content: attr(aria-label);
-					color: $color--secondary;
 					display: none;
 					font-size: rem(13);
+					font-variation-settings: "wght" 300;
+
 					position: absolute;
 						bottom: -1.25rem;
 						left: 50%;

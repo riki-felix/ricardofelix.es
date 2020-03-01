@@ -20,7 +20,7 @@
 		h2,
 		.h2 {
 			font-size: rem(15);
-			font-variation-settings: "wght" 100;
+			font-variation-settings: "wght" 500;
 			line-height: 1.2;
 			margin: 0.25rem 0 1rem 0;
 			padding: 0;
@@ -32,7 +32,7 @@
 		h3,
 		.h3 {
 			font-size: rem(18);
-			font-weight: 400;
+			font-variation-settings: "wght" 700;
 			line-height: 1.4;
 			margin: 0;
 			padding: 0 0 1rem 0;
@@ -43,9 +43,8 @@
 		}
 
 		p {
-			font-size: rem(15);
-			font-weight: 400;
-			font-variation-settings: "wght" 300;
+			font-size: rem(20);
+			font-variation-settings: "wght" 400;
 			line-height: 1.4;
 			margin: 0 0 1.4rem 0;
 			padding: 0;
@@ -57,7 +56,9 @@
 		address { margin: 0 0 1.5rem; }
 
 		b,
-		strong { font-weight: 700; }
+		strong {
+			font-variation-settings: "wght" 700;
+		}
 
 		small {
 			font-size: rem(12);
