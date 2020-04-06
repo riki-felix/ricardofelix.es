@@ -3,8 +3,9 @@
   <section class="design__section page{{ .Type }}">
     {{ range .Pages.ByPublishDate.Reverse }}
     <div class="designSection__item">
-      <a class="title__link" href="{{.Permalink}}" aria-label="{{ .Description }}">{{.Title}}</a>
+      <a class="title__link" href="{{.Permalink}}" aria-label="{{ .Params.label }}">{{.Title}}</a>
     </div>
     {{ end }}
   </section>
 {{ end }}
+  

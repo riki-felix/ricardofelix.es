@@ -2,31 +2,30 @@
 title: "Zabriskie"
 publishdate: 2019-2-1T19:08:37+02:00
 draft: false
-description: "Libros y libres"
-images: [/images/bottle_xanum_rfs.jpg]
+description: "Zabriskie es una tienda, de barrio, en Berlín. Es pequeña, acogedora y con una oferta basada en obras relacionadas con la naturaleza, la música y la contracultura, entre otros."
+label: "Libros y libres"
+images: [images/lore-eta-jean.jpg]
+slug: "zabriskie"
 ---
-![image alt text](bottle_xanum_rfs.jpg)
-{{<img src="images/bottle_xanum_rfs.jpg" alt="" >}}
-Sabéis aquello de "tengo unos amigos que van a abrir un negocio, pero es muy pequeño..." Todos sabemos que ese "pero" implica siempre varias condiciones:
-* No hay presupuesto
-* Tienen prisa
-* Lo quieren todo porque no saben que quieren
 
-No digo que sea una constante... pero seguro que de algo os suena. Evidentemente, siendo así, siempre soy muy cauteloso, el problema vinó cuando ese "pero" en realidad fue "...pero es una librería."
+## El início
+Libros, valores y personas capaces de entender y cuidar la necesaria convivencia del diseño en todos los aspectos de su proyecto. Una vez llegué a esta conclusión, **involucrarme con Lore y Jean fue algo fácil**, sin discusión y que me suponía un reto muy interesante para poder crecer y construir algo conjuntamente.
 
-Ese ese momento que te tocan la fibra sensible, tipico proyecto idílico que nunca había llegado, y que, no podía rechazar.
+{{<img src="images/web-home-zabriskie_rfs.jpg" alt="" >}}
 
-Una de las partes más interesantes inicialmente era poder trabajar desde el principio y con total libertad en la adaptación de la marca, [Maria Walnut]() hizo un trabajo excelente para sentar los fundamenteos básicos y el sistema quenos permitió crear toda la identidad digital.
-
-Zabriskie es una tienda, de barrio, en Berlín. Es pequqeña, acogedora y con una oferta basada en la selección muy enfocada a temas como la naturaleza, la música y la contracultura entre otros.
+Una de las partes más interesantes inicialmente era poder trabajar desde el principio y con total libertad en la adaptación de la marca, [Maria Walnut](https://www.studiomariawalnut.com/) hizo un trabajo excelente para sentar los fundamenteos básicos y el sistema que nos permitió crear toda la identidad digital.
 
 EL proyecto ha ido escalando constantemente y de forma natural.
-Catálogo > Ecom > PoS
+Catálogo > Blog > Eventos > Ecom > PoS 
 
 Adaptamos el scope del proeycto de forma constantemente, en tiempos, inversión y siempre midiendo el impacto que tiene para ellos, ya que lo gestionan todo directamente desde la tienda, algo que nos condicionaba también a la hora de implementar funcionalidades.
 
-Hace apenas un mes hemos renovado un poco su aspecto, y hemos modernizado toda la estructura. Sigue siendo Wordpress + Woocommerce, pero con una plantilla un poco más supervitaminada y que nos ha permitido evaluar la forma en que mostrabamos la información y facilitabamos la venta.
+Hace unos meses renovamos un poco su aspecto, y hemos modernizado toda la estructura. Desde el primer commit allá por marzo del 2014, ha sido el segundo upgrade con más impacto en la marca y la plataforma. Sigue siendo Wordpress + Woocommerce, pero con una plantilla un poco más supervitaminada que nos ha permitido evaluar la forma en que mostrabamos la información y facilitabamos la venta. En esta última versión además hemos incorporado la sincronización con iZettle para las ventas en tienda, permitiendo tener el inventario mejor sincronizado y facilitar la experiencia de venta en la propia tienda.
 
-Otro de esos proyectos que quiero hablar y me gusta hablar, que no tienen un despliegue tecnológico abrumador pero que ofrece resultados y métricas muy interesantes.
+Es un proyecto con un componente de riesgo bajo a nivel tecnológico, aunque totalmente adaptado a la oferta y capacidad de inversión.
 
-Gora Jean y Lore! Porque mantienen la calidad de su negocio con muy pocas concesiones, porque saben sacar partido a sus limitaciones y porque siempre entienden las 
+Zabriskie trata de personas, de inquietudes y de compartir experiencias, ya sea en la propia tienda o en la web. Te da la opción de mantener la mis experincia de compra en ambos contextos, cuidar la interacción para resolver dudas o ayudarte a buscar una publicación sin que eso suponga prescindir de tecnologías que hagan todos esos momentos algo agradable y eficaz.
+
+Otro de esos proyectos de los me gusta hablar, que no tienen un despliegue tecnológico abrumador pero que ofrece resultados y métricas muy interesantes.
+
+Gora Lore eta Jean! Porque mantienen la calidad de su negocio con muy pocas concesiones, porque saben sacar partido a sus limitaciones y porque siempre colaboran en invertir un poco más de tiempo, esfuerzo o dinero en mantener su identidad personal y de marca en cada paso que damos.

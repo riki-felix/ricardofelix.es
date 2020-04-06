@@ -55,7 +55,7 @@
         background-color: $color--primary;
         content: attr(aria-label);
         color: $color--light;
-        font-size: 15vw;
+        font-size: calc(24px + (200 - 24) * ((100vw - 300px) / (1600 - 300)));
         font-variation-settings: "wght" 900;
         opacity: 0;
         display: flex;

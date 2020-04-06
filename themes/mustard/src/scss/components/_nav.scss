@@ -1,60 +1,60 @@
-/*  ==========================================================================
-    Main menu
-    ========================================================================== */
-		.globalNav {
-			&__menu {
-				width: 100%;
-				list-style: none;
-				display: flex;
-				justify-content: center;
-				padding: 0;
-				margin: 0;
-				position: relative;
-				li {
-					margin: 0;
-				}
-				a,
-				&:visited {
-					font-size: rem(17);
-					// color: $color--light;
-					color: $color--dark;
-					display: block;
-					line-height: 1;
-					padding: .5rem 1rem;
-					text-decoration: none;
-					transition: transform .2s ease;
-					vertical-align: bottom;
-					text-align: center;
-					&:hover {
-					}
-					&:focus {
-						outline: 1px dotted $color--primary;
-					}
-					&.active {
-					}
-				}
-				[aria-label]:after {
-					content: attr(aria-label);
-					display: none;
-					font-size: rem(13);
-					font-variation-settings: "wght" 300;
-
-					position: absolute;
-						bottom: -1.25rem;
-						left: 50%;
-						transform: translateX(-50%);
-						z-index: 1;
-					overflow: visible;
-					padding: .5rem 1rem;
-					pointer-events: none;
-					text-decoration: none;
-					text-indent: 0;
-					white-space: nowrap;
-					text-align: center;
-				}
-
-				[aria-label]:hover:after, [aria-label]:focus:after {
-					display: inline-block;
-				}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Main nav
+~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.globalNav {
+	&__menu {
+		width: 100%;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		li {
+			margin: 0;
+		}
+		a,
+		&:visited {
+			font-size: rem(17);
+			color: $color--neutro;
+			display: block;
+			line-height: 1;
+			padding: .5rem 1rem;
+			text-decoration: none;
+			transition: transform .2s ease;
+			vertical-align: bottom;
+			text-align: center;
+			&:hover {
+			}
+			&:focus {
+				outline: 1px dotted $color--primary;
+			}
+			&.active {
 			}
 		}
+		[aria-label]:after {
+			color: $color--neutro;
+			content: attr(aria-label);
+			display: none;
+			font-size: rem(13);
+			font-variation-settings: "wght" 300;
+
+			position: absolute;
+				bottom: -1.25rem;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 1;
+			overflow: visible;
+			padding: .5rem 1rem;
+			pointer-events: none;
+			text-decoration: none;
+			text-indent: 0;
+			white-space: nowrap;
+			text-align: center;
+		}
+
+		[aria-label]:hover:after, [aria-label]:focus:after {
+			display: inline-block;
+		}
+	}
+}

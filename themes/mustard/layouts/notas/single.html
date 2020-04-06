@@ -1,10 +1,23 @@
 {{ define "main"}}
+	{{ with .Site.GetPage "/notas" }}
+	<nav>
+		<ul>
+			{{ range .Pages.ByPublishDate.Reverse }}
+				<li>
+					<a href="{{.Permalink}}" class="articleNav__link" rel="noopener" aria-label="{{ .Title }}">
+						N{{.Params.postNumber}}<br>
+						{{ .Title }}
+					</a>	
+				</li>
+			{{ end }}
+		</ul>
+	</nav>
+	{{ end }}
 	<section class="layout--grid">
 		<div class="layout">
-			{{.ReadingTime}}
-			{{.WordCount}}
-			
 			<h1 class="h3">{{ .Title }}</h1>
+			{{.ReadingTime}}´
+			{{.WordCount}} palabras
 			<p>
 				{{ .Description }}
 			</p>

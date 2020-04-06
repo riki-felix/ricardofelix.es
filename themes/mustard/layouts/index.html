@@ -1,27 +1,7 @@
 {{ define "main"}}
 	<section class="home--grid">
-		<div class="layout">
-			<div class="heroText">
-			</div>
-			<div class="">
-				{{ with .Site.GetPage "/diseno" }}
-					{{ range first 1 .Pages.ByPublishDate.Reverse }}
-						{{.Title}}
-						<a href="{{ .RelPermalink }}" class="image featured">
-							{{ range first 1 .Params.images }}
-							  <img src="{{ . | relURL}}" alt="">
-							  a
-							{{ end }}
-						 </a>
-					{{ end }}
-				{{ end }}
-				{{ with .Site.GetPage "/notas" }}
-					{{ range first 1 .Pages.ByPublishDate.Reverse }}
-						{{.Title}}
-						{{.Render "Summary"}}
-					{{ end }}
-				{{ end }}
-			</div>
-		</div>
+		<h1>Hey!</h1>
+		<p>Soy Ricardo Félix, diseñdor y bla bla</p>
+		<p>EN los últimos años eh trabajado bla bla  </p>
 	</section>
 {{end}}

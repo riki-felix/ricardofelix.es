@@ -1,18 +1,8 @@
-/*!
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Theme Name: Mustard
-*/
+SCSS imports
+~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-@import "utils/mixins";
-@import "utils/variables";
-@import "utils/general";
-
-@import "base/typography";
-
-@import "layout/header";
-@import "layout/footer";
-@import "layout/main";
-@import "components/nav";
-
-@import "pages/page";
-@import "pages/newsletter";
-@import "pages/single";
+@import "abstracts/__abstracts-dir";
+@import "pages/__pages-dir";
+@import "components/__components-dir";

@@ -2,7 +2,8 @@
 title: "Almanaque"
 publishdate: 2019-1-1T19:08:37+02:00
 draft: false
-description: "El baul de los recuerdos"
+slug: "almanaque"
+label: "El baul de los recuerdos"
 ---
 
 ## 2019

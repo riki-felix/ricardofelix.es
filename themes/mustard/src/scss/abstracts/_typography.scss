@@ -1,0 +1,50 @@
+/* ~~~~~~~~~~~~~~~~~~~~~
+Theme typography
+~~~~~~~~~~~~~~~~~~~~~ */
+h1 {
+	font-size: rem(36);
+	font-variation-settings: "wght" 900;
+	line-height: 1.2;
+	letter-spacing: 1px;
+	margin: .5rem 0 1rem 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: rem(24);
+	font-variation-settings: "wght" 500;
+	line-height: 1.2;
+	margin: 0.25rem 0 1rem 0;
+	padding: 0;
+}
+
+h3 {
+	font-size: rem(18);
+	font-variation-settings: "wght" 700;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0 0 1rem 0;
+}
+
+p {
+	font-variation-settings: "wght" 300;
+	line-height: 1.4;
+	margin: 0 0 1.4rem 0;
+	padding: 0;
+	a {
+		color: $color--dark;
+		text-decoration: none;
+	}
+}
+address { margin: 0 0 1.5rem; }
+
+b,
+strong {
+	font-variation-settings: "wght" 700;
+}
+
+small {
+	font-size: rem(12);
+	line-height: 1.2;
+}

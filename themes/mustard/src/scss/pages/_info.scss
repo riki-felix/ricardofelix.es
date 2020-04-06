@@ -1,0 +1,20 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Information page
+~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.pageInfo {
+    &__grid {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+            gap: 1rem;
+            li {
+                background-color: red;
+                padding: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}
