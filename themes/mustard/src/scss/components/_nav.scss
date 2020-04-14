@@ -2,19 +2,22 @@
 Main nav
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .globalNav {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
 	&__menu {
 		list-style: none;
 		display: flex;
 		align-items: center;
-		padding: 1rem 0;
+		padding: 0 1rem;
 		margin: 0;
 		li {
-			margin: 0;
+			margin: 0 0.5rem 0 0 ;
 		}
 		a {
 			position: relative;
 			font-size: rem(18);
-			font-variation-settings: "wght" 500;
+			font-variation-settings: "wght" 400;
 			display: block;
 			padding: 0 0.5rem;
 		}
@@ -28,7 +31,7 @@ Main nav
 			border: 1px solid $color--dark;
 			box-shadow: 2px 2px 0 0 $color--dark;
 			position: absolute;
-				bottom: -2rem;
+				bottom: -2.25rem;
 				left: 1.5rem;
 				z-index: 1;
 			overflow: visible;

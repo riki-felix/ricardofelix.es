@@ -2,24 +2,18 @@
    Footer
    ========================================================================== */
 	 .siteFooter {
-		 display: grid;
-		 grid-template-columns:1fr;
-		 padding: 4rem 1rem;
-		 text-align: center;
-		 .cell {
-			 p {
-				 font-size: rem(13);
-			 }
-			 a {
-				 padding: 0 0 4px 0;
-				 line-height: 1.2;
-				 font-size: rem(13);
-				 display: inline-block;
-				 margin: 0 .15rem;
-				 &:hover {
-					 background-color: $color--dark;
-					 color: $color--light;
-				 }
-			 }
-		 }
+		 margin: 4rem auto;
+		 width: 100%;
+		 max-width: $pageWidth;
+		 padding: 0 1rem;
+		p {
+			font-size: rem(13);
+		}
+		a {
+			display: inline-block;
+			&:hover {
+				background-color: $color--dark;
+				color: $color--light;
+			}
+		}
 	 }

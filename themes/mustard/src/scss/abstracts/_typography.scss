@@ -2,7 +2,8 @@
 Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
-	font-size: rem(32);
+	font-size: calc(28px + (32 - 28) * ((100vw - 300px) / (1600 - 300)));
+
 	font-variation-settings: "wght" 400;
 	line-height: 1.2;
 	margin: 0.2rem 0 1rem 0;

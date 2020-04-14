@@ -3,9 +3,8 @@ Design section
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .pageDiseno {
-  max-width: rem(1024);
+  max-width: $pageWidth;
   margin: 0 auto;
-  padding: 0 1rem;
 
   display: flex;
   flex-flow: column wrap;

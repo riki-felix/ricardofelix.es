@@ -8,7 +8,7 @@ Notes list
     display: grid;
     grid-template-columns: rem(24) 2fr auto;
     gap: 1rem;
-    align-items: center;
+    align-items: end;
     
     grid-column: 1 / 3;
     
@@ -21,6 +21,10 @@ Notes list
       gap: 0;
       & .article__title {
         font-size: rem(28);
+        margin-bottom: 0.5rem;
+      }
+      & .article__number {
+        margin: 0 0 0 -1rem;
       }
     }
   }
@@ -30,16 +34,17 @@ Notes list
       font-size: rem(13);
       text-transform: uppercase;
       line-height: 1;
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
     &__time {
-      font-size: rem(11);
+      font-size: rem(12);
     }
     &__title {
       font-size: rem(18);
       text-decoration: none;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0;
+      line-height: 1;
     }
     &__link {
       text-decoration: none;
@@ -56,7 +61,8 @@ Notes list
 Notes single
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .notesNav {
-    margin-bottom: 2rem;
+  margin: 0 auto;
+  max-width: $pageWidth;
     &__list {
         list-style: none;
         padding: 0 1rem;
@@ -94,9 +100,35 @@ Notes single
     }
 }
 .singleArticle {
-    max-width: rem(768);
-    margin: 0 auto;
+    max-width: rem(700);
+    padding: 0 1rem;
+    margin: 2rem auto;
     &__header {
 
     }
+    &__number {
+      margin-right: 1rem;
+    }
+    &__info {
+      font-size: rem(13);
+      display: flex;
+      flex-flow: row nowrap;
+
+    }
+    &__time {
+      margin-right: 1rem;
+    }
+    &__reading {
+      margin-right: 1rem;
+    }
+    &__wordcount {}
+    &__excerpt {
+      margin: 2rem 0 2rem -2rem ;
+      p {
+        font-variation-settings: "wght" 500;
+        font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
+      }
+    }
+    &__content {}
+
 }
