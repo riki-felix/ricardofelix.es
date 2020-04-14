@@ -24,7 +24,7 @@
 	.button {
 		flex: 0 0 auto;
 		align-self: flex-start;
-		background-color: $color--primary;
+		background-color: $color--dark;
 		padding: .5em 1em;
 		color: #fff;
 		font-size: 1em;
@@ -78,7 +78,7 @@
 				&:first-child {
 					padding: 1em;
 					margin: 0 0 2em 0;
-					border-left: 4px solid rgba($color--primary,.25);
+					border-left: 4px solid rgba($color--dark,.25);
 				}
 			}
 		}

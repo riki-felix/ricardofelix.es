@@ -14,10 +14,10 @@
       color: $color--dark;
       font-family: $font--primary;
       font-variation-settings: "wght" 300;
+      font-display: swap;
       min-height: 100%;
       margin: 0;
       padding: 0;
-      font-size: calc(13px + (20 - 13) * ((100vw - 300px) / (1600 - 300)));
       text-rendering: optimizeLegibility;
       // @media (prefers-color-scheme: dark) {
       //   background: $color--dark;
@@ -46,10 +46,13 @@
     }
 
     a {
-      // color: $color--light;
       color: $color--dark;
+      text-decoration: none;
+      &:visited {
+       color: $color--dark;
+      }
       &:hover,
       &:active {
-        color: $color--primary;
+        cursor:url(/images/circle.svg),auto;
       }
     }

@@ -2,40 +2,40 @@
   <section class="layout--grid">
     <div class="layout notes">
         {{ range first 1 .Paginator.Pages }}
-        <article class="notes__article recent__note">
-          <p class="article__number">
-            N{{.Params.postNumber}}
-          </p>
-          <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
-            <h2 class="article__title">
-              {{.Title}}
-            </h2>
-          </a>
-          <p class="article__legend">
-            <time datetime="{{.PublishDate.Format "02 Jan 2006 15:04"}}">
-              {{dateFormat "02 Jan 2006" .PublishDate.Local}}
+          <article class="notes__article recent__note">
+            <p class="article__number">
+              N{{.Params.postNumber}}
+            </p>
+            <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
+              <h2 class="article__title">
+                {{.Title}}
+              </h2>
+            </a>
+            <time class="article__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
+              {{ index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
             </time>
-          </p>
-          <p>
-            {{ .Description }}
-          </p>
-        </article>
+            <p class="article__legend">
+              {{ .Description }}
+            </p>
+          </article>
         {{ end }}
+        
         {{ range first 5 (after 1 .Paginator.Pages) }}
-        <article class="notes__article">
-         <p class="article__number">
-          N{{.Params.postNumber}}
-         </p>
-         <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
-            <h2 class="article__title">
-              {{.Title}}
-            </h2>
-          </a>
-          <time class="article__time" datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-            {{ .PublishDate.Day }} {{ index $.Site.Data.meses (printf "%d" .PublishDate.Month) }} {{ .PublishDate.Year }}
-          </time>
-        </article>
+          <article class="notes__article">
+            <p class="article__number">
+              N{{.Params.postNumber}}
+            </p>
+            <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
+              <h2 class="article__title">
+                {{.Title}}
+              </h2>
+            </a>
+            <time class="article__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
+              {{index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
+            </time>
+          </article>
         {{ end }}
+
     </div>
   </section>
 {{ end }}

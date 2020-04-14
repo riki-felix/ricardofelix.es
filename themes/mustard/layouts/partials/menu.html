@@ -4,7 +4,7 @@
         {{ $.Scratch.Set "active" (eq .Identifier $.Type) }}
     {{ $active := $.Scratch.Get "active" }}
       <li>
-        <a class="menu__item{{ if $active }} active{{end}}" href="{{ .URL }}" aria-label="{{ .Pre }}" >
+        <a class="globalNav__link{{ if $active }}--active{{end}}" href="{{ .URL }}" aria-label="{{ .Pre }}" >
           {{ .Name }}
         </a>
       </li>

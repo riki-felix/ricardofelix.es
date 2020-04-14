@@ -3,58 +3,65 @@ Main nav
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .globalNav {
 	&__menu {
-		width: 100%;
 		list-style: none;
 		display: flex;
-		justify-content: center;
-		padding: 0;
+		align-items: center;
+		padding: 1rem 0;
 		margin: 0;
-		position: relative;
 		li {
 			margin: 0;
 		}
-		a,
-		&:visited {
-			font-size: rem(17);
-			color: $color--neutro;
+		a {
+			position: relative;
+			font-size: rem(18);
+			font-variation-settings: "wght" 500;
 			display: block;
-			line-height: 1;
-			padding: .5rem 1rem;
-			text-decoration: none;
-			transition: transform .2s ease;
-			vertical-align: bottom;
-			text-align: center;
-			&:hover {
-			}
-			&:focus {
-				outline: 1px dotted $color--primary;
-			}
-			&.active {
-			}
+			padding: 0 0.5rem;
 		}
 		[aria-label]:after {
-			color: $color--neutro;
+			background-color: $color--light;
+			color: $color--dark;
 			content: attr(aria-label);
 			display: none;
-			font-size: rem(13);
-			font-variation-settings: "wght" 300;
-
+			font-size: rem(11);
+			font-variation-settings: "wght" 400;
+			border: 1px solid $color--dark;
+			box-shadow: 2px 2px 0 0 $color--dark;
 			position: absolute;
-				bottom: -1.25rem;
-				left: 50%;
-				transform: translateX(-50%);
+				bottom: -2rem;
+				left: 1.5rem;
 				z-index: 1;
 			overflow: visible;
-			padding: .5rem 1rem;
+			padding: 0.5rem 0.25rem;
 			pointer-events: none;
 			text-decoration: none;
 			text-indent: 0;
 			white-space: nowrap;
 			text-align: center;
 		}
-
 		[aria-label]:hover:after, [aria-label]:focus:after {
-			display: inline-block;
+			display: block;
+		}
+	}
+	&__link {
+		color: $color--dark;
+		font-size: rem(17);
+		display: block;
+		line-height: 1;
+		padding: .5rem 1rem;
+		text-decoration: none;
+		text-align: center;
+		&:hover {
+			text-decoration: none;
+			cursor:url(/images/circle.svg),auto;
+		}
+		&:focus {
+			outline: 1px dotted $color--dark;
+		}
+		&--active {
+			@extend .globalNav__link;
+			font-variation-settings: "wght" 800;
+
 		}
 	}
 }

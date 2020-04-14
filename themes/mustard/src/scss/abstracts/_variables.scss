@@ -1,17 +1,31 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Theme variables
+~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  $font--primary:      "Neue Frutiger Variable W05", Helvetica, Arial, sans-serif;
 
-  $font--primary:          "Neue Frutiger Variable W05", Helvetica, Arial, sans-serif;
-
-  $color--dark:       #000000; //171e26
+  $color--dark:       #000000;
   $color--light:      #fff;
-  $color--neutro:     #1a1a1a;
-  $color--primary:    rgb(228, 228, 228);
-  $color--secondary:  #002EA7;
     
   $breakpoints: (
    'medium':          (min-width: 800px),
    'large':           (min-width: 1000px),
    'huge':            (min-width: 1200px),
   );
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Theme typography scale
+
+H1:      32/400
+H2:      24/400
+H3:      18/400/Uppercase
+
+P:       20/300
+ST:      600
+
+XBOLD:   900
+XLIGHT:  100
+
+NAV:     20/500
+~~~~~~~~~~~~~~~~~~~~~~~~~ */
+

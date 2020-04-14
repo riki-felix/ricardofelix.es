@@ -2,20 +2,18 @@
 Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
-	font-size: rem(36);
-	font-variation-settings: "wght" 900;
+	font-size: rem(32);
+	font-variation-settings: "wght" 400;
 	line-height: 1.2;
-	letter-spacing: 1px;
-	margin: .5rem 0 1rem 0;
+	margin: 0.2rem 0 1rem 0;
 	padding: 0;
-	text-transform: uppercase;
 }
 
 h2 {
 	font-size: rem(24);
-	font-variation-settings: "wght" 500;
+	font-variation-settings: "wght" 400;
 	line-height: 1.2;
-	margin: 0.25rem 0 1rem 0;
+	margin: 0 0 1.4rem 0;
 	padding: 0;
 }
 
@@ -23,11 +21,13 @@ h3 {
 	font-size: rem(18);
 	font-variation-settings: "wght" 700;
 	line-height: 1.4;
-	margin: 0;
-	padding: 0 0 1rem 0;
+	margin: 0 0 1.4rem 0;
+	padding: 0;
+	text-transform: uppercase;
 }
 
 p {
+	font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
 	font-variation-settings: "wght" 300;
 	line-height: 1.4;
 	margin: 0 0 1.4rem 0;
@@ -41,10 +41,14 @@ address { margin: 0 0 1.5rem; }
 
 b,
 strong {
-	font-variation-settings: "wght" 700;
+	font-variation-settings: "wght" 400;
 }
 
 small {
 	font-size: rem(12);
 	line-height: 1.2;
+}
+
+em {
+	font-variation-settings: "wght" 300;
 }

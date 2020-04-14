@@ -2,7 +2,6 @@ baseURL = "https://www.ricardofelix.es/"
 languageCode = "es-ES"
 title = "Ricardo Félix"
 theme = "mustard"
-googleAnalytics = "UA-15641392-3"
 
 [params]
   subtitle = "Diseño de productos digitales."
@@ -14,3 +13,13 @@ googleAnalytics = "UA-15641392-3"
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.goldmark.parser]
+  attribute = true
+  autoHeadingID = true
+  autoHeadingIDType = "github"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5

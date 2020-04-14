@@ -1,11 +1,13 @@
 {{ define "main"}}
 	{{ with .Site.GetPage "/notas" }}
-	<nav>
-		<ul>
+	<nav class="notesNav">
+		<ul class="notesNav__list">
 			{{ range .Pages.ByPublishDate.Reverse }}
 				<li>
-					<a href="{{.Permalink}}" class="articleNav__link" rel="noopener" aria-label="{{ .Title }}">
-						N{{.Params.postNumber}}<br>
+					<a class="notesNav__link" href="{{.Permalink}}" rel="noopener" aria-label="{{ .Title }}">
+						<span class="post_id">
+							N{{.Params.postNumber}}
+						</span>
 						{{ .Title }}
 					</a>	
 				</li>
@@ -13,19 +15,17 @@
 		</ul>
 	</nav>
 	{{ end }}
-	<section class="layout--grid">
-		<div class="layout">
+	<article class="singleArticle">
+		<header class="singleArticle__header">
 			<h1 class="h3">{{ .Title }}</h1>
 			{{.ReadingTime}}´
 			{{.WordCount}} palabras
+		</header>
+		<section class="singleArticle__content">
 			<p>
 				{{ .Description }}
 			</p>
-		</div>
-	</section>
-	<section>
-		<div class="layout">
 			{{ .Content }}
-		</div>
-	</section>
+		</section>		
+	</article>
 {{ end }}

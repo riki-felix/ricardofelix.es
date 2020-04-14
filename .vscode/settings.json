@@ -1,3 +1,11 @@
 {
-    "editor.codeLens": false
+    "editor.codeLens": false,
+    "spellright.language": [
+        "es"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
 }

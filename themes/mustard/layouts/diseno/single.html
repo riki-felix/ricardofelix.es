@@ -14,12 +14,13 @@
 				{{ end }}
 			</div>
 			<div class="content__excerpt">
-				{{ .Description }}
+				<p>
+					{{ .Description }}
+				</p>
 			</div>
 		</section>
 		<section class="content__full {{ .Params.slug }}">
 			{{ .Content }}
-
 		</section>
 	</article>
 {{ end }}

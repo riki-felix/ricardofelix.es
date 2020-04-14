@@ -2,18 +2,69 @@
 Information page
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .pageInfo {
+    &__content {
+        max-width: rem(700);
+        margin: 0 auto;
+    }
     &__grid {
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        max-width: rem(1400);
+        margin: 4rem auto;
+        h2 {
+            color: $color--dark;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        ol {
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-            gap: 1rem;
+            gap: 4rem 3rem;
+            
+            list-style-type: none;
+            margin: 0;
+            padding: 0 2rem;
+
+            color: $color--dark;
+            font-size: rem(15);
+
             li {
-                background-color: red;
-                padding: 1rem;
-                text-align: center;
+                counter-increment: section;
+                padding: 0 0 0.5rem 0.5rem;
+
+                &:before {
+                    color: $color--dark;
+                    font-size: rem(13);
+                    content: counter(section,upper-alpha);
+                    display: block;
+                    font-synthesis: none;
+                    font-variation-settings: 'wght' 800, 'ital' 1;
+                    margin-left: -0.85rem;
+                    background-color: #fff;
+                    padding: 0.15rem 0;
+                }
+                &:nth-child(odd) {
+                    &:before {
+                    }
+                }
+                
+                ul {
+                    counter-reset: section;
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    flex-flow: column wrap;
+                    li {
+                        border: none;
+                        line-height: 1.4;
+                        padding: 0;
+                        margin: 0;
+                        &:before {
+                            border-bottom: none;
+                            content: "";
+                            margin: 0;
+                        }
+                    }
+                    
+                }
             }
         }
     }

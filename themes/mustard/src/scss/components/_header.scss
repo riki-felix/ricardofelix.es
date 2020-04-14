@@ -1,29 +1,16 @@
-.globalNavBar {
+.siteHeader {
+  margin: 0 auto 1rem auto;
   display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: 2rem;
-  padding: .5rem 0;
-  
-  &:hover {
-    // background: linear-gradient(180deg, $color--primary, #000000);
-    // background-size: 350% 350%;
-    // background-repeat: no-repeat;
-    // animation: gradientAnimation 10s ease infinite;
-
-    // @keyframes gradientAnimation {
-    //     0%{background-position:0% 100%}
-    //     50%{background-position:100% 50%}
-    //     100%{background-position:0% 50%}
-    // }
-  }
+  grid-template-columns: auto 1fr;
+  width: 100%;
+  max-width: rem(1024);
+  padding: 0 1rem;
 }
+
 .brandLogo__link {
   padding:  0 1rem;
   margin: 0;
-  display: block;
-  text-align: center;
-  position: relative;
-  opacity: 1;
+  display: inline-block;
   .brandLogo {
     // fill: $color--light;
     fill: $color--dark;
