@@ -16,22 +16,21 @@ Design section
         background-color: $color--dark;
         content: attr(aria-label);
         color: $color--light;
-        font-size: calc(24px + (64 - 24) * ((200vw - 300px) / (1600 - 300)));
+        font-size: calc(24px + (80 - 24) * ((200vw - 300px) / (1600 - 300)));
         font-variation-settings: "wght" 900;
         font-style: normal;
-        text-transform: uppercase;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
   
         height: 100%;
-        width: calc(50% -2rem);
+        width: calc(60% -2rem);
         
         position: fixed;
           top: 0;
           right: 0;
         
         letter-spacing: -0.25rem;
-        line-height: .9;
+        line-height: 1;
         padding: 0 1rem;
         pointer-events: none;
         visibility: hidden;
@@ -115,6 +114,9 @@ Design single
         &.almanaque {
           max-width: none;
           margin: 0 auto;
+          background-color: $color--light;
+          background-size: rem(9) rem(9);
+          background-image: radial-gradient(circle, $color--dark 0.5px, rgba(0, 0, 0, 0) 0.5px);
           h2 {
             transform: rotate(-90deg);
             transform-origin: center center;

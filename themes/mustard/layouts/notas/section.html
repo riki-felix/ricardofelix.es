@@ -2,40 +2,39 @@
   <section class="layout--grid">
     <div class="layout notes">
         {{ range first 1 .Paginator.Pages }}
-          <article class="notes__article recent__note">
-            <p class="article__number">
+          <article class="notesArticle recent__note">
+            <p class="notesArticle__number">
               N{{.Params.postNumber}}
             </p>
-            <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
-              <h2 class="article__title">
+            <a href="{{.Permalink}}" class="notesArticle__link" rel="noopener" aria-label="{{ .Title }}">
+              <h2 class="notesArticle__title">
                 {{.Title}}
               </h2>
             </a>
-            <time class="article__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
+            <time class="notesArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
               {{ index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
             </time>
-            <p class="article__legend">
+            <p class="notesArticle__legend">
               {{ .Description }}
             </p>
           </article>
         {{ end }}
         
         {{ range first 5 (after 1 .Paginator.Pages) }}
-          <article class="notes__article">
-            <p class="article__number">
+          <article class="notesArticle">
+            <p class="notesArticle__number">
               N{{.Params.postNumber}}
             </p>
-            <a href="{{.Permalink}}" class="article__link" rel="noopener" aria-label="{{ .Title }}">
-              <h2 class="article__title">
+            <a href="{{.Permalink}}" class="notesArticle__link" rel="noopener" aria-label="{{ .Title }}">
+              <h2 class="notesArticle__title">
                 {{.Title}}
               </h2>
             </a>
-            <time class="article__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
+            <time class="notesArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
               {{index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
             </time>
           </article>
         {{ end }}
-
     </div>
   </section>
 {{ end }}

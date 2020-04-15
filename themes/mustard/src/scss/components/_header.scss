@@ -1,8 +1,11 @@
 .siteHeader {
-  margin: 0 auto 1rem auto;
+  margin: 1rem auto 4rem auto;
   padding: 0 1rem;
+  
   display: grid;
   grid-template-columns: auto 1fr;
+  align-items: baseline;
+  
   width: 100%;
   max-width: $pageWidth;
   padding: 0 1rem;
@@ -13,6 +16,6 @@
   .brandLogo {
     // fill: $color--light;
     fill: $color--dark;
-    width: rem(34);
+    width: rem(48);
   }
 }

@@ -1,21 +1,4 @@
 {{ define "main"}}
-	{{ with .Site.GetPage "/notas" }}
-	<nav class="notesNav">
-		<ul class="notesNav__list">
-			☛
-			{{ range .Pages.ByPublishDate }}
-				<li>
-					<a class="notesNav__link" href="{{.Permalink}}" rel="noopener" aria-label="{{ .Title }}">
-						<span class="post_id">
-							N{{.Params.postNumber}}
-						</span>
-						{{ .Title }}
-					</a>	
-				</li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
 	<article class="singleArticle">
 		<header class="singleArticle__header">
 			<h1>{{ .Title }}</h1>
@@ -43,4 +26,23 @@
 			{{ .Content }}
 		</section>		
 	</article>
+	{{ with .Site.GetPage "/notas" }}
+	<nav class="notesNav">
+		<ul class="notesNav__list">
+			<h3>
+				☛ Notas
+			</h3>
+			{{ range .Pages.ByPublishDate.Reverse }}
+				<li>
+					<a class="notesNav__link" href="{{.Permalink}}" rel="noopener" aria-label="{{ .Title }}">
+						<span class="post_id">
+							N{{.Params.postNumber}}
+						</span>
+						{{ .Title }}
+					</a>	
+				</li>
+			{{ end }}
+		</ul>
+	</nav>
+	{{ end }}
 {{ end }}

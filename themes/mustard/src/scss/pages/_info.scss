@@ -3,17 +3,24 @@ Information page
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .pageInfo {
     &__content {
-        max-width: rem(700);
+        max-width: $pageWidth;
         margin: 0 auto;
+        padding: 0 1rem;
+        h1 {
+            max-width: 35ch;
+        }
+        p {
+            max-width: 65ch;
+        }
     }
     &__grid {
         margin: 4rem auto;
-
+        padding: 1rem 0;
         background-color: $color--light;
         background-size: rem(9) rem(9);
         background-image: radial-gradient(circle, $color--dark 0.5px, rgba(0, 0, 0, 0) 0.5px);
         h3 {
-            margin: 2rem 1rem;
+            margin: 1rem;
             display: inline-block;
         }
         ol {

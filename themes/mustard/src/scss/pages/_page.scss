@@ -1,0 +1,12 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Page general
+~~~~~~~~~~~~~~~~~~~~~~~~~ */    
+
+.singlePage {
+    max-width: $pageWidth;
+    margin: 0 auto;
+    padding: 0 1rem;
+    &__content {
+        max-width: rem(700);
+    }
+}

@@ -1,10 +1,10 @@
 ---
 title: "Zabriskie"
-publishdate: 2019-2-1T19:08:37+02:00
+publishdate: 2020-4-6T8:03:37+02:00
 draft: false
 description: "Zabriskie es una tienda, de barrio, en Berlín. Es pequeña, acogedora y con una oferta basada en obras relacionadas con la naturaleza, la música y la contracultura, entre otros."
 label: "Libros y libres"
-images: [images/lore-eta-jean.jpg]
+images: [images/lore-eta-jean_rfs.jpg]
 slug: "zabriskie"
 ---
 
@@ -29,3 +29,9 @@ Zabriskie trata de personas, de inquietudes y de compartir experiencias, ya sea 
 Otro de esos proyectos de los me gusta hablar, que no tienen un despliegue tecnológico abrumador pero que ofrece resultados y métricas muy interesantes.
 
 Gora Lore eta Jean! Porque mantienen la calidad de su negocio con muy pocas concesiones, porque saben sacar partido a sus limitaciones y porque siempre colaboran en invertir un poco más de tiempo, esfuerzo o dinero en mantener su identidad personal y de marca en cada paso que damos.
+
+<code>
+Backend: Wordpress + WooCommerce<br>
+Theme: Personalizado. SASS + Gulp<br>
+Integraciones: iZettle en punto de venta 
+</code>

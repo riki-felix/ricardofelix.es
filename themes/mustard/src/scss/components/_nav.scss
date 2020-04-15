@@ -14,13 +14,7 @@ Main nav
 		li {
 			margin: 0 0.5rem 0 0 ;
 		}
-		a {
-			position: relative;
-			font-size: rem(18);
-			font-variation-settings: "wght" 400;
-			display: block;
-			padding: 0 0.5rem;
-		}
+
 		[aria-label]:after {
 			background-color: $color--light;
 			color: $color--dark;
@@ -48,12 +42,14 @@ Main nav
 	}
 	&__link {
 		color: $color--dark;
-		font-size: rem(17);
-		display: block;
 		line-height: 1;
-		padding: .5rem 1rem;
 		text-decoration: none;
 		text-align: center;
+		position: relative;
+			font-size: rem(18);
+			font-variation-settings: "wght" 400;
+			display: block;
+			padding: 0 0.5rem;
 		&:hover {
 			text-decoration: none;
 			cursor:url(/images/circle.svg),auto;
@@ -64,7 +60,7 @@ Main nav
 		&--active {
 			@extend .globalNav__link;
 			font-variation-settings: "wght" 800;
-
+			transform: translateY(-10px);
 		}
 	}
 }

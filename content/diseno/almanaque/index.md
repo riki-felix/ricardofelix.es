@@ -31,39 +31,39 @@ label: "El baul de los recuerdos"
     <div class="itemImage">{{<img src="images/booklet_pau-esteve_rfs.jpg" alt="" >}}</div>
     <div class="itemImage">{{<img src="images/book_pau-esteve_rfs.jpg" alt="" >}}</div>
     <div class="itemImage">{{<img src="images/pagezoom_pau-esteve_rfs.jpg" alt="" >}}</div>
-    <div class="itemImage">{{<img src="images/page-detail_pauesteve_rfs.jpg" alt="" >}}</div>
+    <div class="itemImage highlight">{{<img src="images/page-detail_pauesteve_rfs.jpg" alt="" >}}</div>
     <div class="itemImage">{{<img src="images/three-bottles-reverte_rfs.jpg" alt="" >}}</div>
 </div>
 
 ## 2016
 <div class="item__layout">
-    <div class="itemImage">{{<img src="images/cards_debut_rfs.jpg" alt="" >}}</div>
     <div class="itemImage">{{<img src="images/cart_debut_rfs.jpg" alt="" >}}</div>
-    <div class="itemImage">{{<img src="images/pig_debut_rfs.png" alt="" >}}</div>
+    <div class="itemImage highlight">{{<img src="images/cards_debut_rfs.jpg" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/pork-debut_rfs.jpg" alt="" >}}</div>
 </div>
 
 ## 2015
 <div class="item__layout">
-    <div class="itemImage">{{<img src="images/debut_logo_ricardofelix.jpg" alt="" >}}</div>
-    <div class="itemImage">{{<img src="images/sb_symbol_rfs.png" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/debut-logo_rfs.jpg" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/smokingbrains-symbol_rfs.jpg" alt="" >}}</div>
 </div>
 
 
 ## 2014
 <div class="item__layout">
     <div class="itemImage">{{<img src="images/bottle_xanum_rfs.jpg" alt="" >}}</div>
-    <div class="itemImage">{{<img src="images/ursus_logo_rfs.png" alt="" >}}</div>
-    <div class="itemImage">{{<img src="images/ursus_bear_rfs.png" alt="" >}}</div>
-    <div class="itemImage">{{<img src="images/xanum_symbol_rfs.png" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/ursus-logo_rfs.jpg" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/ursus-symbol_rfs.png" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/xanum-vinae_rfs.jpg" alt="" >}}</div>
 
 </div>
 
 ## 2013
 <div class="item__layout">
-    <div class="itemImage">{{<img src="images/taranna_logo_rfs.png" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/taranna-logo_rfs.jpg" alt="" >}}</div>
 </div>
 
 ## 2012
 <div class="item__layout">
-    <div class="itemImage">{{<img src="images/auxpama_symbol_rfs.png" alt="" >}}</div>
+    <div class="itemImage">{{<img src="images/auxpama-monogram_rfs.jpg" alt="" >}}</div>
 </div>
