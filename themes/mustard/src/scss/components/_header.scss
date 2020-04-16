@@ -1,5 +1,15 @@
+
+
+.pageLayout main {
+  animation: fade 1s;
+}
+@keyframes fade {
+  0% { opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .siteHeader {
-  margin: 1rem auto 4rem auto;
+  margin: 2rem auto;
   padding: 0 1rem;
   
   display: grid;
@@ -9,10 +19,14 @@
   width: 100%;
   max-width: $pageWidth;
   padding: 0 1rem;
+  @include respond-to("medium") {
+    margin: 1rem auto 4rem auto;
+  }
 }
 
 .brandLogo__link {
   display: inline-block;
+  margin-right: 1rem;
   .brandLogo {
     // fill: $color--light;
     fill: $color--dark;

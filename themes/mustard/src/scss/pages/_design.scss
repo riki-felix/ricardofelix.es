@@ -13,17 +13,16 @@ Design section
     
     &__item {
       [aria-label]:after {
-        background-color: $color--dark;
         content: attr(aria-label);
-        color: $color--light;
-        font-size: calc(24px + (80 - 24) * ((200vw - 300px) / (1600 - 300)));
+        color: $color--dark;
+        font-size: calc(24px + (72 - 24) * ((200vw - 300px) / (1600 - 300)));
         font-variation-settings: "wght" 900;
         font-style: normal;
         display: flex;
         align-items: center;
   
         height: 100%;
-        width: calc(60% -2rem);
+        width: calc(60% - 4rem);
         
         position: fixed;
           top: 0;
@@ -31,7 +30,7 @@ Design section
         
         letter-spacing: -0.25rem;
         line-height: 1;
-        padding: 0 1rem;
+        padding: 0 2rem;
         pointer-events: none;
         visibility: hidden;
         z-index: -1;
@@ -39,13 +38,20 @@ Design section
   
         transform-origin: left bottom;
       }
-      
       [aria-label]:hover:after, [aria-label]:focus:after {
         visibility: visible;
+        @media (hover: none) and (pointer: coarse) {
+          visible: hidden;
+        }
+        @include respond-to("medium") {
+          visible: hidden;        
+        }
       }
+
       &:last-child a {
-        font-style: italic;
-        margin-top: 4rem;
+        margin-top: 3rem;
+       font-variation-settings: "wght" 500;
+
         &::before {
           content: "—";
         }
@@ -55,19 +61,14 @@ Design section
     &__link {
       color: $color--dark;
       display: inline-block;
-      font-size: rem(32);
+      font-size: calc(30px + (48 - 30) * ((200vw - 300px) / (1600 - 300)));
       text-decoration: none;
       font-variation-settings: "wght" 900;
       line-height: 1.2;
       padding: .15rem 1rem .5rem 1rem;
-      &:hover {
-          font-variation-settings: "ital" 1;
-
-      }
       &:focus {
         outline: 1px dotted $color--dark;
       }
-      
     }
   }
 
@@ -88,28 +89,10 @@ Design single
       @include respond-to("medium"){
         grid-template-columns: 1fr 1fr;
       }
-     }
-     .content {
-       &__header {
-         grid-column: span 2;
-         text-align: center;
-         margin-bottom: 2rem;
-         .heading_tagline {
-          font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
-          margin: 0;
-         }
-       }
-       &__image {
-       }
-       &__excerpt p {
-         font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1600 - 300)));
-         padding: 0 1rem;
-       
-      }
-       &__full{
+      &--full{
         max-width: rem(700);
-        margin: 2rem auto;
-        padding: 0 1rem;
+        margin: 1rem auto;
+        padding: 2rem 0;
         
         &.almanaque {
           max-width: none;
@@ -117,7 +100,7 @@ Design single
           background-color: $color--light;
           background-size: rem(9) rem(9);
           background-image: radial-gradient(circle, $color--dark 0.5px, rgba(0, 0, 0, 0) 0.5px);
-          h2 {
+          h3 {
             transform: rotate(-90deg);
             transform-origin: center center;
             display: inline-block;
@@ -125,17 +108,15 @@ Design single
           .item__layout {
             display: grid;
             gap: .25rem;
-            grid-template-columns: repeat(auto-fill,minmax(120px,320px));
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
             margin-bottom: 3rem;
             .itemImage {
-              background-color: $color--light;
               padding: 1rem;
+
               &.highlight {
                 grid-column: span 2;
-              }
-              
+              }       
               img {
-                background-color: $color--dark;
                 transition: transform .4s ease;
                 &:hover {
                   transform: scale(1.15);
@@ -148,5 +129,31 @@ Design single
 
       }
      }
-   }
+    }
+    &__header {
+      grid-column: span 2;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    &__title {
+      font-size: calc(34px + (48 - 34) * ((100vw - 300px) / (1600 - 300)));
+      margin-bottom: 0.4rem;
+      margin-top: 1rem;
+    }
+    &__tagline {
+      font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+      margin: 0;
+    }
+    &__image {
+      
+        @include respond-to("medium") {
+          box-shadow:
+          1px 1px 0 0 $color--light,
+          4px 4px 0 0 $color--dark;
+        }
+    }
+    &__excerpt p {
+      font-size: calc(22px + (30 - 22) * ((100vw - 300px) / (1600 - 300)));
+      padding: 0 1rem;
+    }  
   }

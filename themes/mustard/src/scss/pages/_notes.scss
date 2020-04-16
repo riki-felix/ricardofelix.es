@@ -4,7 +4,7 @@ Notes list
 
 .notesArticle {
     border-top: 1px solid $color--dark;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     
     display: grid;
     grid-template-columns: rem(24) 2fr auto;
@@ -116,8 +116,12 @@ Notes single
 .singleArticle {
   margin: 0;
   padding: 0;
+    &__title {
+      display: inline-block;
+    }
     &__number {
-      margin-right: 1rem;
+      display: inline-block;
+      margin-left: 1rem;
     }
     &__info {
       font-size: rem(14);
@@ -134,7 +138,7 @@ Notes single
     &__wordcount {}
     &__excerpt {
       margin: 2rem 1rem;
-      @include respond-to("large"){
+      @include respond-to("huge"){
         margin: 2rem 0 2rem -2rem ;
       }
       p {

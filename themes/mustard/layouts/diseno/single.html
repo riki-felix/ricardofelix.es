@@ -1,25 +1,25 @@
 {{ define "main"}}
 	<article class="designSingle__article">
-		<header class="content__header">
-			<h1 class="articleHeader__heading">{{ .Title }}</h1>
-			<p class="heading_tagline">
+		<header class="designSingle__header">
+			<h1 class="designSingle__title">{{ .Title }}</h1>
+			<p class="designSingle_tagline">
 				{{ .Params.label }}
 			</p>
 		</header>
 		
 		<section class="layout single--{{ .Params.slug }}">
-			<div class="content__image">
-				{{ range .Params.images }}
+			{{ range .Params.images }}
+				<div class="designSingle__image">
 					<img src="{{ . }}" alt="">
-				{{ end }}
-			</div>
-			<div class="content__excerpt">
+				</div>
+			{{ end }}
+			<div class="designSingle__excerpt">
 				<p>
 					{{ .Description }}
 				</p>
 			</div>
 		</section>
-		<section class="content__full {{ .Params.slug }}">
+		<section class="layout--full {{ .Params.slug }}">
 			{{ .Content }}
 		</section>
 	</article>

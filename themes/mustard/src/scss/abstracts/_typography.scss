@@ -2,7 +2,7 @@
 Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
-	font-size: calc(28px + (32 - 28) * ((100vw - 300px) / (1600 - 300)));
+	font-size: calc(28px + (30 - 24) * ((100vw - 300px) / (1600 - 300)));
 
 	font-variation-settings: "wght" 300;
 	line-height: 1.2;
@@ -12,7 +12,7 @@ h1 {
 
 h2 {
 	font-size: rem(24);
-	font-variation-settings: "wght" 400;
+	font-variation-settings: "wght" 300;
 	line-height: 1.2;
 	margin: 0.4 0 1rem 0;
 	padding: 0;
@@ -29,7 +29,7 @@ h3 {
 }
 
 p {
-	font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
 	font-variation-settings: "wght" 300;
 	line-height: 1.4;
 	margin: 0 0 1.4rem 0;

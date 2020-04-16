@@ -9,7 +9,7 @@ Main nav
 		list-style: none;
 		display: flex;
 		align-items: center;
-		padding: 0 1rem;
+		padding: 0;
 		margin: 0;
 		li {
 			margin: 0 0.5rem 0 0 ;
@@ -38,6 +38,12 @@ Main nav
 		}
 		[aria-label]:hover:after, [aria-label]:focus:after {
 			display: block;
+			@media (hover: none) and (pointer: coarse) {
+				display: none;
+			}
+			@include respond-to("medium") {
+				display: none;
+			}
 		}
 	}
 	&__link {
@@ -46,10 +52,13 @@ Main nav
 		text-decoration: none;
 		text-align: center;
 		position: relative;
-			font-size: rem(18);
-			font-variation-settings: "wght" 400;
-			display: block;
-			padding: 0 0.5rem;
+		
+		font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+		font-variation-settings: "wght" 400;
+		
+		display: block;
+		padding: 0 0.5rem;
+		transition: all .4s ease;
 		&:hover {
 			text-decoration: none;
 			cursor:url(/images/circle.svg),auto;

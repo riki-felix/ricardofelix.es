@@ -1,11 +1,11 @@
 {{ define "main"}}
 	<article class="singleArticle">
 		<header class="singleArticle__header">
-			<h1>{{ .Title }}</h1>
+			<h1 class="singleArticle__title">{{ .Title }}</h1>
+			<span class="singleArticle__number">
+				Nota nº{{.Params.postNumber}}
+			</span>
 			<div class="singleArticle__info">
-				<span class="singleArticle__number">
-					Nota nº{{.Params.postNumber}}
-				</span>
 				<time class="singleArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
 					{{index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
 				</time>
