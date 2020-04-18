@@ -1,20 +1,17 @@
 {{ define "main"}}
 	<article class="singleArticle">
 		<header class="singleArticle__header">
-			<h1 class="singleArticle__title">{{ .Title }}</h1>
-			<span class="singleArticle__number">
-				Nota nº{{.Params.postNumber}}
-			</span>
+			<h1 class="singleArticle__title">
+				<span class="singleArticle__number">N{{.Params.postNumber}} </span>
+				{{ .Title }}
+			</h1>
 			<div class="singleArticle__info">
-				<time class="singleArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
-					{{index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
-				</time>
 				<span class="singleArticle__reading">
-					{{.ReadingTime}}m. de lectura
+					Lectura {{.ReadingTime}}m., {{.WordCount}} p.
 				</span>
-				<span class="singleArticle__wordcount">
-					{{.WordCount}} palabras
-				</span>
+				<time class="singleArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
+					— {{index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}.		
+				</time>
 			</div>
 		</header>
 		<section class="singleArticle__excerpt">

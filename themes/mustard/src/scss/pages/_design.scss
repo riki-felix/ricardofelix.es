@@ -10,47 +10,38 @@ Design section
   flex-flow: column wrap;
   justify-content: center;
   height: 100%;
-    
-    &__item {
+  
+  &__item {
+    position: relative;
       [aria-label]:after {
         content: attr(aria-label);
         color: $color--dark;
-        font-size: calc(24px + (72 - 24) * ((200vw - 300px) / (1600 - 300)));
-        font-variation-settings: "wght" 900;
-        font-style: normal;
-        display: flex;
-        align-items: center;
-  
-        height: 100%;
-        width: calc(60% - 4rem);
-        
-        position: fixed;
-          top: 0;
-          right: 0;
-        
-        letter-spacing: -0.25rem;
-        line-height: 1;
-        padding: 0 2rem;
-        pointer-events: none;
+        font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
+        font-variation-settings: "wght" 400;
         visibility: hidden;
-        z-index: -1;
-        word-wrap: break-word;
-  
-        transform-origin: left bottom;
-      }
-      [aria-label]:hover:after, [aria-label]:focus:after {
-        visibility: visible;
-        @media (hover: none) and (pointer: coarse) {
-          visible: hidden;
+        opacity: 0;
+          line-height: 1.2;
+          padding: .15rem 1rem .5rem 1rem;
+        transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+        transform: translateY(1rem);
         }
-        @include respond-to("medium") {
-          visible: hidden;        
-        }
+        [aria-label]:hover:after, [aria-label]:focus:after {
+          visibility: visible;
+          opacity: 1;
+        transform: translateY(-1rem);
+
+          @media (hover: none) and (pointer: coarse) {
+            display: none;
+          }
+          @include respond-to("medium") {
+            visibility: visible;
+          }
+          
       }
 
       &:last-child a {
         margin-top: 3rem;
-       font-variation-settings: "wght" 500;
+       font-variation-settings: "wght" 700;
 
         &::before {
           content: "—";
@@ -60,14 +51,20 @@ Design section
 
     &__link {
       color: $color--dark;
-      display: inline-block;
-      font-size: calc(30px + (48 - 30) * ((200vw - 300px) / (1600 - 300)));
+      display: flex;
+        flex-flow: row nowrap;
+      font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
       text-decoration: none;
       font-variation-settings: "wght" 900;
       line-height: 1.2;
       padding: .15rem 1rem .5rem 1rem;
+      transition: transform .4s ease-in-out;
+      
       &:focus {
         outline: 1px dotted $color--dark;
+      }
+      &:hover {
+        transform: translateX(-1rem);
       }
     }
   }
@@ -81,18 +78,18 @@ Design single
   .designSingle {
     &__article {
      .layout {
-      max-width: rem(900);
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin: 0 auto;
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 2rem;
+       max-width: rem(900);
+        margin: 0 auto;
       @include respond-to("medium"){
         grid-template-columns: 1fr 1fr;
       }
       &--full{
         max-width: rem(700);
         margin: 1rem auto;
-        padding: 2rem 0;
+        padding: 2rem 1rem;
         
         &.almanaque {
           max-width: none;
@@ -100,6 +97,8 @@ Design single
           background-color: $color--light;
           background-size: rem(9) rem(9);
           background-image: radial-gradient(circle, $color--dark 0.5px, rgba(0, 0, 0, 0) 0.5px);
+          padding: 2rem 0;
+
           h3 {
             transform: rotate(-90deg);
             transform-origin: center center;
@@ -145,7 +144,6 @@ Design single
       margin: 0;
     }
     &__image {
-      
         @include respond-to("medium") {
           box-shadow:
           1px 1px 0 0 $color--light,
@@ -155,5 +153,15 @@ Design single
     &__excerpt p {
       font-size: calc(22px + (30 - 22) * ((100vw - 300px) / (1600 - 300)));
       padding: 0 1rem;
-    }  
+    }
   }
+      code {
+        background-color: $color--dark;
+        color: $color--light;
+        padding: 1rem;
+        display: block;
+        margin: 0 0 1rem 1rem;
+        box-shadow:
+          1px 1px 0 0 $color--light,
+          4px 4px 0 0 $color--dark;
+      }

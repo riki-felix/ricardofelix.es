@@ -4,15 +4,16 @@ date: 2019-01-5T19:08:37+02:00
 draft: false
 type: "informacion"
 ---
-# El estudio nace con una idea clara, consolidar el valor y responsabilidad del diseño en cada etapa de un proyecto.
+#  Diseño gráfico, con todo lo que implica. Conciencia, responsabilidad y estrategia aplicada en cada proyecto.  
 
-Ayudo a las organizaciones a entender y analizar sus necesidades en el contexto digital. Trabajo en mejorar el diseño de productos y servicios, para todas las personas, dispositivos y entornos que intervienen en sus proyectos.
+## Al norte del norte
+Estamos en Donostia, me gusta el norte, incluso el clima. Puedes enviarnos un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es). Clientes de aquí y allá, una oportunidad de trabajar sin fronteras, teniendo en cuenta diferentes contextos y culturas.
 
-El estudio está en Donostia, pero es solo una excusa por mi apego al norte, a su cultura, su clima y su gente. Soy un firme defensor del trabajo en remoto, de deslocalizar el diseño y entenderlo como una responsabilidad global, sea cual sea su origen. Mis clientes son una mezcla de idiomas, culturas y contextos culturales que enriquecen día a día mi trabajo.
+## Servicios
+Diseño, CSS, HTML, Wordpress, Shopify, Hugo.
 
-Actualmente también soy profesor de *Proyectos: Diseño de productos y experiencias digitales* en [Kunsthal](https://kunsthal.es)
-
-Si quieres saber un poco más sobre mi trabajo, o simplemente saludar. Puedes enviar un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es)
+## Sobre diseño
+Soy profesor de *Proyectos: Diseño de productos y experiencias digitales* en [Kunsthal](https://kunsthal.es), intentando enseñar mientras aprendo. Una apuesta por transmitir y formar a mejores profesionales en el diseño de interfaces y gestión de proyectos.
 
 </section>
 <section class="pageInfo__grid">

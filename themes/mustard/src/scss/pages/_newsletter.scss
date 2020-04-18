@@ -4,17 +4,17 @@
 		flex-flow: column wrap;
 		justify-content: flex-start;
 		align-items: stretch;
-		margin-bottom: .5em;
+		margin-bottom: .5rem;
 	}
 	.form-input {
 		flex: 0 0 auto;
 		background-color: #fff;
 		border: 0;
 		border-bottom: 1px solid $color--dark;
-		font-size: 1em;
+		font-size: 1rem;
 		font-weight: 700;
-		padding: .5em 0;
-		margin: 0 0 1em 0;
+		padding: .5rem 0;
+		margin: 0 0 1rem 0;
 		appearance: none;
 
 		&.mce_inline_error {
@@ -25,9 +25,9 @@
 		flex: 0 0 auto;
 		align-self: flex-start;
 		background-color: $color--dark;
-		padding: .5em 1em;
+		padding: .5rem 1rem;
 		color: #fff;
-		font-size: 1em;
+		font-size: 1rem;
 		border: 0;
 		outline: 0;
 		cursor: pointer;
@@ -46,7 +46,7 @@
 		div.mce_inline_error {
 			background-color: transparent;
 			font-weight: 300;
-			font-size: em(14);
+			font-size: rem(14);
 			padding: 0;
 			text-align: left;
 			z-index: 1;
@@ -54,7 +54,7 @@
 		}
 	}
 	.referal {
-		padding: 2em 0 0 0;
+		padding: 2rem 0 0 0;
 		color: rgba($color--dark, .5);
 		display: inline-block;
 		a {
@@ -69,15 +69,15 @@
 		.display_archive {
 			margin-bottom: 4em;
 			.campaign {
-				margin-bottom: 1em;
+				margin-bottom: 1rem;
 				font-weight: 700;
-				font-size: em(14);
+				font-size: rem(14);
 				a {
 					font-weight: 400;
 				}
 				&:first-child {
-					padding: 1em;
-					margin: 0 0 2em 0;
+					padding: 1rem;
+					margin: 0 0 2rem 0;
 					border-left: 4px solid rgba($color--dark,.25);
 				}
 			}

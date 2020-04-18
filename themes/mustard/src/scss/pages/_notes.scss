@@ -4,7 +4,8 @@ Notes list
 
 .notesArticle {
     border-top: 1px solid $color--dark;
-    padding: 0.5rem 2rem;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
     
     display: grid;
     grid-template-columns: rem(24) 2fr auto;
@@ -26,7 +27,7 @@ Notes list
         margin-bottom: 0.5rem;
       }
       & .notesArticle__number {
-        margin: 0 0 0 -1rem;
+        margin: 0 0 0 0;
       }
     }
     &:last-child {
@@ -49,10 +50,12 @@ Notes list
       text-decoration: none;
       margin-bottom: 0;
       line-height: 1;
+      display: inline-block;
     }
     &__link {
       text-decoration: none;
       margin: 0;
+      display: inline-block;
     }
     &__legend {
       font-size: rem(18);
@@ -72,19 +75,20 @@ Notes single
   padding: 0 1rem;
   max-width: $pageWidth;
   @include respond-to("medium"){
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.5fr;
   }
 } 
 .notesNav {
     &__list {
         list-style: none;
-        padding: 0 1rem;
+        padding: 0;
     
         display: flex;
         flex-flow: column wrap;
         justify-content: flex-start;
         li {
           margin-bottom: 0.5rem;
+          border-top: 1px solid #000;
         }
     }
     &__link {
@@ -121,19 +125,16 @@ Notes single
     }
     &__number {
       display: inline-block;
-      margin-left: 1rem;
+      font-size: rem(14);
+      vertical-align: super;
     }
     &__info {
       font-size: rem(14);
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: baseline;
     }
     &__time {
       margin-right: 1rem;
     }
     &__reading {
-      margin-right: 1rem;
     }
     &__wordcount {}
     &__excerpt {

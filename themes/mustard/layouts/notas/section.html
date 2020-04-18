@@ -7,9 +7,9 @@
               N{{.Params.postNumber}}
             </p>
             <a href="{{.Permalink}}" class="notesArticle__link" rel="noopener" aria-label="{{ .Title }}">
-              <h2 class="notesArticle__title">
+              <h1 class="notesArticle__title">
                 {{.Title}}
-              </h2>
+              </h1>
             </a>
             <time class="notesArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
               {{ index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}

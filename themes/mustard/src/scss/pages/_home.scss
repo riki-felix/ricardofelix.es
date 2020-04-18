@@ -7,8 +7,8 @@
       padding: 0 1rem;
       font-size: rem(24);
       p {
-        font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+        font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));
         font-variation-settings: "wght" 300;
-        max-width: 65ch;
+        max-width: 45ch;
       }
     }

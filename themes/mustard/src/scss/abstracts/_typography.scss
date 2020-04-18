@@ -3,18 +3,17 @@ Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
 	font-size: calc(28px + (30 - 24) * ((100vw - 300px) / (1600 - 300)));
-
-	font-variation-settings: "wght" 300;
-	line-height: 1.2;
-	margin: 0.2rem 0 1rem 0;
+	font-variation-settings: "wght" 280;
+	line-height: 1.4;
+	margin: 0.2rem 0 0.8rem 0;
 	padding: 0;
 }
 
 h2 {
 	font-size: rem(24);
-	font-variation-settings: "wght" 300;
+	font-variation-settings: "wght" 350;
 	line-height: 1.2;
-	margin: 0.4 0 1rem 0;
+	margin: 0.4rem 0 0.6rem -1rem;
 	padding: 0;
 }
 
@@ -23,21 +22,22 @@ h3 {
 	font-variation-settings: "wght" 500;
 	line-height: 1.4;
 	letter-spacing: 1px;
-	margin: 0 0 1.4rem 0;
+	margin: 0 0 1rem 0;
 	padding: 0;
 	text-transform: uppercase;
 }
 
 p {
-	font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
+	font-size: calc(17px + (20 - 17) * ((100vw - 300px) / (1600 - 300)));
 	font-variation-settings: "wght" 300;
-	line-height: 1.4;
-	margin: 0 0 1.4rem 0;
+	line-height: 1.6;
+	margin: 0.2rem 0 1.2rem 0;
 	padding: 0;
 	a {
 		color: $color--dark;
 		text-decoration: none;
 	}
+	
 }
 address { margin: 0 0 1.5rem; }
 
