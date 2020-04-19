@@ -9,7 +9,7 @@ slug: "debut-restaurant"
 ---
 <div class="article__content">
 
-## Aguantame la birra
+## Aguántame la birra
 
 Es uno de esos proyectos que, después de la primera reunión de *kick off*, me tienen conquistado. Sobre todo si la reunión es tomando una cerveza con un perfecto desconocido y el proyecto todavía estaba en una fase con muchas incógnitas por resolver.
 
