@@ -14,30 +14,29 @@ Design section
   &__item {
     position: relative;
       [aria-label]:after {
-        content: attr(aria-label);
-        color: $color--dark;
-        font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
-        font-variation-settings: "wght" 400;
-        visibility: hidden;
-        opacity: 0;
+        display: none;
+        
+        @media (hover: none) and (pointer: coarse) {
+          display: none;
+        }
+
+        @include respond-to("medium") {
+          display: block;
+          visibility: hidden;
+          content: attr(aria-label);
+          color: $color--dark;
+          font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
+          font-variation-settings: "wght" 400;
+          opacity: 0;
           line-height: 1.2;
           padding: .15rem 1rem .5rem 1rem;
-        transition: transform .4s ease-in-out, opacity .4s ease-in-out;
-        transform: translateY(1rem);
+          transition: transform .4s ease-in-out, opacity .4s ease-in-out;
         }
-        [aria-label]:hover:after, [aria-label]:focus:after {
-          visibility: visible;
-          opacity: 1;
-        transform: translateY(-1rem);
-
-          @media (hover: none) and (pointer: coarse) {
-            display: none;
-          }
-          @include respond-to("medium") {
-            visibility: visible;
-          }
-          
       }
+      [aria-label]:hover:after, [aria-label]:focus:after {
+        visibility: visible;
+        opacity: 1;
+      }  
 
       &:last-child a {
         margin-top: 3rem;
@@ -155,13 +154,3 @@ Design single
       padding: 0 1rem;
     }
   }
-      code {
-        background-color: $color--dark;
-        color: $color--light;
-        padding: 1rem;
-        display: block;
-        margin: 0 0 1rem 1rem;
-        box-shadow:
-          1px 1px 0 0 $color--light,
-          4px 4px 0 0 $color--dark;
-      }

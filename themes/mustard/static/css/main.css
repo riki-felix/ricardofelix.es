@@ -100,8 +100,14 @@ h2 {
   font-size: 1.5rem;
   font-variation-settings: "wght" 350;
   line-height: 1.2;
-  margin: 0.4rem 0 0.6rem -1rem;
+  margin: 0.4rem 0 0.6rem 0;
   padding: 0;
+}
+
+@media (min-width: 1000px) {
+  h2 {
+    margin: 0.4rem 0 0.6rem -1rem;
+  }
 }
 
 h3 {
@@ -143,6 +149,18 @@ small {
 
 em {
   font-variation-settings: "wght" 300;
+}
+
+code {
+  background-color: #1a1a1a;
+  font-size: 0.8125rem;
+  color: #fff;
+  padding: 1rem;
+  display: block;
+  line-height: 2;
+  margin: 1rem 0 1rem 1rem;
+  -webkit-box-shadow: 1px 1px 0 0 #fff, 4px 4px 0 0 #1a1a1a;
+          box-shadow: 1px 1px 0 0 #fff, 4px 4px 0 0 #1a1a1a;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -574,39 +592,36 @@ Design section
 }
 
 .pageDiseno__item [aria-label]:after {
-  content: attr(aria-label);
-  color: #1a1a1a;
-  font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
-  font-variation-settings: "wght" 400;
-  visibility: hidden;
-  opacity: 0;
-  line-height: 1.2;
-  padding: .15rem 1rem .5rem 1rem;
-  -webkit-transition: opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
-  transition: opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
-  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
-  transition: transform .4s ease-in-out, opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
-  -webkit-transform: translateY(1rem);
-          transform: translateY(1rem);
-}
-
-.pageDiseno__item [aria-label]:hover:after, .pageDiseno__item [aria-label]:focus:after {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
+  display: none;
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .pageDiseno__item [aria-label]:hover:after, .pageDiseno__item [aria-label]:focus:after {
+  .pageDiseno__item [aria-label]:after {
     display: none;
   }
 }
 
 @media (min-width: 800px) {
-  .pageDiseno__item [aria-label]:hover:after, .pageDiseno__item [aria-label]:focus:after {
-    visibility: visible;
+  .pageDiseno__item [aria-label]:after {
+    display: block;
+    visibility: hidden;
+    content: attr(aria-label);
+    color: #1a1a1a;
+    font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
+    font-variation-settings: "wght" 400;
+    opacity: 0;
+    line-height: 1.2;
+    padding: .15rem 1rem .5rem 1rem;
+    -webkit-transition: opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
+    transition: opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+    transition: transform .4s ease-in-out, opacity .4s ease-in-out, -webkit-transform .4s ease-in-out;
   }
+}
+
+.pageDiseno__item [aria-label]:hover:after, .pageDiseno__item [aria-label]:focus:after {
+  visibility: visible;
+  opacity: 1;
 }
 
 .pageDiseno__item:last-child a {
@@ -742,16 +757,6 @@ Design single
 .designSingle__excerpt p {
   font-size: calc(22px + (30 - 22) * ((100vw - 300px) / (1600 - 300)));
   padding: 0 1rem;
-}
-
-code {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 1rem;
-  display: block;
-  margin: 0 0 1rem 1rem;
-  -webkit-box-shadow: 1px 1px 0 0 #fff, 4px 4px 0 0 #1a1a1a;
-          box-shadow: 1px 1px 0 0 #fff, 4px 4px 0 0 #1a1a1a;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~
@@ -915,9 +920,11 @@ Main nav
 
 .globalNav__menu li {
   margin: 0 0.5rem 0 0;
+  z-index: 0;
+  position: relative;
 }
 
-.globalNav__menu [aria-label]:after {
+.globalNav__menu li [aria-label]:after {
   background-color: #fff;
   color: #1a1a1a;
   content: attr(aria-label);
@@ -940,20 +947,9 @@ Main nav
   text-align: center;
 }
 
-.globalNav__menu [aria-label]:hover:after, .globalNav__menu [aria-label]:focus:after {
+.globalNav__menu li [aria-label]:hover:after,
+.globalNav__menu li [aria-label]:focus:after {
   display: block;
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .globalNav__menu [aria-label]:hover:after, .globalNav__menu [aria-label]:focus:after {
-    display: none;
-  }
-}
-
-@media (min-width: 800px) {
-  .globalNav__menu [aria-label]:hover:after, .globalNav__menu [aria-label]:focus:after {
-    display: none;
-  }
 }
 
 .globalNav__link, .globalNav__link--active {
@@ -961,7 +957,6 @@ Main nav
   line-height: 1;
   text-decoration: none;
   text-align: center;
-  position: relative;
   font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
   font-variation-settings: "wght" 400;
   display: block;

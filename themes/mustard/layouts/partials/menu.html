@@ -1,7 +1,7 @@
-<nav class="globalNav">
-  <ul class="globalNav__menu">
+  <nav class="globalNav" role="navigation">
+    <ul class="globalNav__menu">
     {{ range .Site.Menus.main }}
-        {{ $.Scratch.Set "active" (eq .Identifier $.Type) }}
+    {{ $.Scratch.Set "active" (eq .Identifier $.Type) }}
     {{ $active := $.Scratch.Get "active" }}
       <li>
         <a class="globalNav__link{{ if $active }}--active{{end}}" href="{{ .URL }}" aria-label="{{ .Pre }}" >
@@ -9,5 +9,5 @@
         </a>
       </li>
     {{ end }}
-  </ul>
-</nav>
+    </ul>
+  </nav>

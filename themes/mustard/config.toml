@@ -2,21 +2,21 @@
   [[menu.main]]
     identifier = "diseno"
     name = "Diseño"
-    pre = "Ver los proyectos e historias con clientes"
+    pre = "Historias y proyectos"
   	url = "/diseno/"
   	weight = 1
 
   [[menu.main]]
     identifier = "informacion"
     name = "Información"
-    pre = "Toda la información sobre el estudio"
+    pre = "Conoce mi estudio"
   	url = "/informacion/"
   	weight = 2
 
   [[menu.main]]
     identifier = "notas"
     name = "Notas"
-    pre = "Notas, textos y cosas que se me ocurren"
+    pre = "Pensamientos sobre mi trabajo"
   	url = "/notas/"
   	weight = 3
 

@@ -1,10 +1,10 @@
 ---
-title: "Home"
+title: "¡Hola!"
 draft: false
 ---
 
 # Kaixo!
 
-Este es mi sitio web, estoy haciendo el diseño e implementación en abierto. Estoy escribiendo sobre ello en mis [notas](/notas).
+Desde mi pequeño estudio, ayudo a personas y empresas diseñando mejores productos y experiencias digitales. Y no tan digitales.
 
 Por cierto, me llamo Ricardo Félix, soy diseñador gráfico.

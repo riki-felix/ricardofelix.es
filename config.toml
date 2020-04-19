@@ -4,7 +4,7 @@ title = "Ricardo Félix"
 theme = "mustard"
 
 [params]
-  subtitle = "Diseño de productos digitales."
+  description = "Diseño de productos y experiencias digitales."
   author = "Ricardo Félix"
 
 [permalinks]

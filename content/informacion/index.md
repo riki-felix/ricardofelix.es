@@ -4,16 +4,18 @@ date: 2019-01-5T19:08:37+02:00
 draft: false
 type: "informacion"
 ---
-#  Diseño gráfico, con todo lo que implica. Conciencia, responsabilidad y estrategia aplicada en cada proyecto.  
+#  Diseño gráfico, con todo lo que implica.  
+
+Desde 2002 diseñando interfaces y experiencias digitales.
 
 ## Al norte del norte
-Estamos en Donostia, me gusta el norte, incluso el clima. Puedes enviarnos un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es). Clientes de aquí y allá, una oportunidad de trabajar sin fronteras, teniendo en cuenta diferentes contextos y culturas.
+Estamos en Donostia, me gusta el norte, incluso el clima. Puedes enviarnos un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es).
 
 ## Servicios
-Diseño, CSS, HTML, Wordpress, Shopify, Hugo.
+Diseño, CSS, HTML, JS, Wordpress, Shopify, Hugo.
 
 ## Sobre diseño
-Soy profesor de *Proyectos: Diseño de productos y experiencias digitales* en [Kunsthal](https://kunsthal.es), intentando enseñar mientras aprendo. Una apuesta por transmitir y formar a mejores profesionales en el diseño de interfaces y gestión de proyectos.
+Soy profesor en [Kunsthal](https://kunsthal.es), intentando enseñar mientras aprendo. Una apuesta por transmitir y formar a mejores profesionales en el diseño de interfaces y gestión de proyectos.
 
 </section>
 <section class="pageInfo__grid">
@@ -66,5 +68,3 @@ Soy profesor de *Proyectos: Diseño de productos y experiencias digitales* en [K
 27. 
 28. 
     * [Zabriskie](https://zabriskie.de)
-
-</section>
