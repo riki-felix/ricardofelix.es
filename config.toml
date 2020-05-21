@@ -23,3 +23,32 @@ theme = "mustard"
   changefreq = "monthly"
   filename = "sitemap.xml"
   priority = 0.5
+
+[menu]
+  [[menu.main]]
+    identifier = "diseno"
+    name = "Diseño"
+    pre = "Historias y proyectos"
+  	url = "/diseno/"
+  	weight = 1
+
+  [[menu.main]]
+    identifier = "informacion"
+    name = "Información"
+    pre = "Conoce mi trabajo"
+  	url = "/informacion/"
+  	weight = 2
+
+  [[menu.main]]
+    identifier = "notas"
+    name = "Notas"
+    pre = "Apuntes sobre diseño"
+  	url = "/notas/"
+  	weight = 3
+
+  [[menu.main]]
+    identifier = "entretiempo"
+    name = "Entretiempo"
+    pre = "Mi newsletter de cosas"
+  	url = "/entretiempo/"
+  	weight = 4

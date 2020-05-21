@@ -9,18 +9,17 @@
 }
 
 .siteHeader {
-  margin: 2rem auto;
+  margin: 1rem auto 4rem auto;
   padding: 0 1rem;
   
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: baseline;
+  grid-template-columns: 1fr;
   
   width: 100%;
   max-width: $pageWidth;
   padding: 0 1rem;
   @include respond-to("medium") {
-    margin: 1rem auto 4rem auto;
+    grid-template-columns: auto 1fr;
   }
 }
 

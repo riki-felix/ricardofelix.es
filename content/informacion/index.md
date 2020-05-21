@@ -20,7 +20,7 @@ Soy profesor en [Kunsthal](https://kunsthal.es), intentando enseñar mientras ap
 </section>
 <section class="pageInfo__grid">
 
-### Clientes
+### Directorio de clientes
 
 1. 
     * [Alamar Editions](https://alamareditions.com)

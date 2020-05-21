@@ -1,5 +1,6 @@
 {
-    "name": "Ricardo F\u00e9lix",
+    "name": "rfs",
+    "short_name": "rfs",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -7,12 +8,12 @@
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-256x256.png",
-            "sizes": "256x256",
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#1a1a1a",
-    "background_color": "#1a1a1a",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }

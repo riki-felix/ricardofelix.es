@@ -1,7 +1,7 @@
 ---
 title: "Cuarentena"
 slug: "cuarentena"
-publishdate: 2020-04-18T08:08:55+02:00
+publishDate: 2020-04-18
 draft: false
 description: "Sinceramente, he tenido que mirar el significado real de la palabra, no lo tenía claro del todo."
 type: "notas"

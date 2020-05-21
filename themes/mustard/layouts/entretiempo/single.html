@@ -1,9 +1,7 @@
 {{ define "main"}}
-	<section class="layout--grid">
-		<div class="layout">
-			<h1 class="h3">{{ .Title }}</h1>
-			<p>
-			</p>
+	<article class="simple__page pageNewsletter">
+		<section class="pageNewsletter__content">
+			{{- .Content -}}
 			{{ partial "newsletter.html" . }}
 
 			<h3>En capítulos anteriores.</h3>
@@ -12,11 +10,6 @@
 				src="//ricardofelix.us8.list-manage.com/generate-js/?u=b412bc73aa573137010a43e4a&fid=9805&show=20"
 				type="text/javascript">
 			</script>
-		</div>
-	</section>
-	<section>
-		<div class="layout">
-			{{ .Content }}
-		</div>
-	</section>
+		</section>
+	</article>
 {{ end }}

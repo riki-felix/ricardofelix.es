@@ -9,6 +9,14 @@
     <meta property="og:title" content="{{ . }}" />
     <meta name="twitter:title" content="{{ . }}" />
     {{ end }}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}images/favicon-16x16.png">
+    <link rel="icon" type="image/svg" href="{{ .Site.BaseURL }}images/circle.svg">
+    <link rel="manifest" href="{{ .Site.BaseURL }}images/site.webmanifest">
+    <link rel="mask-icon" href="{{ .Site.BaseURL }}images/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <meta name="author" content="{{ .Site.Params.author }}"/>
     <meta property="og:site_name" content="{{ .Site.Title }} — rfs" />
     <meta property="og:url" content="{{ .Permalink }}" />
@@ -28,7 +36,6 @@
     
     <script type="text/javascript" src="//fast.fonts.net/jsapi/ef316d9e-7d0a-470d-a316-35ed0d948f6e.js"></script>
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.min.css" />
-    <link rel="icon" href="{{ .Site.BaseURL }}images/circle.svg">
 
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 

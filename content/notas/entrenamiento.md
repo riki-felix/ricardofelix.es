@@ -1,7 +1,7 @@
 ---
 title: "Entrenamiento"
 slug: "entrenamiento"
-publishdate: 2020-04-06T08:08:37+02:00
+publishDate: 2020-04-06
 draft: false
 description: "Escribir sobre tu propio trabajo es realmente difícil, nunca lo he subestimado, más bien todo lo contrario."
 type: "notas"

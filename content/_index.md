@@ -5,6 +5,6 @@ draft: false
 
 # Kaixo!
 
-Desde mi pequeño estudio, ayudo a personas y empresas diseñando mejores productos y experiencias digitales. Y no tan digitales.
+Ayudo a personas y empresas diseñando mejores productos digitales, bueno, y no tan digitales...también.
 
 Por cierto, me llamo Ricardo Félix, soy diseñador gráfico.

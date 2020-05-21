@@ -4,8 +4,8 @@
     &.design__page {}
     &.notes {
       grid-template-columns: 1fr;
-      margin: 2rem auto;
-      max-width: rem(768);
+      margin: 0 auto;
+      max-width: $pageWidth;
     }
   }
 }

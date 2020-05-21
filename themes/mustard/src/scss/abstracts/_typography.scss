@@ -2,22 +2,19 @@
 Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
-	font-size: calc(28px + (30 - 24) * ((100vw - 300px) / (1600 - 300)));
+	font-size: calc(28px + (32 - 28) * ((100vw - 300px) / (1600 - 300)));
 	font-variation-settings: "wght" 280;
 	line-height: 1.4;
-	margin: 0.2rem 0 0.8rem 0;
+	margin: 0.2rem 0 1.4rem 0;
 	padding: 0;
 }
 
 h2 {
-	font-size: rem(24);
-	font-variation-settings: "wght" 350;
+	font-size: calc(17px + (20 - 17) * ((100vw - 300px) / (1600 - 300)));
+	font-variation-settings: "wght" 580;
 	line-height: 1.2;
 	margin: 0.4rem 0 0.6rem 0;
 	padding: 0;
-	@include respond-to("large") {
-		margin: 0.4rem 0 0.6rem -1rem;
-	}
 }
 
 h3 {
@@ -32,7 +29,7 @@ h3 {
 
 p {
 	font-size: calc(17px + (20 - 17) * ((100vw - 300px) / (1600 - 300)));
-	font-variation-settings: "wght" 300;
+	font-variation-settings: "wght" 280;
 	line-height: 1.6;
 	margin: 0.2rem 0 1.2rem 0;
 	padding: 0;
