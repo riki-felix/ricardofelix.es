@@ -445,6 +445,26 @@ Notes list
   margin: 0;
 }
 
+.notesArticle.recent__note .notesArticle__link {
+  grid-column: 2 / -1;
+}
+
+@media (min-width: 800px) {
+  .notesArticle.recent__note .notesArticle__link {
+    grid-column: 2 / 3;
+  }
+}
+
+.notesArticle.recent__note .notesArticle__time {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 800px) {
+  .notesArticle.recent__note .notesArticle__time {
+    grid-column: 3 / -1;
+  }
+}
+
 .notesArticle.recent__note .notesArticle__number {
   margin: 0 0 0 0;
   font-size: 1.25rem;
@@ -481,7 +501,13 @@ Notes list
 .notesArticle__legend {
   font-size: 1.125rem;
   color: #1a1a1a;
-  grid-column: 2 / 3;
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 800px) {
+  .notesArticle__legend {
+    grid-column: 2/-1;
+  }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ 

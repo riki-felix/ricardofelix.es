@@ -21,9 +21,23 @@ Notes list
         font-size: rem(28);
         margin: 0;
       }
+      & .notesArticle__link {
+        grid-column: 2 / -1;
+        @include respond-to('medium') {
+          grid-column: 2 / 3;
+        }
+      }
+      & .notesArticle__time {
+        grid-column: 1 / -1;
+        @include respond-to('medium') {
+          grid-column: 3 / -1;
+        }
+      }
       & .notesArticle__number {
         margin: 0 0 0 0;
         font-size: rem(20);
+      }
+      @include respond-to('medium') {
       }
     }
     &:last-child {
@@ -53,7 +67,10 @@ Notes list
     &__legend {
       font-size: rem(18);
       color: $color--dark;
-      grid-column: 2 / 3;
+      grid-column: 1 / -1;
+      @include respond-to('medium') {
+        grid-column: 2/-1;
+      }
     }
   }
 
