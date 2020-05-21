@@ -83,7 +83,7 @@ Notes single
   gap: 0 4rem;
   margin: 0 auto;
   padding: 0 1rem;
-  max-width: $pageWidth;
+  max-width: rem(1000);
   @include respond-to("medium"){
     grid-template-columns: 2.5fr 1fr;
   }

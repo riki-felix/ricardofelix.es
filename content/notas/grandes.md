@@ -4,7 +4,7 @@ slug: "grandes"
 date: 2020-05-21
 publishDate: 2020-05-21
 draft: false
-description: "Cuando quedo atrás mi etapa en Runroom, tenía por delante un reto personal delicado. Dar el salto al mundo freelance, vuelta al complejo de navaja suiza."
+description: "Tras mi paso por Runroom, allá por 2015, me enfrentaba a un reto personal delicado, primero aprender a descansar y después... dar el salto al mundo freelance, vuelta al complejo de navaja suiza."
 type: "notas"
 postNumber: "4"
 

@@ -12,21 +12,6 @@ Theme abstracts
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Theme variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
-Theme typography scale
-
-H1:      32/400
-H2:      24/400
-H3:      18/400/Uppercase
-
-P:       20/300
-ST:      600
-
-XBOLD:   900
-XLIGHT:  100
-
-NAV:     20/500
-~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*  ==========================================================================
     General
     ========================================================================== */
@@ -164,7 +149,7 @@ Theme pages
     Page home
     ========================================================================== */
 .homeContent {
-  max-width: 62.5rem;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 1rem;
   font-size: 1.5rem;
@@ -180,7 +165,7 @@ Theme pages
 Newsletter page
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .pageNewsletter__content {
-  max-width: 62.5rem;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -325,7 +310,7 @@ Newsletter page
 Page general
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .singlePage {
-  max-width: 62.5rem;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -338,7 +323,7 @@ Page general
 Information page
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .pageInfo__content {
-  max-width: 62.5rem;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -621,7 +606,7 @@ Notes single
 Design section
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .pageDiseno {
-  max-width: 62.5rem;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -829,7 +814,7 @@ Theme components
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 90%;
   padding: 0 1rem;
 }
 
@@ -855,7 +840,7 @@ Theme components
 .siteFooter {
   margin: 2rem auto;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 90%;
   padding: 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -922,7 +907,7 @@ Theme components
 .layout--grid .layout.notes {
   grid-template-columns: 1fr;
   margin: 0 auto;
-  max-width: 62.5rem;
+  max-width: 90%;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
