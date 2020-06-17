@@ -6,16 +6,19 @@ type: "informacion"
 ---
 #  Diseño gráfico, con todo lo que implica.  
 
-Desde 2002 diseñando interfaces y experiencias digitales.
-
 ## Al norte del norte
-Estamos en Donostia, me gusta el norte, incluso el clima. Puedes enviarnos un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es).
+Desde Corella, con una breve formación artística y en gráfica publicitaria, pasando por Barcelona, donde he desarrollado la mayor parte de mi carrera profesional y de vuelta al norte, a Donosti, donde tengo mi pequeña oficina de diseño.
 
 ## Servicios
 Diseño, CSS, HTML, JS, Wordpress, Shopify, Hugo.
 
 ## Sobre diseño
-Soy profesor en [Kunsthal](https://kunsthal.es), intentando enseñar mientras aprendo. Una apuesta por transmitir y formar a mejores profesionales en el diseño de interfaces y gestión de proyectos.
+Soy profesor en [Kunsthal](https://kunsthal.es), enseñando mientras aprendo. Una apuesta por transmitir y formar a futuros profesionales en el diseño de interfaces y gestión de proyectos digitales.
+
+## Previously
+Runroom, Folch, Océ, ADV(Italia).
+
+Puedes enviar un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es).
 
 </section>
 <section class="pageInfo__grid">

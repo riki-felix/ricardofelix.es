@@ -2,34 +2,34 @@
    Mixins
    ========================================================================== */
 
-	$global-font-size: 100%;
-	$global-font-size-px: 16px;
+   $global-font-size: 100%;
+   $global-font-size-px: 16px;
 
-	// =Helpers
-	// ------------------------------------------------------
-	@function stripUnit($number) {
-	    @return $number / ($number * 0 + 1);
-	}
-	@function unitlessZero($number) {
-	    $value: $number;
+   // =Helpers
+   // ------------------------------------------------------
+   @function stripUnit($number) {
+	   @return $number / ($number * 0 + 1);
+   }
+   @function unitlessZero($number) {
+	   $value: $number;
 
-	    @if (type-of($value) == number) and stripUnit($value) == 0 {
-	        $value: stripUnit($value);
-	    }
+	   @if (type-of($value) == number) and stripUnit($value) == 0 {
+		   $value: stripUnit($value);
+	   }
 
-	    @return $value;
-	}
+	   @return $value;
+   }
 
-	@function rootFontSize($html-font-size) {
-	    @return (stripUnit($html-font-size) * 16)/100;
-	}
+   @function rootFontSize($html-font-size) {
+	   @return (stripUnit($html-font-size) * 16)/100;
+   }
 
 
-	// =px to rem
-	// ------------------------------------------------------
-	@function rem($val) {
-	    @return (stripUnit($val) / rootFontSize($global-font-size)) + 0rem;
-	}
+   // =px to rem
+   // ------------------------------------------------------
+   @function rem($val) {
+	   @return (stripUnit($val) / rootFontSize($global-font-size)) + 0rem;
+   }
 
 
 /// Responsive breakpoint manager
