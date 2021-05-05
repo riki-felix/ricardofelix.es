@@ -27,6 +27,11 @@
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6385918/6240832/css/fonts.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet"> 
+  <script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+
 </head>
 
 <body id="natkits-com" class="page-body">
@@ -38,7 +43,7 @@
 				</svg>
 				<p>Envío gratuito a Península y Baleares a partir de 50€ de compras (impuestos no incluidos)</p>
 			</div>
-			<div class="natklub">
+			<div class="badge-natklub">
 				<svg width="72" height="13" viewBox="0 0 72 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M0.624375 12H4.33638V6.832L8.49638 12H11.8244V0.799999H8.11238V5.744L4.12838 0.799999H0.624375V12ZM15.5408 12.208C16.6288 12.208 17.4448 11.776 18.0528 11.12V12H21.6848V7.024C21.6848 5.76 21.4288 4.912 20.7728 4.256C20.0048 3.488 18.8528 3.12 17.0768 3.12C15.5568 3.12 14.4048 3.376 13.3968 3.76L14.0368 6.176C14.8048 5.872 15.5568 5.68 16.4528 5.68C17.5728 5.68 18.0688 6.144 18.0688 6.944V7.088C17.6848 6.928 16.7408 6.768 16.0048 6.768C13.9728 6.768 12.6768 7.744 12.6768 9.488V9.52C12.6768 11.248 13.8608 12.208 15.5408 12.208ZM16.9808 10.112C16.5168 10.112 16.1488 9.776 16.1488 9.264V9.232C16.1488 8.688 16.5488 8.256 17.2688 8.256C17.5728 8.256 17.8928 8.32 18.1008 8.4V8.768C18.1008 9.6 17.6208 10.112 16.9808 10.112ZM26.6058 12.192C27.4858 12.192 28.3498 12 28.9258 11.696V8.896C28.5418 9.072 28.1578 9.168 27.8218 9.168C27.2458 9.168 26.9418 8.928 26.9418 8.272V6.064H28.9578V3.264H26.9418V1.072H23.3098V3.264H22.2858V6.064H23.3098V9.072C23.3098 11.2 24.4618 12.192 26.6058 12.192ZM29.8744 12H33.6184V9.616L34.5784 8.448L36.7704 12H41.2344L37.2504 5.664L41.1544 0.799999H36.8024L33.6184 4.992V0.799999H29.8744V12ZM41.4979 12H45.1299V0.32H41.4979V12ZM49.1751 12.208C50.4071 12.208 51.2871 11.552 51.8471 10.832V12H55.4791V3.264H51.8471V7.856C51.8471 8.608 51.3511 9.04 50.8071 9.04C50.2631 9.04 49.8151 8.608 49.8151 7.856V3.264H46.1831V9.024C46.1831 10.992 47.3351 12.208 49.1751 12.208ZM62.8156 12.208C64.8796 12.208 66.5436 10.368 66.5436 7.6V7.568C66.5436 4.896 64.8956 3.056 62.7836 3.056C61.4556 3.056 60.7836 3.696 60.1916 4.336V0.32H56.5596V12H60.1916V11.008C60.7516 11.632 61.4876 12.208 62.8156 12.208ZM61.5676 9.216C60.7356 9.216 60.1116 8.512 60.1116 7.648V7.616C60.1116 6.736 60.7356 6.048 61.5676 6.048C62.3996 6.048 63.0236 6.736 63.0236 7.616V7.648C63.0236 8.528 62.3996 9.216 61.5676 9.216ZM68.5081 8.512H70.3321L71.4521 3.2V0.799999H67.3881V3.2L68.5081 8.512ZM67.5641 12H71.2761V9.12H67.5641V12Z" fill="white"/>
 				</svg>
@@ -55,10 +60,10 @@
 			   <nav class="menu">
 				   <ul>
 					<li><a href="">Materiales</a></li>
-					<li><a href="">Usos</a></li>
 					<li><a href="">Kits</a></li>
-					<li><a href="">Blog</a></li>
+					<li><a href="">Libros</a></li>
 					<li><a href="">Teoría y práctica</a></li>
+					<li><a href="">Blog</a></li>
 				   </ul>
 			   </nav>
 		   <div class="header-actions">
@@ -558,7 +563,6 @@
 		</div>
 		<div class="module categories">
 			<div class="inner">
-				<h2>Cómo usar tus fibras</h2>
 				<div class="grid c-4">
 					<div class="grid-card">
 						<img src="assets/img/cesteria_natkits.gif" />
@@ -580,20 +584,40 @@
 			</div>
 		</div>
 		<div class="module featured">
-			<div class="inner">
-				<h2>Nuestros favoritos</h2>
-				<div class="grid c-3">
-					<div class="grid-card">
+			<div class="inner-featured">
+				<h2>Kits, los originales.</h2>
+				<div class="hs">
+					<div class="hs-card">
 						<img class="dummie" src="https://cdn.shopify.com/s/files/1/2996/1964/products/081615-081640-web_2a5d5668-048a-4048-8a99-8de850f70d29_360x.jpg?v=1589484180" />
 						<p class="card-title">Nombre producto</p>
 						<p class="card-price">10€</p>
 					</div>
-					<div class="grid-card">
+					<div class="hs-card">
 						<img class="dummie" src="https://cdn.shopify.com/s/files/1/2996/1964/products/562005_10_madeja-rafia-natural_natkits_360x.jpg?v=1604714711" />
 						<p class="card-title">Nombre producto</p>
 						<p class="card-price">10€</p>
 					</div>
-					<div class="grid-card">
+					<div class="hs-card">
+						<img class="dummie" src="https://cdn.shopify.com/s/files/1/2996/1964/products/trenza-papel-5-2_360x.jpg?v=1606418711" />
+						<p class="card-title">Nombre producto</p>
+						<p class="card-price">10€</p>
+					</div>
+					<div class="hs-card">
+						<img class="dummie" src="https://cdn.shopify.com/s/files/1/2996/1964/products/trenza-papel-5-2_360x.jpg?v=1606418711" />
+						<p class="card-title">Nombre producto</p>
+						<p class="card-price">10€</p>
+					</div>
+					<div class="hs-card">
+						<img class="dummie" src="https://cdn.shopify.com/s/files/1/2996/1964/products/trenza-papel-5-2_360x.jpg?v=1606418711" />
+						<p class="card-title">Nombre producto</p>
+						<p class="card-price">10€</p>
+					</div>
+					<div class="hs-card">
+						<img class="dummie" src="https://cdn.shopify.com/s/files/1/2996/1964/products/trenza-papel-5-2_360x.jpg?v=1606418711" />
+						<p class="card-title">Nombre producto</p>
+						<p class="card-price">10€</p>
+					</div>
+					<div class="hs-card">
 						<img class="dummie" src="https://cdn.shopify.com/s/files/1/2996/1964/products/trenza-papel-5-2_360x.jpg?v=1606418711" />
 						<p class="card-title">Nombre producto</p>
 						<p class="card-price">10€</p>
@@ -615,7 +639,7 @@
 			<div class="inner">
 				<div class="grid c-2">
 					<p class="large">
-						En Natkits tenemos mucho que enseñar... y aprender. Navega por nuestros contenidos orientados a compartir todo lo que sabemos y descubrimos sobre las fibras naturales.
+						En Natkits tenemos mucho que mostrar... y aprender. Navega por nuestros contenidos orientados a compartir todo lo que sabemos y descubrimos sobre las fibras naturales.
 					</p>
 					<div class="blocks">
 						<div class="block">
@@ -703,8 +727,9 @@
 								</g>
 
 							</svg>
-							<p><strong>Historia de los materiales</strong><br/>
-							Te contamos todo lo qeu sabemos sobre ellos, historia, trucos y anécdotas para conocer mejor la fibra natural.</p>
+							<p><strong>Los materiales</strong><br/>
+							Historia, trucos y anécdotas para conocer mejor la fibra natural.</p>
+							<a href="#" class="btn--secondary">Ver videos</a>
 						</div>
 						<div class="block">
 							<svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -722,10 +747,10 @@
 								</clipPath>
 								</defs>
 								</svg>
-								
 							<p><strong>¿Cómo lo hago?</strong><br/>
 								Tutoriales e instrucciones paso a paso.
 							</p>
+							<a href="#" class="btn--secondary">Ver videos</a>
 						</div>
 					</div>
 				</div>
@@ -753,8 +778,10 @@
 		<div class="module inspire">
 			<div class="inner">
 				<div class="inner-content">
-					<h2>Lo quiero!</h2>
-					<p>Inspiración para tus proyectos</p>
+					<header class="inner-header">
+						<h2>¡Lo quiero! #natkitsinspira</h2>
+						<p class="">Búscalos en <a class="btn--secondary" target="_blank" href="https://www.instagram.com/natkits/">@natkits</a></p>
+					</header>
 					<div class="blocks grid fluid">
 						<div class="grid-card portrait">
 							<img src="https://source.unsplash.com/collection/51445918/300x400" />
@@ -778,6 +805,23 @@
 				</div>
 			</div>
 		</div>
+		<div class="module newsletter">
+			<h2>#natklub.</h2>
+			<p class="heading-tagline">Noticias, promociones y acceso exclusivo a contenidos mensuales</p>
+			<form class="form-newsletter">
+				<div class="form-group">
+					<input type="email" placeholder="tu@email.com"/>
+					<button class="main-button">Únete</button>
+				</div>
+				<div class="form-group">
+					<label for="disclaimer" class="label--checkbox">
+						<input type="checkbox" value="acceptance" name="disclaimer">
+						Acepto las <a href="#">condiciones de uso</a> de mis datos<br  />para recibir comunicados comerciales
+					</label> 
+				</div>
+				
+			</form>
+		</div>
     </main>
     <footer class="site-footer">
         <div class="inner">
@@ -797,21 +841,22 @@
 			<div class="block-nav">
 				<h4>Info</h4>
 				<ul>
-					<li>Blog</li>
-					<li>En persona</li>
+					<li>Materiales</li>
+					<li>Tutoriales</li>
 					<li>¡Lo quiero!</li>
-					<li>Natural de verdad</li>
+					<li>Blog</li>
 				</ul>
 			</div>
 			<div class="block-info">
-				<h4>Natklub!</h4>
+				<h4>Natkits</h4>
 				<p>
-					Conoce todas las ventajas de 
-					forma parte de nuestro club, es gratuíto y te ayudará en tus proyectos
+					¿Necesitas consejo con tu compra? No estás segura de algún material o complemento... estamos aquí para ayudarte.
 				</p>
-				<a href="#" class="seondary-button">Únete</a>
+				<a href="#" class="main-button">Preguntanos</a>
 			</div>
 		</div>
     </footer>
+	<script src="assets/js/custom.min.js"></script>
+	
 </body>
 </html>
