@@ -55,5 +55,6 @@
       &:hover,
       &:active {
         cursor: url(/images/circle.svg),auto;
+		color: $color--primary;
       }
     }

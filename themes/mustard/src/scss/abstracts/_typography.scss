@@ -43,7 +43,10 @@ p {
 		&:hover {
 			text-decoration: underline;
 			text-decoration-style: dotted;
+			cursor: url(/images/circle.svg),auto;
+			color: $color--primary;
 		}
+		
 	}
 	
 }
@@ -52,7 +55,7 @@ address { margin: 0 0 1.5rem; }
 b,
 strong {
 	// font-variation-settings: "wght" 400;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 small {
@@ -63,6 +66,7 @@ small {
 em {
 	// font-variation-settings: "wght" 300;
 	font-style: italic;
+	font-weight: 300;
 }
 
 code {

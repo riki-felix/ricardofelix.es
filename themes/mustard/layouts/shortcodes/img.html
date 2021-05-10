@@ -6,7 +6,7 @@
 {{ $tinyw := default "500x" }}
 {{ $smallw := default "800x" }}
 {{ $mediumw := default "1200x" }}
-{{ $largew := default "1500x" }}
+{{ $largew := default "1800x" }}
 
 {{/* resize the src image to the given sizes */}}
 
@@ -25,8 +25,8 @@
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<img 
-  {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}sizes="(min-width: 35em) 1200px, 100vw"{{ end }}
+<img
+  {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}sizes="(min-width: 40em) 1800px, 100vw"{{ end }}
   srcset='
   {{ if ge $src.Width "500" }}
 	{{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
@@ -45,4 +45,5 @@
   {{ else }}
 	src="{{ $src.RelPermalink }}" 
   {{ end }}
-  {{ with .Get "alt" }}alt="{{.}}"{{ else }}alt=""{{ end }}>
+  {{ with .Get "alt" }}alt="{{.}}"{{ else }}alt=""{{ end }}
+  {{ with .Get "class" }}class="{{.}}"{{ else }}class=""{{ end }}>

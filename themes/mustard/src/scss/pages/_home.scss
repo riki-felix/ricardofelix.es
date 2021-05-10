@@ -14,10 +14,36 @@
     }
 	
 	.grid {
-		display: grid;
-		gap: 1px;
+		position: relative;
+		overflow: hidden;
+		.img-1 {
+		max-height: rem(500);
+			animation-name: fade;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+			animation-duration: 4s;
+			animation-direction: alternate;
+			position:absolute;
+			  left:0;
+			  top: 0;
+			  transition: opacity 5s ease;
+			}
+			.img-2 {
+				max-height: rem(500);
+			}
 		&.c-2 {
-		grid-template-columns: 1fr 1fr;
-			
 		}
 	}
+	@keyframes fade {
+		0% {
+			opacity:1;
+		}
+		50% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+		
+		

@@ -130,6 +130,7 @@ Design single
       font-size: calc(34px + (48 - 34) * ((100vw - 300px) / (1600 - 300)));
       margin-bottom: 0.4rem;
       margin-top: 1rem;
+	  font-weight: 500;
     }
     &__tagline {
       font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));

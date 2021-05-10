@@ -13,7 +13,7 @@ Desde Corella, con una breve formación artística y en gráfica publicitaria, p
 Diseño, CSS, HTML, JS, Wordpress, Shopify, Hugo.
 
 ## Sobre diseño
-Soy profesor en [Kunsthal](https://kunsthal.es), enseñando mientras aprendo. Una apuesta por transmitir y formar a futuros profesionales en el diseño de interfaces y gestión de proyectos digitales.
+Soy profesor en [IED Kunsthal Bilbao](https://kunsthal.es), enseñando mientras aprendo. Una apuesta por transmitir y formar a futuros profesionales en el diseño de interfaces y gestión de proyectos digitales.
 
 ## Previously
 Runroom, Folch, Océ, ADV(Italia).

@@ -56,13 +56,12 @@ Main nav
 		}
 	}
 	&__link {
-		color: $color--dark;
+		color: $color--primary;
 		line-height: 1;
 		text-decoration: none;
 		text-align: center;
 		
 		font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
-		font-variation-settings: "wght" 400;
 		
 		display: block;
 		padding: 0;
@@ -76,7 +75,6 @@ Main nav
 		}
 		&--active {
 			@extend .globalNav__link;
-			font-variation-settings: "wght" 800;
 		}		
 	}
 }
