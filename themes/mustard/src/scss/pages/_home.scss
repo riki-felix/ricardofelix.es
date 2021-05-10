@@ -4,7 +4,7 @@
     .homeContent {
       max-width: $pageWidth;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0;
       font-size: rem(24);
       p {
         font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));
@@ -12,3 +12,12 @@
         max-width: 45ch;
       }
     }
+	
+	.grid {
+		display: grid;
+		gap: 1px;
+		&.c-2 {
+		grid-template-columns: 1fr 1fr;
+			
+		}
+	}

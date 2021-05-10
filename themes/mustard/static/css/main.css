@@ -28,9 +28,9 @@ html {
 
 body {
   background: #fff;
-  color: #1a1a1a;
-  font-family: "Frutiger Neue Variable W05 Rm", Helvetica, Arial, sans-serif;
-  font-variation-settings: "wght" 300;
+  color: #ff5100;
+  font-family: "Surveyor SSm A", "Surveyor SSm B", Times New Roman, Times, sans-serif;
+  font-weight: 300;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -57,13 +57,12 @@ figure {
 }
 
 a {
-  color: #1a1a1a;
+  color: #ff5100;
   text-decoration: none;
-  font-variation-settings: "wght" 400;
 }
 
 a:visited {
-  color: #1a1a1a;
+  color: #ff5100;
 }
 
 a:hover, a:active {
@@ -74,16 +73,16 @@ a:hover, a:active {
 Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
-  font-size: calc(28px + (32 - 28) * ((100vw - 300px) / (1600 - 300)));
-  font-variation-settings: "wght" 280;
-  line-height: 1.4;
+  font-size: calc(32px + (40 - 32) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 300;
+  line-height: 1.2;
   margin: 0.2rem 0 1.4rem 0;
   padding: 0;
 }
 
 h2 {
-  font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
-  font-variation-settings: "wght" 580;
+  font-size: calc(24px + (28 - 24) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 300;
   line-height: 1.2;
   margin: 0.4rem 0 0.6rem 0;
   padding: 0;
@@ -91,25 +90,31 @@ h2 {
 
 h3 {
   font-size: 0.8125rem;
-  font-variation-settings: "wght" 500;
   line-height: 1.4;
   letter-spacing: 1px;
   margin: 0 0 1rem 0;
   padding: 0;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 p {
-  font-size: calc(17px + (20 - 17) * ((100vw - 300px) / (1600 - 300)));
-  font-variation-settings: "wght" 280;
-  line-height: 1.6;
-  margin: 0.2rem 0 1.2rem 0;
+  font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.4;
+  margin: 0.2rem 0 1.4rem 0;
   padding: 0;
 }
 
 p a {
-  color: #1a1a1a;
-  text-decoration: none;
+  color: #ff5100;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+p a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
 }
 
 address {
@@ -118,16 +123,16 @@ address {
 
 b,
 strong {
-  font-variation-settings: "wght" 400;
+  font-weight: 400;
 }
 
 small {
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   line-height: 1.2;
 }
 
 em {
-  font-variation-settings: "wght" 300;
+  font-style: italic;
 }
 
 code {
@@ -151,7 +156,7 @@ Theme pages
 .homeContent {
   max-width: 90%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
   font-size: 1.5rem;
 }
 
@@ -161,13 +166,22 @@ Theme pages
   max-width: 45ch;
 }
 
+.grid {
+  display: grid;
+  gap: 1px;
+}
+
+.grid.c-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Newsletter page
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .pageNewsletter__content {
   max-width: 90%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .pageNewsletter__content h1 {
@@ -214,7 +228,7 @@ Newsletter page
 #mc_embed_signup .mc-field-group .text-input {
   background-color: #fff;
   border: 0;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #ff5100;
   font-size: 1.125rem;
   padding: .5rem 0;
   margin: 0;
@@ -229,7 +243,6 @@ Newsletter page
 
 #mc_embed_signup .mc-field-group ::-moz-placeholder {
   color: gray;
-  font-variation-settings: 'wght' 200;
 }
 
 #mc_embed_signup .mc-field-group div.mce_inline_error {
@@ -291,7 +304,7 @@ Newsletter page
 .display_archive .campaign {
   font-weight: 700;
   font-size: 0.875rem;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #ff5100;
   padding: 1rem 0;
 }
 
@@ -302,7 +315,7 @@ Newsletter page
 .display_archive .campaign:first-child {
   padding: 1rem;
   margin: 0 0 2rem 0;
-  border-left: 4px solid #1a1a1a;
+  border-left: 4px solid #ff5100;
   border-bottom: none;
 }
 
@@ -312,7 +325,7 @@ Page general
 .singlePage {
   max-width: 90%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .singlePage__content {
@@ -325,28 +338,29 @@ Information page
 .pageInfo__content {
   max-width: 90%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .pageInfo__content h1 {
-  max-width: 35ch;
+  max-width: 40ch;
 }
 
 .pageInfo__content p {
-  max-width: 55ch;
+  max-width: 64ch;
 }
 
 .pageInfo__grid {
   margin: 4rem auto;
-  padding: 1rem 0;
+  padding: 1rem 0 4rem 0;
   background-color: #fff;
   background-size: 0.5625rem 0.5625rem;
-  background-image: radial-gradient(circle, #1a1a1a 0.5px, rgba(0, 0, 0, 0) 0.5px);
+  background-image: radial-gradient(circle, rgba(255, 81, 0, 0.5) 0.5px, rgba(0, 0, 0, 0) 0.5px);
 }
 
 .pageInfo__grid h3 {
   margin: 1rem;
-  display: inline-block;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .pageInfo__grid ol {
@@ -356,26 +370,35 @@ Information page
   list-style-type: none;
   margin: 0;
   padding: 0 1rem;
-  color: #1a1a1a;
   font-size: 0.9375rem;
 }
 
+.pageInfo__grid ol a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+}
+
 .pageInfo__grid ol li {
-  background-color: #fff;
   counter-increment: section;
   padding: 0 0 0.5rem 0.5rem;
 }
 
 .pageInfo__grid ol li:before {
-  color: #1a1a1a;
   font-size: 0.8125rem;
   content: counter(section, upper-alpha);
   display: block;
   font-synthesis: none;
-  font-variation-settings: 'wght' 800, 'ital' 1;
   margin-left: 0;
-  background-color: #fff;
-  padding-top: 0.5rem;
+  background-color: #ff5100;
+  color: #fff;
+  padding: 0.15rem;
+  display: inline-block;
+  border-radius: 999px;
+  height: 1.25rem;
+  width: 1.25rem;
+  text-align: center;
 }
 
 .pageInfo__grid ol li ul {
@@ -402,14 +425,17 @@ Information page
   border-bottom: none;
   content: "";
   margin: 0;
+  background-color: transparent;
+  display: block;
+  height: 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Notes list
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .notesArticle {
-  border-top: 1px solid #1a1a1a;
-  margin: 0 1rem;
+  border-top: 1px solid #ff5100;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1.5rem 2fr auto;
@@ -456,11 +482,10 @@ Notes list
 }
 
 .notesArticle:last-child {
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #ff5100;
 }
 
 .notesArticle__number {
-  color: #1a1a1a;
   font-size: 0.8125rem;
   text-transform: uppercase;
   line-height: 1;
@@ -484,14 +509,14 @@ Notes list
 }
 
 .notesArticle__legend {
-  font-size: 1.125rem;
-  color: #1a1a1a;
+  color: #ff5100;
   grid-column: 1 / -1;
 }
 
 @media (min-width: 800px) {
   .notesArticle__legend {
     grid-column: 2/-1;
+    max-width: 64ch;
   }
 }
 
@@ -530,16 +555,16 @@ Notes single
 
 .notesNav__list li {
   margin-bottom: 0.5rem;
-  border-top: 1px solid #000;
+  border-top: 1px solid #ff5100;
 }
 
 .notesNav__link {
   font-size: 0.8125rem;
-  color: #1a1a1a;
+  color: #ff5100;
   display: block;
   margin: 0;
   text-decoration: none;
-  padding: 0;
+  padding: 0.25rem 0;
   line-height: 1.4;
   -webkit-transition: padding 1s ease;
   transition: padding 1s ease;
@@ -598,7 +623,6 @@ Notes single
 }
 
 .singleArticle__excerpt p {
-  font-variation-settings: "wght" 500;
   font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
 }
 
@@ -629,8 +653,7 @@ Design section
     display: block;
     visibility: hidden;
     content: attr(aria-label);
-    color: #1a1a1a;
-    font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
+    font-size: calc(20px + (30 - 20) * ((200vw - 300px) / (1600 - 300)));
     font-variation-settings: "wght" 400;
     opacity: 0;
     line-height: 1.2;
@@ -657,7 +680,7 @@ Design section
 }
 
 .pageDiseno__link {
-  color: #1a1a1a;
+  color: #ff5100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,11 +688,11 @@ Design section
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
+  font-size: calc(20px + (30 - 20) * ((200vw - 300px) / (1600 - 300)));
   text-decoration: none;
   font-variation-settings: "wght" 900;
   line-height: 1.2;
-  padding: .15rem 1rem .5rem 1rem;
+  padding: .15rem 1rem .5rem 0;
   -webkit-transition: -webkit-transform .4s ease-in-out;
   transition: -webkit-transform .4s ease-in-out;
   transition: transform .4s ease-in-out;
@@ -813,17 +836,16 @@ Theme components
 
 .siteHeader {
   margin: 1rem auto 4rem auto;
-  padding: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
   max-width: 90%;
-  padding: 0 1rem;
 }
 
 @media (min-width: 800px) {
   .siteHeader {
     grid-template-columns: auto 1fr;
+    padding: 0;
   }
 }
 
@@ -833,7 +855,7 @@ Theme components
 }
 
 .brandLogo__link .brandLogo {
-  fill: #1a1a1a;
+  fill: #ff5100;
   width: 3rem;
 }
 
@@ -844,7 +866,7 @@ Theme components
   margin: 2rem auto;
   width: 100%;
   max-width: 90%;
-  padding: 0 1rem;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -942,6 +964,12 @@ Main nav
   position: relative;
 }
 
+@media (min-width: 800px) {
+  .globalNav__menu li {
+    margin: 0 0 0 1rem;
+  }
+}
+
 .globalNav__menu li [aria-label]:after {
   display: none;
 }
@@ -955,14 +983,14 @@ Main nav
 @media (min-width: 800px) {
   .globalNav__menu li [aria-label]:after {
     background-color: #fff;
-    color: #1a1a1a;
+    color: #ff5100;
     content: attr(aria-label);
     display: none;
     font-size: 0.6875rem;
     font-variation-settings: "wght" 400;
-    border: 1px solid #1a1a1a;
-    -webkit-box-shadow: 2px 2px 0 0 #1a1a1a;
-            box-shadow: 2px 2px 0 0 #1a1a1a;
+    border: 1px solid #ff5100;
+    -webkit-box-shadow: 2px 2px 0 0 #ff5100;
+            box-shadow: 2px 2px 0 0 #ff5100;
     position: absolute;
     bottom: -2.25rem;
     left: 1.5rem;

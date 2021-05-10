@@ -3,8 +3,8 @@ Notes list
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .notesArticle {
-    border-top: 1px solid $color--dark;
-    margin: 0 1rem;
+    border-top: 1px solid $color--primary;
+    margin: 0;
     padding: 0;
     
     display: grid;
@@ -41,11 +41,10 @@ Notes list
       }
     }
     &:last-child {
-      border-bottom: 1px solid $color--dark;
+      border-bottom: 1px solid $color--primary;
     }
 
     &__number {
-      color: $color--dark;
       font-size: rem(13);
       text-transform: uppercase;
       line-height: 1;
@@ -65,11 +64,11 @@ Notes list
       display: inline-block;
     }
     &__legend {
-      font-size: rem(18);
-      color: $color--dark;
+      color: $color--primary;
       grid-column: 1 / -1;
       @include respond-to('medium') {
         grid-column: 2/-1;
+		max-width: 64ch;
       }
     }
   }
@@ -98,16 +97,16 @@ Notes single
         justify-content: flex-start;
         li {
           margin-bottom: 0.5rem;
-          border-top: 1px solid #000;
+          border-top: 1px solid $color--primary;
         }
     }
     &__link {
         font-size: rem(13);
-        color: $color--dark;
+        color: $color--primary;
         display: block;
         margin: 0;
         text-decoration: none;
-        padding: 0;
+        padding: 0.25rem 0;
         line-height: 1.4;
         transition: padding 1s ease;
         &::after {
@@ -153,7 +152,7 @@ Notes single
         margin: 2rem 0 2rem -2rem ;
       }
       p {
-        font-variation-settings: "wght" 500;
+        // font-variation-settings: "wght" 500;
         font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
       }
     }

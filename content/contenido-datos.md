@@ -10,4 +10,6 @@ Este sítio web no utiliza ningún tipo de cookies, tampoco recolecta datos a tr
 
 ## Tipografía
 
-V0.1: Neue Frutiger® Variable a través de [fonts.com](https://www.fonts.com/font/linotype/neue-frutiger-variable).
+~~V0.1: Neue Frutiger® Variable a través de [fonts.com](https://www.fonts.com/font/linotype/neue-frutiger-variable).~~
+
+V0.2: Surveyor ScreenSmart® by Hoefler&Co. a través de [typography.com](https://www.typography.com/fonts/surveyor/overview).

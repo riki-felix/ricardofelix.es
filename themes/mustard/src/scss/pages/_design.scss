@@ -18,8 +18,7 @@ Design section
           display: block;
           visibility: hidden;
           content: attr(aria-label);
-          color: $color--dark;
-          font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
+          font-size: calc(20px + (30 - 20) * ((200vw - 300px) / (1600 - 300)));
           font-variation-settings: "wght" 400;
           opacity: 0;
           line-height: 1.2;
@@ -43,14 +42,14 @@ Design section
     }
 
     &__link {
-      color: $color--dark;
+      color: $color--primary;
       display: flex;
         flex-flow: row nowrap;
-      font-size: calc(30px + (46 - 30) * ((200vw - 300px) / (1600 - 300)));
+      font-size: calc(20px + (30 - 20) * ((200vw - 300px) / (1600 - 300)));
       text-decoration: none;
       font-variation-settings: "wght" 900;
       line-height: 1.2;
-      padding: .15rem 1rem .5rem 1rem;
+      padding: .15rem 1rem .5rem 0;
       transition: transform .4s ease-in-out;
       
       &:focus {

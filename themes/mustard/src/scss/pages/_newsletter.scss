@@ -7,7 +7,7 @@ Newsletter page
     &__content {
         max-width: $pageWidth;
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 0;
         h1 {
             max-width: 35ch;
         }
@@ -41,7 +41,7 @@ Newsletter page
 		.text-input {
 			background-color: #fff;
 			border: 0;
-			border-bottom: 1px solid $color--dark;
+			border-bottom: 1px solid $color--primary;
 			font-size: rem(18);
 			padding: .5rem 0;
 			margin: 0;
@@ -53,7 +53,7 @@ Newsletter page
 		}
 		::-moz-placeholder {
 			color: hsl(0,0,50%);
-			font-variation-settings: 'wght' 200;
+			// font-variation-settings: 'wght' 200;
 		}
 		div.mce_inline_error {
 			background-color: transparent;
@@ -104,7 +104,7 @@ Newsletter page
 			.campaign {
 				font-weight: 700;
 				font-size: rem(14);
-				border-bottom: 1px solid $color--dark;
+				border-bottom: 1px solid $color--primary;
 				padding: 1rem 0;
 				a {
 					font-weight: 400;
@@ -112,7 +112,7 @@ Newsletter page
 				&:first-child {
 					padding: 1rem;
 					margin: 0 0 2rem 0;
-					border-left: 4px solid $color--dark;
+					border-left: 4px solid $color--primary;
 					border-bottom: none;
 				}
 			}

@@ -11,9 +11,10 @@
     }
     body {
       background: $color--light;
-      color: $color--dark;
+      color: $color--primary;
       font-family: $font--primary;
-      font-variation-settings: "wght" 300;
+      // font-variation-settings: "wght" 300;
+	  font-weight: 300;
       min-height: 100%;
       margin: 0;
       padding: 0;
@@ -45,14 +46,14 @@
     }
 
     a {
-      color: $color--dark;
+      color: $color--primary;
       text-decoration: none;
-      font-variation-settings: "wght" 400;
+      // font-variation-settings: "wght" 400;
       &:visited {
-       color: $color--dark;
+       color: $color--primary;
       }
       &:hover,
       &:active {
-        cursor:url(/images/circle.svg),auto;
+        cursor: url(/images/circle.svg),auto;
       }
     }

@@ -3,8 +3,8 @@ title: "¡Hola!"
 draft: false
 ---
 
-# Kaixo!
+{{< figure class="grid c-2" figcaption="" >}}
+{{< img src="back-stone_rfs.jpg" alt="img1" >}}
+{{< img src="back-stone-2_rfs.jpg" alt="img2" >}}
+{{< /figure >}}
 
-Ayudo a personas y empresas diseñando mejores productos digitales, bueno, y no tan digitales...también.
-
-Por cierto, me llamo Ricardo Félix, soy diseñador gráfico.

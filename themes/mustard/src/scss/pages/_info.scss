@@ -5,23 +5,25 @@ Information page
     &__content {
         max-width: $pageWidth;
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 0;
         h1 {
-            max-width: 35ch;
+            max-width: 40ch;
         }
         p {
-            max-width: 55ch;
+            max-width: 64ch;
         }
+		
     }
     &__grid {
         margin: 4rem auto;
-        padding: 1rem 0;
+        padding: 1rem 0 4rem 0;
         background-color: $color--light;
         background-size: rem(9) rem(9);
-        background-image: radial-gradient(circle, $color--dark 0.5px, rgba(0, 0, 0, 0) 0.5px);
+        background-image: radial-gradient(circle, rgba($color--primary,0.5) 0.5px, rgba(0, 0, 0, 0) 0.5px);
         h3 {
             margin: 1rem;
-            display: inline-block;
+			text-align: center;
+			padding: 2rem 0;
         }
         ol {
             display: grid;
@@ -32,24 +34,33 @@ Information page
             margin: 0;
             padding: 0 1rem;
 
-            color: $color--dark;
             font-size: rem(15);
-
+			a {
+				&:hover {
+					text-decoration: underline;
+					text-decoration-style: dotted;
+					text-decoration-thickness: 2px;
+				}
+			}
             li {
-                background-color: $color--light;
                 counter-increment: section;
                 padding: 0 0 0.5rem 0.5rem;
 
                 &:before {
-                    color: $color--dark;
                     font-size: rem(13);
                     content: counter(section,upper-alpha);
                     display: block;
                     font-synthesis: none;
-                    font-variation-settings: 'wght' 800, 'ital' 1;
+                    // font-variation-settings: 'wght' 800, 'ital' 1;
                     margin-left: 0;
-                    background-color: #fff;
-                    padding-top: 0.5rem;
+                    background-color: $color--primary;
+					color: $color--light;
+                    padding: 0.15rem;
+					display: inline-block;
+					border-radius: 999px;
+					height: rem(20);
+					width: rem(20);
+					text-align: center;
                 }
                 &:nth-child(odd) {
                     &:before {
@@ -71,6 +82,9 @@ Information page
                             border-bottom: none;
                             content: "";
                             margin: 0;
+							background-color: transparent;
+							display: block;
+							height: 0;
                         }
                     }
                     

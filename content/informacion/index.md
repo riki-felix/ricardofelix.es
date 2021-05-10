@@ -4,7 +4,7 @@ date: 2019-01-5T19:08:37+02:00
 draft: false
 type: "informacion"
 ---
-#  Diseño gráfico, con todo lo que implica.  
+# La curiosidad y el aprendizaje continuo.  
 
 ## Al norte del norte
 Desde Corella, con una breve formación artística y en gráfica publicitaria, pasando por Barcelona, donde he desarrollado la mayor parte de mi carrera profesional y de vuelta al norte, a Donosti, donde tengo mi pequeña oficina de diseño.
@@ -39,11 +39,12 @@ Puedes enviar un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es)
 7. 
 8. 
     * [Hunky Dory Laboratory](https://unkydorylab.com)
+	* [Humo Pizza Gros](https://humopizza.com)
 9. 
     * [InfoPLC](https://infoplc.net)
 10. 
 11. 
-    * [Kunsthal](https://kunsthal.es)
+    * [IED Kunsthal Bilbao](https://kunsthal.es)
     * Kokoshca
 12. 
     * LTW
@@ -66,6 +67,7 @@ Puedes enviar un email a [studio@ricardofelix.es](mailto:studio@ricardofelix.es)
     * Ursus Polaris
 24. 
     * [Viña Zorzal Wines](https://vinazorzalwines.com)
+	* [Vinos Únicos](https://vinos-unicos.fr)
 25. 
 26. 
 27. 

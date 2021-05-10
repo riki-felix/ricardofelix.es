@@ -34,11 +34,11 @@
     {{ hugo.Generator }}
     <meta name="siteversion" content="0.1">
     
-    <script type="text/javascript" src="//fast.fonts.net/jsapi/ef316d9e-7d0a-470d-a316-35ed0d948f6e.js"></script>
+    <!-- <script type="text/javascript" src="//fast.fonts.net/jsapi/ef316d9e-7d0a-470d-a316-35ed0d948f6e.js"></script> -->
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.min.css" />
 
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-
+	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6385918/6877032/css/fonts.css" />
   </head>
   <body class="pageLayout {{ .Type }} {{ .Kind }}" id="ricardofelix-es">
   {{ block "header.html" . }}
