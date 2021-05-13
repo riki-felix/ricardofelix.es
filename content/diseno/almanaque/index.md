@@ -6,6 +6,34 @@ slug: "almanaque"
 label: "El baul de los recuerdos"
 ---
 
+### 2021
+<div class="item__layout">
+	{{<figure class="itemImage">}}
+		{{<img src="images/debut-pegatinas.jpg" alt="Foto de doferentes stickers para Debut " >}}
+	{{</figure>}}
+	{{<figure class="itemImage">}}
+		{{<img src="images/debut-delantal.jpg" alt="Foto del delantal azul con gráficos de debut" >}}
+	{{</figure>}}
+	{{<figure class="itemImage highlight">}}
+	{{<img src="images/debut-fanzine.jpg" alt="Foto del fanzine abierto de Debut" >}}
+	{{</figure>}}
+	{{<figure class="itemImage">}}
+	{{<img src="images/debut-tazas.jpg" alt="Foto de las tazas azul y blanca con el gráfico de Debut" >}}
+	{{</figure>}}
+</div>
+<div class="item__layout">
+	{{<figure class="itemImage">}}
+	{{<img src="images/debut-bote-especias.jpg" alt="Foto del bote de especias y la cucharilla" >}}
+	{{</figure>}}
+	{{<figure class="itemImage highlight">}}
+	{{<img src="images/debut-bodegon.jpg" alt="Foto de un bodegón con todos los productos del pack de Debut Aniversario 5 años" >}}
+	{{</figure>}}
+</div>
+
+### 2020
+<div class="item__layout">
+</div>
+
 ### 2019
 <div class="item__layout">
     {{<figure class="itemImage">}}
