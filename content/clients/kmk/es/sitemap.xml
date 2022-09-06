@@ -2,88 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>%20/es/agenda-hedatua/</loc>
+    <loc>/es/agenda-hedatua/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="%20/agenda-hedatua/"
+                href="/agenda-hedatua/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="%20/es/agenda-hedatua/"
+                href="/es/agenda-hedatua/"
                 />
   </url><url>
-    <loc>%20/es/categories/</loc>
+    <loc>/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="%20/categories/"
+                href="/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="%20/es/categories/"
+                href="/es/categories/"
                 />
   </url><url>
-    <loc>%20/es/zinema/</loc>
+    <loc>/es/zinema/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="%20/zinema/"
+                href="/zinema/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="%20/es/zinema/"
+                href="/es/zinema/"
                 />
   </url><url>
-    <loc>%20/es/erakusketa/</loc>
+    <loc>/es/erakusketa/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="%20/erakusketa/"
+                href="/erakusketa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="%20/es/erakusketa/"
+                href="/es/erakusketa/"
                 />
   </url><url>
-    <loc>%20/es/</loc>
+    <loc>/es/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="%20/"
+                href="/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="%20/es/"
+                href="/es/"
                 />
   </url><url>
-    <loc>%20/es/prentsa/</loc>
+    <loc>/es/prentsa/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="%20/prentsa/"
+                href="/prentsa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="%20/es/prentsa/"
+                href="/es/prentsa/"
                 />
   </url><url>
-    <loc>%20/es/tags/</loc>
+    <loc>/es/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="%20/tags/"
+                href="/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="%20/es/tags/"
+                href="/es/tags/"
                 />
   </url>
 </urlset>

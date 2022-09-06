@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agenda hedatua on </title>
-    <link>%20/es/agenda-hedatua/</link>
+    <link>/es/agenda-hedatua/</link>
     <description>Recent content in Agenda hedatua on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <copyright>KMK © 2022</copyright><atom:link href="%20/es/agenda-hedatua/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>KMK © 2022</copyright><atom:link href="/es/agenda-hedatua/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
