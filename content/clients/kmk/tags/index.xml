@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>/tags/</link>
+    <link>%20/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>eu-ES</language>
-    <copyright>KMK © 2022</copyright><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>KMK © 2022</copyright><atom:link href="%20/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on </title>
-    <link>/es/categories/</link>
+    <link>%20/es/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <copyright>KMK © 2022</copyright><atom:link href="/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>KMK © 2022</copyright><atom:link href="%20/es/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

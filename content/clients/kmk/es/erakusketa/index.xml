@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Erakusketa on </title>
-    <link>/es/erakusketa/</link>
+    <link>%20/es/erakusketa/</link>
     <description>Recent content in Erakusketa on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <copyright>KMK © 2022</copyright><atom:link href="/es/erakusketa/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>KMK © 2022</copyright><atom:link href="%20/es/erakusketa/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

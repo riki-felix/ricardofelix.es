@@ -2,20 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Index on </title>
-    <link>/es/</link>
+    <link>%20/es/</link>
     <description>Recent content in Index on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <copyright>KMK © 2022</copyright><atom:link href="/es/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cine</title>
-      <link>/es/cine/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/es/cine/</guid>
-      <description>Cine es
-ackerman_luis-gasca.jpgcarlo-rambaldi_luis-gasca.jpgcelia-cruz_luis-gasca.jpgcharloton-heston_luis-gasca.jpgdavid-carradine_luis-gasca.jpgdavid-hasselhoff_luis-gasca.jpgdick-van-dyke_luis-gasca.jpgdirk-bogarde_luis-gasca.jpggil-kane_luis-gasca.jpgharvey-kutzman_luis-gasca.jpgimelda-marcos_luis-gasca.jpgjack-kirby_luis-gasca.jpgjodie-foster_luis-gasca.jpgjoe-kubert_luis-gasca.jpgrobert-mitchum_luis-gasca.jpgtroupe-almodovar_luis-gasca.jpgwill-eisner_luis-gasca.jpgxavier-cugat_luis-gasca.jpg</description>
-    </item>
-    
+    <copyright>KMK © 2022</copyright><atom:link href="%20/es/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
