@@ -2,6 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/</loc>
+    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/"
+                />
+  </url><url>
+    <loc>/agenda-hedatua/</loc>
+    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/agenda-hedatua/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/agenda-hedatua/"
+                />
+  </url><url>
+    <loc>/agenda-hedatua/stephan-levallois-belen-atienda/</loc>
+    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/agenda-hedatua/luis-bustos-eugenio-mira/</loc>
+    <lastmod>2022-10-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/agenda-hedatua/fermin-solis-paul-urquijo/</loc>
+    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/agenda-hedatua/laura-perez/</loc>
+    <lastmod>2022-09-08T17:00:00+00:00</lastmod>
+  </url><url>
     <loc>/bisita-birtuala/</loc>
   </url><url>
     <loc>/bitxikerien-kanala/</loc>
@@ -28,30 +66,6 @@
                 rel="alternate"
                 hreflang="eu"
                 href="/erakusketa/"
-                />
-  </url><url>
-    <loc>/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/"
-                />
-  </url><url>
-    <loc>/agenda-hedatua/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-hedatua/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/"
                 />
   </url><url>
     <loc>/prentsa/</loc>
