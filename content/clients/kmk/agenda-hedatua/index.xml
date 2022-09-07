@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Index on </title>
+    <title>Agenda hedatua on </title>
     <link>/agenda-hedatua/</link>
-    <description>Recent content in Index on </description>
+    <description>Recent content in Agenda hedatua on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>eu-ES</language>
     <copyright>KMK © 2022</copyright>
-    <lastBuildDate>Thu, 27 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/agenda-hedatua/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Oct 2022 17:00:00 +0000</lastBuildDate><atom:link href="/agenda-hedatua/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Stephan Levallois eta Belén Atienda</title>
-      <link>/agenda-hedatua/stephan-levallois-belen-atienda/</link>
-      <pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate>
+      <title>* laister informazio gehiago</title>
+      <link>/agenda-hedatua/event-4-next/</link>
+      <pubDate>Thu, 27 Oct 2022 17:00:00 +0000</pubDate>
       
-      <guid>/agenda-hedatua/stephan-levallois-belen-atienda/</guid>
+      <guid>/agenda-hedatua/event-4-next/</guid>
       <description>Coordinación Borja Crespo</description>
     </item>
     
     <item>
-      <title>Luis Bustos eta Eugenio Mira</title>
-      <link>/agenda-hedatua/luis-bustos-eugenio-mira/</link>
-      <pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate>
+      <title>* laister informazio gehiago</title>
+      <link>/agenda-hedatua/event-3-next/</link>
+      <pubDate>Mon, 17 Oct 2022 17:00:00 +0000</pubDate>
       
-      <guid>/agenda-hedatua/luis-bustos-eugenio-mira/</guid>
+      <guid>/agenda-hedatua/event-3-next/</guid>
       <description>Coordinación Borja Crespo</description>
     </item>
     
     <item>
-      <title>Fermín Solís eta Paul Urquijo</title>
-      <link>/agenda-hedatua/fermin-solis-paul-urquijo/</link>
-      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      <title>Fermín Solís eta Paul Urkijo</title>
+      <link>/agenda-hedatua/fermin-solis-paul-urkijo/</link>
+      <pubDate>Wed, 05 Oct 2022 17:00:00 +0000</pubDate>
       
-      <guid>/agenda-hedatua/fermin-solis-paul-urquijo/</guid>
+      <guid>/agenda-hedatua/fermin-solis-paul-urkijo/</guid>
       <description>Coordinación Borja Crespo</description>
     </item>
     
     <item>
-      <title>laura perez</title>
-      <link>/agenda-hedatua/laura-perez/</link>
-      <pubDate>Thu, 08 Sep 2022 17:00:00 +0000</pubDate>
+      <title>Laura Perez eta Dario Adanti</title>
+      <link>/agenda-hedatua/laura-perez-dario-adanti/</link>
+      <pubDate>Wed, 28 Sep 2022 17:00:00 +0000</pubDate>
       
-      <guid>/agenda-hedatua/laura-perez/</guid>
+      <guid>/agenda-hedatua/laura-perez-dario-adanti/</guid>
       <description>Coordinación Borja Crespo</description>
     </item>
     

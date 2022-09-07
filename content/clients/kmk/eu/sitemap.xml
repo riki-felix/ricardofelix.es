@@ -2,8 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/agenda-hedatua/event-4-next/</loc>
+    <lastmod>2022-10-27T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/agenda-expandida/event-4-next/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/agenda-hedatua/event-4-next/"
+                />
+  </url><url>
+    <loc>/agenda-hedatua/</loc>
+    <lastmod>2022-10-27T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/agenda-expandida/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/agenda-hedatua/"
+                />
+  </url><url>
     <loc>/</loc>
-    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-27T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -15,34 +41,68 @@
                 href="/"
                 />
   </url><url>
-    <loc>/agenda-hedatua/</loc>
-    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
+    <loc>/agenda-hedatua/event-3-next/</loc>
+    <lastmod>2022-10-17T17:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/agenda-hedatua/"
+                href="/es/agenda-expandida/event-3-next/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="/agenda-hedatua/"
+                href="/agenda-hedatua/event-3-next/"
                 />
   </url><url>
-    <loc>/agenda-hedatua/stephan-levallois-belen-atienda/</loc>
-    <lastmod>2022-10-27T00:00:00+00:00</lastmod>
+    <loc>/agenda-hedatua/fermin-solis-paul-urkijo/</loc>
+    <lastmod>2022-10-05T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/agenda-expandida/fermin-solis-paul-urkijo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/agenda-hedatua/fermin-solis-paul-urkijo/"
+                />
   </url><url>
-    <loc>/agenda-hedatua/luis-bustos-eugenio-mira/</loc>
-    <lastmod>2022-10-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/agenda-hedatua/fermin-solis-paul-urquijo/</loc>
-    <lastmod>2022-10-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/agenda-hedatua/laura-perez/</loc>
-    <lastmod>2022-09-08T17:00:00+00:00</lastmod>
+    <loc>/agenda-hedatua/laura-perez-dario-adanti/</loc>
+    <lastmod>2022-09-28T17:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/agenda-expandida/laura-perez-dario-adanti/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/agenda-hedatua/laura-perez-dario-adanti/"
+                />
   </url><url>
     <loc>/bisita-birtuala/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/visita-virtual/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/bisita-birtuala/"
+                />
   </url><url>
     <loc>/bitxikerien-kanala/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/canal-curiosidades/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/bitxikerien-kanala/"
+                />
   </url><url>
     <loc>/categories/</loc>
     <xhtml:link
@@ -60,7 +120,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/erakusketa/"
+                href="/es/exposicion/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -72,7 +132,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/prentsa/"
+                href="/es/prensa/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -96,7 +156,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/zinema/"
+                href="/es/cine/"
                 />
     <xhtml:link
                 rel="alternate"

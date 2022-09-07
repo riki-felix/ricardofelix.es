@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Index on </title>
-    <link>/es/</link>
-    <description>Recent content in Index on </description>
+    <title>Agenda expandida on </title>
+    <link>/es/agenda-expandida/</link>
+    <description>Recent content in Agenda expandida on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <copyright>KMK © 2022</copyright>
-    <lastBuildDate>Thu, 27 Oct 2022 17:00:00 +0000</lastBuildDate><atom:link href="/es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Oct 2022 17:00:00 +0000</lastBuildDate><atom:link href="/es/agenda-expandida/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>* próximamente</title>
       <link>/es/agenda-expandida/event-4-next/</link>
