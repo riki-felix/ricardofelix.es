@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/agenda-hedatua/</loc>
-    <lastmod>2022-10-27T19:00:00+00:00</lastmod>
+    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -15,8 +15,21 @@
                 href="/agenda-hedatua/"
                 />
   </url><url>
+    <loc>/agenda-hedatua/euskal-komikigintza/</loc>
+    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/agenda-expandida/comic-euskara/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/agenda-hedatua/euskal-komikigintza/"
+                />
+  </url><url>
     <loc>/</loc>
-    <lastmod>2022-10-27T19:00:00+00:00</lastmod>
+    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -28,17 +41,17 @@
                 href="/"
                 />
   </url><url>
-    <loc>/agenda-hedatua/stephan-levallois-maria-herreros/</loc>
+    <loc>/agenda-hedatua/stephane-levallois-maria-herreros/</loc>
     <lastmod>2022-10-27T19:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/agenda-expandida/stephan-levallois-maria-herrerosx/"
+                href="/es/agenda-expandida/stephane-levallois-maria-herrerosx/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="/agenda-hedatua/stephan-levallois-maria-herreros/"
+                href="/agenda-hedatua/stephane-levallois-maria-herreros/"
                 />
   </url><url>
     <loc>/agenda-hedatua/oscar-aibar-chema-garcia/</loc>
