@@ -15,19 +15,6 @@
                 href="/agenda-hedatua/"
                 />
   </url><url>
-    <loc>/agenda-hedatua/euskal-komikigintza/</loc>
-    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-expandida/comic-euskara/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/euskal-komikigintza/"
-                />
-  </url><url>
     <loc>/</loc>
     <lastmod>2022-11-07T19:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,6 +26,19 @@
                 rel="alternate"
                 hreflang="eu"
                 href="/"
+                />
+  </url><url>
+    <loc>/agenda-hedatua/euskal-komikigintza/</loc>
+    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/agenda-expandida/comic-euskara/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/agenda-hedatua/euskal-komikigintza/"
                 />
   </url><url>
     <loc>/agenda-hedatua/stephane-levallois-maria-herreros/</loc>
