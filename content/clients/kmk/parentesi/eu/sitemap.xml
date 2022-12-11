@@ -2,21 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/agenda-hedatua/</loc>
-    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-expandida/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/"
-                />
+    <loc>/programa/martxoak-4-larunbata-arratsaldea/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/feminismoak/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gaurkotasuna/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gorrotoa-sareetan/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -28,83 +27,86 @@
                 href="/"
                 />
   </url><url>
-    <loc>/agenda-hedatua/euskal-komikigintza/</loc>
-    <lastmod>2022-11-07T19:00:00+00:00</lastmod>
+    <loc>/programa/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/agenda-expandida/comic-euskara/"
+                href="/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="eu"
-                href="/agenda-hedatua/euskal-komikigintza/"
+                href="/tags/"
                 />
   </url><url>
-    <loc>/agenda-hedatua/komikiaren-tailerra/</loc>
-    <lastmod>2022-11-07T17:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-expandida/taller-comic-manga/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/komikiaren-tailerra/"
-                />
+    <loc>/tags/umorea/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
   </url><url>
-    <loc>/agenda-hedatua/stephane-levallois-maria-herreros/</loc>
-    <lastmod>2022-10-27T19:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-expandida/stephane-levallois-maria-herrerosx/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/stephane-levallois-maria-herreros/"
-                />
+    <loc>/tags/zaintzak/</loc>
+    <lastmod>2023-03-04T18:00:00+00:00</lastmod>
   </url><url>
-    <loc>/agenda-hedatua/oscar-aibar-chema-garcia/</loc>
-    <lastmod>2022-10-17T19:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-expandida/oscar-aibar-chema-garcia/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/oscar-aibar-chema-garcia/"
-                />
+    <loc>/tags/autoekoizpena-vs-ekoizpen-publikoak/</loc>
+    <lastmod>2023-03-04T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>/agenda-hedatua/fermin-solis-paul-urkijo/</loc>
-    <lastmod>2022-10-05T19:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-expandida/fermin-solis-paul-urkijo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/fermin-solis-paul-urkijo/"
-                />
+    <loc>/tags/entzuleen-sustapena/</loc>
+    <lastmod>2023-03-04T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>/agenda-hedatua/laura-perez-dario-adanti/</loc>
-    <lastmod>2022-09-28T19:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/agenda-expandida/laura-perez-dario-adanti/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/agenda-hedatua/laura-perez-dario-adanti/"
-                />
+    <loc>/tags/euskararen-erabilera-gaidesberdinetan/</loc>
+    <lastmod>2023-03-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gaien-aukeraketa/</loc>
+    <lastmod>2023-03-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/programa/martxoak-4-larunbata-goiza/</loc>
+    <lastmod>2023-03-04T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ekoizpena/</loc>
+    <lastmod>2023-03-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/etorkizuna/</loc>
+    <lastmod>2023-03-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/joerak/</loc>
+    <lastmod>2023-03-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/lehia/</loc>
+    <lastmod>2023-03-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/programa/martxoak-2-ostirala/</loc>
+    <lastmod>2023-03-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/bitartekoak/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/programa/martxoak-1-osteguna/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/dibulgazioa/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/edukien-hautaketa/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/historia/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/kanalak/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/kultura-artea/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/podcast-kontsumoamerkatua/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/publikoak/</loc>
+    <lastmod>2023-03-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/boom-podcast-pandemia-garaian/ondoren/</loc>
   </url><url>
     <loc>/categories/</loc>
     <xhtml:link
@@ -118,16 +120,12 @@
                 href="/categories/"
                 />
   </url><url>
-    <loc>/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/tags/"
-                />
+    <loc>/colophon/</loc>
+  </url><url>
+    <loc>/tags/edukiaren/ekipoaren-hautaketa/</loc>
+  </url><url>
+    <loc>/pilulak/</loc>
+  </url><url>
+    <loc>/podcast/</loc>
   </url>
 </urlset>
