@@ -522,18 +522,6 @@
                 href="/tags/publikoak/"
                 />
   </url><url>
-    <loc>/podcast/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/podcast/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/podcast/"
-                />
-  </url><url>
     <loc>/tags/boom-podcast-pandemia-garaian/ondoren/</loc>
     <xhtml:link
                 rel="alternate"
@@ -568,6 +556,18 @@
                 rel="alternate"
                 hreflang="eu"
                 href="/tags/edukiaren/ekipoaren-hautaketa/"
+                />
+  </url><url>
+    <loc>/podcast/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/podcast/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/podcast/"
                 />
   </url>
 </urlset>

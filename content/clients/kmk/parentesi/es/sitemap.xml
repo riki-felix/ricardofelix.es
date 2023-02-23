@@ -522,18 +522,6 @@
                 href="/es/programa/marzo-2-jueves/"
                 />
   </url><url>
-    <loc>/es/podcast/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="eu"
-                href="/podcast/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/podcast/"
-                />
-  </url><url>
     <loc>/es/tags/boom-podcast-pandemia-garaian/ondoren/</loc>
     <xhtml:link
                 rel="alternate"
@@ -568,6 +556,18 @@
                 rel="alternate"
                 hreflang="es"
                 href="/es/tags/edukiaren/ekipoaren-hautaketa/"
+                />
+  </url><url>
+    <loc>/es/podcast/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="eu"
+                href="/podcast/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/podcast/"
                 />
   </url>
 </urlset>
