@@ -1,0 +1,33 @@
+
+
+.pageLayout main {
+  animation: fade 1s;
+}
+@keyframes fade {
+  0% { opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.siteHeader {
+  margin: 1rem auto 4rem auto;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  width: 100%;
+  max-width: $pageWidth;
+  @include respond-to("medium") {
+    grid-template-columns: auto 1fr;
+    padding: 0;
+  }
+}
+
+.brandLogo__link {
+  display: inline-block;
+  margin-right: 1rem;
+  .brandLogo {
+    // fill: $color--light;
+    fill: $color--primary;
+    width: rem(48);
+  }
+}

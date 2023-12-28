@@ -2,49 +2,42 @@
 Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
-	font-size: calc(32px + (40 - 32) * ((100vw - 300px) / (1600 - 300)));
-	font-weight: 300;
-	// font-variation-settings: "wght" 280;
+	font-size: $font-xl;
 	line-height: 1.2;
 	margin: 0.2rem 0 1.4rem 0;
 	padding: 0;
 }
 
 h2 {
-	font-size: calc(24px + (28 - 24) * ((100vw - 300px) / (1600 - 300)));
-	font-weight: 300;
-	// font-variation-settings: "wght" 580;
+	font-size: $font-m;
 	line-height: 1.2;
 	margin: 0.4rem 0 0.6rem 0;
 	padding: 0;
 }
 
 h3 {
-	font-size: rem(13);
-	// font-variation-settings: "wght" 500;
+	font-size: $font-m;
 	line-height: 1.4;
 	letter-spacing: 1px;
 	margin: 0 0 1rem 0;
 	padding: 0;
 	text-transform: uppercase;
-	font-weight: 300;
 }
 
 p {
-	font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
-	// font-variation-settings: "wght" 280;
+	font-size: $font-m;
 	line-height: 1.4;
 	margin: 0.2rem 0 1.4rem 0;
 	padding: 0;
 	a {
-		color: $color--primary;
-		text-decoration: underline;
-		text-decoration-thickness: 2px;
+		color: $color--light;
+		text-decoration: none;
+		font-family: $font--bold;
 		&:hover {
-			text-decoration: underline;
-			text-decoration-style: dotted;
+			text-decoration: none;
 			cursor: url(/images/circle.svg),auto;
 			color: $color--primary;
+			opacity: 0.5;
 		}
 		
 	}
@@ -55,23 +48,23 @@ address { margin: 0 0 1.5rem; }
 b,
 strong {
 	// font-variation-settings: "wght" 400;
-	font-weight: 500;
+	font-family: $font--bold;
 }
 
 small {
-	font-size: rem(11);
+	font-size: $font-xs;
 	line-height: 1.2;
 }
 
 em {
 	// font-variation-settings: "wght" 300;
 	font-style: italic;
-	font-weight: 300;
+	font-family: $font--italic;
 }
 
 code {
 	background-color: $color--dark;
-	font-size: rem(13);
+	font-size: $font-xs;
 	color: $color--light;
 	padding: 1rem;
 	display: block;

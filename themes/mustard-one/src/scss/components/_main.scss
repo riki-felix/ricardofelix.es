@@ -1,0 +1,11 @@
+.layout--grid {
+  .layout {
+    display: grid;
+    &.design__page {}
+    &.notes {
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      max-width: $pageWidth;
+    }
+  }
+}

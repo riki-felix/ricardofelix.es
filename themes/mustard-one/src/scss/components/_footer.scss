@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+	 .siteFooter {
+		 margin: 2rem auto;
+		 width: 100%;
+		 max-width: $pageWidth;
+		 padding: 0;
+
+		 display: flex;
+		 flex-flow: row wrap;
+		 justify-content: space-between;
+		 @include respond-to("medium") {
+			margin: 4rem auto;			
+		  }
+		p {
+			font-size: rem(13);
+			a {
+				&:hover {
+					text-decoration: underline ;	
+				}
+			}
+		}
+		
+		.footerNav {
+			display: flex;
+			flex-flow: wrap row;
+			font-size: rem(13);
+			list-style: none;
+
+			padding: 0;
+			margin: 0;
+			a {
+				padding: 0 1rem 0 0;
+				display: inline-block;
+				&:hover {
+					text-decoration: underline ;	
+				}
+			}
+			@include respond-to("medium") {
+				flex-flow: row nowrap;
+
+			  }
+		}
+	 }

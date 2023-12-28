@@ -10,14 +10,14 @@
       box-sizing: border-box;
     }
     body {
-      background: $color--light;
-      color: $color--primary;
+      background-color: $color--light;
+      color: $color--dark;
       font-family: $font--primary;
       // font-variation-settings: "wght" 300;
-	  font-weight: 300;
       min-height: 100%;
       margin: 0;
       padding: 0;
+      width: calc(100vw - 32px);
       text-rendering: optimizeLegibility;
       // @media (prefers-color-scheme: dark) {
       //   background: $color--dark;
@@ -28,7 +28,7 @@
     .pageLayout {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr;
     }
 
 /*  ==========================================================================
@@ -46,9 +46,8 @@
     }
 
     a {
-      color: $color--primary;
+      color: $color--dark;
       text-decoration: none;
-      // font-variation-settings: "wght" 400;
       &:visited {
        color: $color--primary;
       }
@@ -56,5 +55,6 @@
       &:active {
         cursor: url(/images/circle.svg),auto;
 		color: $color--primary;
+        text-decoration: none;
       }
     }

@@ -1,0 +1,60 @@
+/*  ==========================================================================
+    General
+    ========================================================================== */
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    html {
+      height: 100%;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: $color--dark;
+      color: $color--primary;
+      font-family: $font--primary;
+      // font-variation-settings: "wght" 300;
+	  font-weight: 300;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      text-rendering: optimizeLegibility;
+      // @media (prefers-color-scheme: dark) {
+      //   background: $color--dark;
+      //   color: $color--light;
+      // }
+    }
+
+    .pageLayout {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+    }
+
+/*  ==========================================================================
+    Images
+    ========================================================================== */
+
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    a {
+      color: $color--primary;
+      text-decoration: none;
+      // font-variation-settings: "wght" 400;
+      &:visited {
+       color: $color--primary;
+      }
+      &:hover,
+      &:active {
+        cursor: url(/images/circle.svg),auto;
+		color: $color--primary;
+      }
+    }

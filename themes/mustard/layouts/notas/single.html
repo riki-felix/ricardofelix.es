@@ -1,11 +1,28 @@
 {{ define "main"}}
+	{{ with .Site.GetPage "/notas" }}
+	<nav class="notesNav">
+		<ul class="notesNav__list">
+			{{ range .Pages.ByPublishDate.Reverse }}
+				<li>
+					<a class="notesNav__link" href="{{.Permalink}}" rel="noopener" aria-label="{{ .Title }}">
+						<span class="post_id">
+							N{{.Params.postNumber}}
+						</span>
+						{{ .Title }}
+					</a>	
+				</li>
+			{{ end }}
+		</ul>
+	</nav>
+	{{ end }}
 	<article class="singleArticle">
 		<header class="singleArticle__header">
 			<h1 class="singleArticle__title">
-				<span class="singleArticle__number">N{{.Params.postNumber}} </span>
+				
 				{{ .Title }}
 			</h1>
 			<div class="singleArticle__info">
+				<span class="singleArticle__number">N{{.Params.postNumber}} </span>
 				<span class="singleArticle__reading">
 					Lectura {{.ReadingTime}}m., {{.WordCount}} p.
 				</span>
@@ -23,23 +40,5 @@
 			{{ .Content }}
 		</section>		
 	</article>
-	{{ with .Site.GetPage "/notas" }}
-	<nav class="notesNav">
-		<ul class="notesNav__list">
-			<h3>
-				☛ Notas
-			</h3>
-			{{ range .Pages.ByPublishDate.Reverse }}
-				<li>
-					<a class="notesNav__link" href="{{.Permalink}}" rel="noopener" aria-label="{{ .Title }}">
-						<span class="post_id">
-							N{{.Params.postNumber}}
-						</span>
-						{{ .Title }}
-					</a>	
-				</li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
+	
 {{ end }}

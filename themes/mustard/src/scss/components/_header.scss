@@ -9,22 +9,21 @@
 }
 
 .siteHeader {
-  margin: 1rem auto 4rem auto;
-  
-  display: grid;
+  margin: $space-l auto;
+  grid-row-start: 1;
+  display: flex;
+  align-items: baseline;
   grid-template-columns: 1fr;
-  
-  width: 100%;
-  max-width: $pageWidth;
-  @include respond-to("medium") {
-    grid-template-columns: auto 1fr;
-    padding: 0;
+  width: 100%;  
+  padding: $space-none $space-m;
+
+  @include respond-to("medium"){
+    padding: $space-none $space-l;
   }
 }
 
 .brandLogo__link {
   display: inline-block;
-  margin-right: 1rem;
   .brandLogo {
     // fill: $color--light;
     fill: $color--primary;

@@ -1,0 +1,78 @@
+{{ $baseurl := .Site.BaseURL }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+    {{ with .Title | default .Site.Title }}
+    <title>{{ . }} — rfs</title>
+    <meta property="og:title" content="{{ . }}" />
+    <meta name="twitter:title" content="{{ . }}" />
+    {{ end }}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}images/favicon-16x16.png">
+    <link rel="icon" type="image/svg" href="{{ .Site.BaseURL }}images/circle.svg">
+    <link rel="manifest" href="{{ .Site.BaseURL }}images/site.webmanifest">
+    <link rel="mask-icon" href="{{ .Site.BaseURL }}images/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="{{ .Site.Params.author }}"/>
+    <meta property="og:site_name" content="{{ .Site.Title }} — rfs" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+
+    {{ with .Page.Params.label | default .Site.Params.description }}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}">
+    <meta name="twitter:description" content="{{ . | truncate 200 }}">
+    {{ end }}
+    {{ if .IsPage }}
+    <meta property="og:type" content="article" />
+    {{ else }}
+      <meta property="og:type" content="website" />
+    {{ end }}
+    {{ hugo.Generator }}
+    <meta name="siteversion" content="0.1">
+    
+    <!-- <script type="text/javascript" src="//fast.fonts.net/jsapi/ef316d9e-7d0a-470d-a316-35ed0d948f6e.js"></script> -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bundle.css" />
+
+    <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6385918/6877032/css/fonts.css" />
+  </head>
+  <body class="pageLayout {{ .Type }} {{ .Kind }}" id="ricardofelix-es">
+  {{ block "header.html" . }}
+  	<header class="siteHeader" role="banner">
+      <a href="{{ .Site.BaseURL }}" aria-label="Enlaza con la página principal" class="brandLogo__link">
+        <svg class="brandLogo" xmlns="http://www.w3.org/2000/svg" width="75.69px" height="48" viewBox="0 0 75.69 48" role="images">
+          <path class="cls-1" d="M21.23,13.58c3.36,0,5.67,2.24,5.67,5.15a4.91,4.91,0,0,1-5.08,5,5,5,0,0,1-5.07-5.08c-2.11,1.32-4.09,5-4.09,9.63V40.48a2.84,2.84,0,0,0,2.64,2.64h.79l.53.53v2.9l-.53.53H.53L0,46.55v-2.9l.53-.53h.79A2.84,2.84,0,0,0,4,40.48V23.87a2.84,2.84,0,0,0-2.64-2.64H.66L0,20.57V19.05l.53-.65L10,14.51h2l.66.65L12,20C13.71,16.35,16.88,13.58,21.23,13.58Z"/>
+          <path class="cls-1" d="M33.36,21.1a2.73,2.73,0,0,0-2.63-2.64h-.8l-.52-.53V15l.52-.52h3.43v-3.1C33.36,3,39.23,0,43.78,0c3.36,0,5.93,2,5.93,5.14a4.81,4.81,0,0,1-5,5c-3,0-4.88-2.37-4.88-5.34C37.91,5.87,37.25,8,37.25,10.48l.53.73,3.76,1.52.53.59v1.19h4.74l.53.52v2.9l-.53.53H42.07v22a2.83,2.83,0,0,0,2.63,2.64h.79l.53.53v2.9l-.53.53H29.93l-.52-.53v-2.9l.52-.53h.8a2.84,2.84,0,0,0,2.63-2.64Z"/>
+          <path class="cls-1" d="M52.09,45.1l-.33-.66,1.78-7.12.66-.66h2l.66.66c0,4.48,2,7.25,5.81,7.25s5-3.49,5-5.54c0-3.56-2.38-4.55-7.06-6.13-4.94-1.65-7.91-4.88-7.91-9.23,0-6.13,5.21-10.09,12-10.09a16.71,16.71,0,0,1,8.11,1.85l.46.66.33,7.25-.66.66h-2l-.66-.66c0-3.63-1.78-6.33-5.07-6.33-3,0-4.88,1.65-4.88,4.42,0,3,2.24,4.75,6.92,6.33s8.44,3.43,8.44,9.49C75.69,44.44,69.76,48,63.3,48A21.11,21.11,0,0,1,52.09,45.1Z"/>
+        </svg>
+      </a>
+      {{ partial "menu.html" . }}
+	  </header>
+  {{end}}
+
+    <main class="main{{ humanize .Type }}" role="main">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+
+  {{ block "footer.html" . }}
+    <footer class="siteFooter" role="contentinfo">
+      <p>
+        © {{ now.Format "2006"}}. Web creada con <a href="https://gohugo.io/" aria-label="Visita la web de Hugo" target="_blank" rel="noopener">Hugo</a>, hosting en <a href="https://www.netlify.com/" target="_blank" aria-label="Visita la web de Netlify" rel="noopener">Netlify</a>.
+      </p>
+      <ul class="footerNav">
+        <li><a href="https://www.instagram.com/ricardofelixstudio/">Instagram</a></li>
+		<li><a href="/accesibilidad">Accesibilidad</a></li>
+        <li><a href="/contenido-datos">Contenido y datos</a></li>
+        <li><a href="{{ .Site.BaseURL }}/index.xml">RSS</a></li>
+      </ul>
+    </footer>
+	<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"a02427dc5a8338fe04a12ac539eb8729"})});</script>
+  {{end}}
+
+  </body>
+</html>

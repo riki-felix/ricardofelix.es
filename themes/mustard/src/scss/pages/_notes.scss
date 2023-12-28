@@ -5,8 +5,7 @@ Notes list
 .notesArticle {
     border-top: 1px solid $color--primary;
     margin: 0;
-    padding: 0;
-    
+    padding: $space-none $space-xl;
     display: grid;
     grid-template-columns: rem(24) 2fr auto;
     gap: 1rem;
@@ -16,7 +15,8 @@ Notes list
     
     &.recent__note {
       grid-column: 1 / 3;
-      padding: 2rem 0;
+      padding: $space-m $space-xl;
+      background-color: $color--lighter;
       & .notesArticle__title {
         font-size: rem(28);
         margin: 0;
@@ -35,7 +35,6 @@ Notes list
       }
       & .notesArticle__number {
         margin: 0 0 0 0;
-        font-size: rem(20);
       }
       @include respond-to('medium') {
       }
@@ -45,17 +44,18 @@ Notes list
     }
 
     &__number {
-      font-size: rem(13);
+      font-size: $font-s;
       text-transform: uppercase;
       line-height: 1;
       padding: 0;
       margin: 0;
+      font-variant-numeric: lining-nums;
     }
     &__time {
-      font-size: rem(14);
+      font-size: $font-s;
     }
     &__title {
-      font-size: rem(18);
+      font-size: $font-m;
       text-decoration: none;
       display: inline-block;
     }
@@ -64,11 +64,12 @@ Notes list
       display: inline-block;
     }
     &__legend {
-      color: $color--primary;
       grid-column: 1 / -1;
+      font-size: $font-m;
       @include respond-to('medium') {
         grid-column: 2/-1;
-		max-width: 64ch;
+		-webkit-line-clamp: 3;
+      max-width: rem(600);
       }
     }
   }
@@ -79,82 +80,106 @@ Notes single
 .page .mainNotas {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0 4rem;
   margin: 0 auto;
-  padding: 0 1rem;
-  max-width: rem(1000);
+  padding: $space-none;
+  width: 100%;
   @include respond-to("medium"){
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 1fr;
   }
 } 
 .notesNav {
+    font-variant-numeric: lining-nums;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: $space-none;
+    padding: $space-none $space-m;
+    min-height: rem(48);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @include respond-to("medium"){
+      padding: $space-none $space-l;
+    }
     &__list {
+        padding: $space-none;
+        margin: $space-none;
         list-style: none;
-        padding: 0;
-    
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: flex-start;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        gap: $space-none $space-l;
         li {
-          margin-bottom: 0.5rem;
-          border-top: 1px solid $color--primary;
+          flex: 0 0 auto;
         }
     }
+    .post_id {
+      margin-right: $space-xs;
+    }
     &__link {
-        font-size: rem(13);
+        font-size: $font-xs;
         color: $color--primary;
-        display: block;
+        display: inline-flex;
+        flex-flow: row nowrap;
         margin: 0;
         text-decoration: none;
-        padding: 0.25rem 0;
+        padding: 0.25rem;
         line-height: 1.4;
         transition: padding 1s ease;
+        background-color: rgba($color--primary,0.04);
+        border-radius: 6px;
         &::after {
           content: "➞";
-          padding: 0 1rem 0 0.5rem;
-        transition: padding 1s ease;
+          padding: 0 $space-s 0 0.5rem;
+          transition: padding 0.7s ease;
+          margin-left: auto;
 
         }
         &:hover {
           text-decoration: none;
+          background-color: rgba($color--primary,0.1);
           &::after {
-            padding: 0 0.5rem 0 1rem;
+            padding: 0 $space-xs 0 1rem;
           }
         }
         .post_id {
-          font-variation-settings: "wght" 500;
+          font-family: $font--bold;
         }
     }
 }
 .singleArticle {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: $space-none $space-m;
+  max-width: rem(750);
+  font-variant-numeric: lining-nums;
+  @include respond-to("medium"){
+    padding: $space-none $space-l;
+  }
     &__title {
-      display: inline-block;
-	  font-weight: 500;
+      font-family: $font--bold;
     }
     &__number {
       display: inline-block;
-      font-size: rem(14);
-      vertical-align: super;
+      font-size: $font-xs;
+      padding: $space-xs;
+      border-radius: 999px;
+      background-color: $color--primary;
+      color: $color--light;
     }
     &__info {
-      font-size: rem(14);
+      font-size: $font-xs;
     }
     &__time {
       margin-right: 1rem;
     }
     &__reading {
     }
-    &__wordcount {}
+    &__wordcount {
+    }
     &__excerpt {
-      margin: 2rem 1rem;
-      @include respond-to("huge"){
-        margin: 2rem 0 2rem -2rem ;
-      }
+      margin: $space-m $space-none;
       p {
         // font-variation-settings: "wght" 500;
-        font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
+        font-size: $font-l;
+        line-height: 1.4;
       }
     }
     &__content {}

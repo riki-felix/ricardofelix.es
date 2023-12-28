@@ -1,0 +1,17 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Theme variables
+~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  $font--primary:      "Surveyor SSm A", "Surveyor SSm B", Times New Roman, Times, sans-serif;
+
+  $color--dark:       #1a1a1a;
+  $color--light:      #fff;
+  $color--primary:	hsla(19, 100%, 50%, 1);
+    
+  $breakpoints: (
+   'medium':          (min-width: 800px),
+   'large':           (min-width: 1000px),
+   'huge':            (min-width: 1200px),
+  );
+
+  $pageWidth:         90%;
+

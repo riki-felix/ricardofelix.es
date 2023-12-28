@@ -1,11 +1,16 @@
+.mainPage {
+  grid-row-start: 2;
+  padding: $space-none $space-m;
+  @include respond-to("medium"){
+    padding: $space-none $space-l;
+  }
+}
 .layout--grid {
   .layout {
     display: grid;
-    &.design__page {}
+    padding: 0;
     &.notes {
       grid-template-columns: 1fr;
-      margin: 0 auto;
-      max-width: $pageWidth;
     }
   }
 }

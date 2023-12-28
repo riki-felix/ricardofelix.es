@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ .Content }}
+  <section class="page{{ humanize .Type }}">
+    {{ range .Pages.ByPublishDate }}
+    <div class="page{{ humanize .Type }}__item">
+      <a class="page{{ humanize .Type }}__link" href="{{.Permalink}}" aria-label="{{ .Params.label }}">
+        {{.Title}}
+      </a>
+    </div>
+    {{ end }}
+  </section>
+{{ end }}
+  

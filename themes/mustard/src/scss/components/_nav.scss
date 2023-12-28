@@ -2,70 +2,61 @@
 Main nav
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .globalNav {
-	@include respond-to("medium") {
-		justify-self: end;
-		align-self: center;
-		grid-template-columns: auto 1fr;
-	  }
+	margin: $space-none $space-xl;
 	&__menu {
 		list-style: none;
 		display: flex;
-		align-items: center;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
 		padding: 0;
 		margin: 0;
 		li {
-			
-			margin: 0 1rem 0 0;
+			margin: 0;
 			z-index: 0;
 			position: relative;
-			@include respond-to("medium") {
-			margin: 0 0 0 1rem ;
-			}
+			display: flex;
+			flex-flow: row nowrap;
+			transition: all 1s ease;
 			[aria-label]:after {
 				display: none;
 				@media (hover: none) and (pointer: coarse) {
 					display: none;
 				}
-				@include respond-to("medium") {
-					background-color: $color--light;
-					color: $color--primary;
+				@include respond-to("small") {
+					color: rgba($color--primary,0.5);
 					content: attr(aria-label);
 					display: none;
-					font-size: rem(11);
-					font-variation-settings: "wght" 400;
-					border: 1px solid $color--primary;
-					box-shadow: 2px 2px 0 0 $color--primary;
-					position: absolute;
-						bottom: -2.25rem;
-						left: 1.5rem;
-						z-index: 1;
+					font-size: $font-xxs;
 					overflow: visible;
-					padding: 0.5rem 0.25rem;
+					padding: $space-none;
+					border-radius: 2px;
 					pointer-events: none;
 					text-decoration: none;
 					text-indent: 0;
 					white-space: nowrap;
 					text-align: center;
+					opacity: 0;
+					transition: all .4s ease;
 				}
 			}
 	
 			[aria-label]:hover:after,
 			[aria-label]:focus:after {
-				display: block;
+				display: inline-block;
+				opacity: 1;
 			}
 		}
 	}
 	&__link {
 		color: $color--primary;
-		line-height: 1;
-		text-decoration: none;
-		text-align: center;
+		text-decoration: none;		
+		font-size: $font-s;
 		
-		font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
-		
+			transition: all 1s ease;
 		display: block;
-		padding: 0;
-		transition: all .4s ease;
+		padding: $space-xs $space-s;
+		border: 1px solid $color--primary;
+		border-radius: $space-s;
 		&:hover {
 			text-decoration: none;
 			cursor:url(/images/circle.svg),auto;
