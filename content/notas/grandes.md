@@ -6,7 +6,7 @@ publishDate: 2020-05-21
 draft: false
 description: "Tras mi paso por Runroom, allá por 2015, me enfrentaba a un reto personal delicado, primero aprender a descansar y después... dar el salto al mundo freelance, vuelta al complejo de navaja suiza."
 type: "notas"
-postNumber: "4"
+postNumber: "3"
 
 ---
 

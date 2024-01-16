@@ -6,7 +6,7 @@ publishDate: 2020-06-17
 draft: false
 description: "¿En qué medida influye la capacidad creativa en el diseño gráfico? ¿Se puede diseñar sin ser creativo? ¿Hay que ser creativo para diseñar? ¿Todo el diseño es creativo?"
 type: "notas"
-postNumber: "5"
+postNumber: "4"
 
 ---
 Qué miedo me da la palabra creatividad, me pongo tenso cada vez que aparece en una conversación, me saltan todas las alertas cada vez que se refieren a mí como una persona creativa. No es falsa modestia, sí que me considero una persona creativa, pero quizás no de la misma forma que a veces se interpreta desde fuera. Lo que más tensión me provoca es la atribución de mi labor profesional exclusivamente a la creatividad, os sonará de algo esta expresión..."es buena/o... ¡es creativa/o!". Una relación directa que, desde mi punto de vista, suele estar muy lejos de la realidad.

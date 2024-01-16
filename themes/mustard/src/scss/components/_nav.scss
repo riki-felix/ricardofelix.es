@@ -2,7 +2,7 @@
 Main nav
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .globalNav {
-	margin: $space-none $space-xl;
+	margin: $space-none;
 	&__menu {
 		list-style: none;
 		display: flex;
@@ -26,7 +26,7 @@ Main nav
 					color: rgba($color--primary,0.5);
 					content: attr(aria-label);
 					display: none;
-					font-size: $font-xxs;
+					font-size: $font-s;
 					overflow: visible;
 					padding: $space-none;
 					border-radius: 2px;
@@ -45,18 +45,21 @@ Main nav
 				display: inline-block;
 				opacity: 1;
 			}
+			&.item--active {
+				[aria-label]:after {
+					display: inline-block;
+					opacity: 1;
+				}
+			}
 		}
 	}
 	&__link {
-		color: $color--primary;
-		text-decoration: none;		
-		font-size: $font-s;
-		
-			transition: all 1s ease;
+		color: $color--dark;
 		display: block;
-		padding: $space-xs $space-s;
-		border: 1px solid $color--primary;
-		border-radius: $space-s;
+		font-size: $font-s;
+		padding: $space-none;
+		text-decoration: none;		
+		transition: all 1s ease;
 		&:hover {
 			text-decoration: none;
 			cursor:url(/images/circle.svg),auto;

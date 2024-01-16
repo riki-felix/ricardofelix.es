@@ -2,4 +2,41 @@
 	<article class="homeContent">
 		{{ .Content }}
 	</article>
+		<div class="layout notes">
+			<h3>Where is my mind</h3>
+		{{ range first 1 .Paginator.Pages }}
+		  <div class="notesArticle recent__note">
+			<p class="notesArticle__number">
+			  N{{.Params.postNumber}}
+			</p>
+			<a href="{{.Permalink}}" class="notesArticle__link" rel="noopener" aria-label="{{ .Title }}">
+			  <h1 class="notesArticle__title">
+				{{.Title}}
+			  </h1>
+			</a>
+			<time class="notesArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
+			  {{ index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
+			</time>
+			<p class="notesArticle__legend">
+			  {{ .Description }}
+			</p>
+		  </div>
+		{{ end }}
+		
+		{{ range first 10 (after 1 .Paginator.Pages) }}
+		  <div class="notesArticle">
+			<p class="notesArticle__number">
+			  N{{.Params.postNumber}}
+			</p>
+			<a href="{{.Permalink}}" class="notesArticle__link" rel="noopener" aria-label="{{ .Title }}">
+			  <h2 class="notesArticle__title">
+				{{.Title}}
+			  </h2>
+			</a>
+			<time class="notesArticle__time" datetime="{{dateFormat "02-01-2006" .PublishDate.Local}}">
+			  {{index $.Site.Data.dia (printf "%d" .PublishDate.Weekday) }}, {{ .PublishDate.Day }} de {{ index $.Site.Data.mes (printf "%d" .PublishDate.Month) }}. {{ .PublishDate.Year }}
+			</time>
+		  </div>
+		{{ end }}
+	  </div>
 {{end}}

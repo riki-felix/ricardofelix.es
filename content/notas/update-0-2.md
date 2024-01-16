@@ -6,7 +6,7 @@ publishDate: 2020-05-18
 draft: false
 description: "Revisando el ritmo de la tipografía y ajustando el comportamiento en algunos breakpoints relevantes."
 type: "notas"
-postNumber: "3"
+postNumber: "2"
 
 ---
 V0.2

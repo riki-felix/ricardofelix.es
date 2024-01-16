@@ -1,6 +1,7 @@
 {{ define "main"}}
 	{{ with .Site.GetPage "/notas" }}
 	<nav class="notesNav">
+		<h3>Where is my mind</h3>
 		<ul class="notesNav__list">
 			{{ range .Pages.ByPublishDate.Reverse }}
 				<li>
@@ -22,7 +23,7 @@
 				{{ .Title }}
 			</h1>
 			<div class="singleArticle__info">
-				<span class="singleArticle__number">N{{.Params.postNumber}} </span>
+				<span class="singleArticle__number"><strong>N{{.Params.postNumber}}</strong> </span>
 				<span class="singleArticle__reading">
 					Lectura {{.ReadingTime}}m., {{.WordCount}} p.
 				</span>

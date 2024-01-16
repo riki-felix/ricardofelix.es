@@ -2,37 +2,45 @@
 Theme typography
 ~~~~~~~~~~~~~~~~~~~~~ */
 h1 {
-	font-size: $font-xl;
-	line-height: 1.2;
-	margin: 0.2rem 0 1.4rem 0;
-	padding: 0;
+	font-size: $font-l;
+	font-weight: 300;
+	line-height: 1.25;
+	margin: $space-none $space-none $space-xs $space-none;
+	padding: $space-none;
 }
 
 h2 {
 	font-size: $font-m;
-	line-height: 1.2;
-	margin: 0.4rem 0 0.6rem 0;
-	padding: 0;
+	font-weight: 300;
+	line-height: 1.25;
+	margin: $space-none $space-none $space-xs $space-none;
+	padding: $space-none;
 }
 
 h3 {
-	font-size: $font-m;
-	line-height: 1.4;
+	font-size: $font-s;
+	font-weight: 300;
+	line-height: 1.5;
 	letter-spacing: 1px;
-	margin: 0 0 1rem 0;
-	padding: 0;
+	margin: $space-m $space-none;
+	padding: $space-none;
 	text-transform: uppercase;
 }
 
 p {
 	font-size: $font-m;
-	line-height: 1.4;
-	margin: 0.2rem 0 1.4rem 0;
-	padding: 0;
+	font-weight: normal;
+	line-height: 1.5;
+	margin: $space-none $space-none $space-l $space-none;
+	padding: $space-none;
 	a {
 		color: $color--light;
 		text-decoration: none;
-		font-family: $font--bold;
+		.icon--external-link {
+			display: inline-block;
+			vertical-align: super;
+			margin-top: -100px;
+		}
 		&:hover {
 			text-decoration: none;
 			cursor: url(/images/circle.svg),auto;
@@ -43,33 +51,32 @@ p {
 	}
 	
 }
-address { margin: 0 0 1.5rem; }
+address { margin: $space-none; }
 
 b,
 strong {
-	// font-variation-settings: "wght" 400;
-	font-family: $font--bold;
+	font-weight: normal;
+	font-family: 'FolioMedium',-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 small {
-	font-size: $font-xs;
-	line-height: 1.2;
+	font-size: $font-s;
+	line-height: 1.25;
 }
 
-em {
-	// font-variation-settings: "wght" 300;
+em {	// font-variation-settings: "wght" 300;
 	font-style: italic;
-	font-family: $font--italic;
+	font-family: 'FolioLightItalic',-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 code {
 	background-color: $color--dark;
-	font-size: $font-xs;
+	font-size: $font-s;
 	color: $color--light;
-	padding: 1rem;
+	padding: $space-none;
 	display: block;
 	line-height: 2;
-	margin: 1rem 0 1rem 1rem;
+	margin: $space-none;
 	box-shadow:
 		1px 1px 0 0 $color--light,
 		4px 4px 0 0 $color--dark;

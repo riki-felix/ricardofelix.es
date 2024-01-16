@@ -1,0 +1,65 @@
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~ 
+  HEADER
+~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.siteHeader {
+  width: 100%; 
+  margin: $space-xl $space-none;
+  padding: $space-none $space-m;
+  font-family: 'FolioMedium',-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  @include respond-to("medium"){}
+}
+
+.brandLogo__link {
+  display: inline-block;
+  .brandLogo {
+    // fill: $color--light;
+    fill: $color--light;
+    width: rem(48);
+  }
+}
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~ 
+  MAIN
+~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.siteMain {
+    margin: $space-none;
+    padding: $space-none $space-m;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~ 
+  FOOTER
+~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.siteFooter {
+  margin: $space-xl $space-none;
+  padding: $space-none;
+  color: $color--light;
+  font-size: $font-s;
+  padding: $space-none $space-m;
+  p {
+    font-size: $font-s;
+  }
+  a {
+    text-decoration: underline;
+  }
+  .notas & {
+    color: $color--dark;  
+  }
+  .footerNav-social {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    gap: 0 $space-m;
+    margin: $space-none;
+    padding: $space-none;
+    a {
+      text-decoration: none;
+      
+    }
+  }
+}

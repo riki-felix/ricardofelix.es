@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bundle.css" />
 
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    
     <link rel="preconnect" href="https://cdn.fonts.net">
     <link href="https://cdn.fonts.net/kit/edd6b279-8438-4a90-b239-dc655ce0159d/edd6b279-8438-4a90-b239-dc655ce0159d.css" rel="stylesheet" />
   </head>
@@ -46,11 +47,10 @@
       <a href="{{ .Site.BaseURL }}" aria-label="Enlaza con la página principal" class="brandLogo__link">
         Ricardo Félix
       </a>
-      {{ partial "menu.html" . }}
 	  </header>
   {{end}}
 
-    <main class="main{{ humanize .Type }}" role="main">
+    <main class="siteMain main{{ humanize .Type }}" role="main">
       {{ block "main" . }}
       {{ end }}
     </main>
@@ -61,10 +61,6 @@
         <p>
           © {{ now.Format "2006"}}. Web creada con <a href="https://gohugo.io/" aria-label="Visita la web de Hugo" target="_blank" rel="noopener">Hugo</a>, hosting en <a href="https://www.netlify.com/" target="_blank" aria-label="Visita la web de Netlify" rel="noopener">Netlify</a>.
         </p>
-        <ul class="footerNav">
-          <li><a href="https://www.instagram.com/_ricardo_felix/">Instagram</a></li>
-          <li><a href="{{ .Site.BaseURL }}/index.xml">RSS</a></li>
-        </ul>
       </div>
     </footer>
 	<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"a02427dc5a8338fe04a12ac539eb8729"})});</script>

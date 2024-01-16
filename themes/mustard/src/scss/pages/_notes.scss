@@ -2,24 +2,25 @@
 Notes list
 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+.notes {
+  margin: rem(128) $space-none;
+  color: $color--light;
+}
+
 .notesArticle {
-    border-top: 1px solid $color--primary;
-    margin: 0;
-    padding: $space-none $space-xl;
+    margin: $space-none $space-none $space-m $space-none;
+    padding: $space-none;
     display: grid;
-    grid-template-columns: rem(24) 2fr auto;
-    gap: 1rem;
-    align-items: baseline;
-    
-    grid-column: 1 / 3;
-    
+    grid-template-columns: auto 2fr;
+    align-content: start;
+    gap: 0;
+    @include respond-to('small') {
+      grid-template-columns: auto 2fr auto;
+    }
     &.recent__note {
-      grid-column: 1 / 3;
-      padding: $space-m $space-xl;
-      background-color: $color--lighter;
+      padding: $space-none;
       & .notesArticle__title {
-        font-size: rem(28);
-        margin: 0;
+        font-size: $font-l;
       }
       & .notesArticle__link {
         grid-column: 2 / -1;
@@ -28,48 +29,53 @@ Notes list
         }
       }
       & .notesArticle__time {
-        grid-column: 1 / -1;
+        grid-column: 2 / 3;
         @include respond-to('medium') {
           grid-column: 3 / -1;
         }
       }
       & .notesArticle__number {
-        margin: 0 0 0 0;
+        color: $color--light;
       }
-      @include respond-to('medium') {
-      }
+     
     }
-    &:last-child {
-      border-bottom: 1px solid $color--primary;
-    }
+    &:last-child {}
 
     &__number {
       font-size: $font-s;
       text-transform: uppercase;
-      line-height: 1;
-      padding: 0;
-      margin: 0;
-      font-variant-numeric: lining-nums;
+      line-height: 1.65;
+      padding: $space-none;
+      margin: $space-none $space-s $space-none $space-none;
+      @include respond-to('medium') {
+        margin: $space-none $space-none $space-none rem(-28);
+      }
     }
     &__time {
+      color: $color--light;
       font-size: $font-s;
+      grid-column: 2/3;
+      margin: $space-none $space-none $space-s $space-none;
+      @include respond-to('medium') {
+        grid-column: 3/4;
+      }
     }
     &__title {
       font-size: $font-m;
       text-decoration: none;
       display: inline-block;
+      padding: $space-none;
     }
     &__link {
       text-decoration: none;
       display: inline-block;
     }
     &__legend {
-      grid-column: 1 / -1;
       font-size: $font-m;
+      grid-column: 2 / 3;
+      padding-right: $space-xl;
       @include respond-to('medium') {
-        grid-column: 2/-1;
-		-webkit-line-clamp: 3;
-      max-width: rem(600);
+        -webkit-line-clamp: 3;
       }
     }
   }
@@ -80,33 +86,36 @@ Notes single
 .page .mainNotas {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 0 auto;
+  margin: $space-none auto;
   padding: $space-none;
-  width: 100%;
-  @include respond-to("medium"){
-    grid-template-columns: 1fr;
-  }
+  color: $color--dark;
 } 
 .notesNav {
-    font-variant-numeric: lining-nums;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    margin: $space-none;
+  display: flex;
+  flex-flow: column wrap;
+    margin: $space-none $space-none $space-xl $space-none;
     padding: $space-none $space-m;
     min-height: rem(48);
+    @include respond-to("medium"){
+      align-items: baseline;
+      flex-flow: row wrap;
+    }
+    &__list {
     &::-webkit-scrollbar {
       display: none;
     }
-    @include respond-to("medium"){
-      padding: $space-none $space-l;
-    }
-    &__list {
-        padding: $space-none;
+        overflow-x: scroll;
+        overflow-y: hidden;
         margin: $space-none;
         list-style: none;
+        padding: $space-none;
         display: inline-flex;
         flex-flow: row nowrap;
-        gap: $space-none $space-l;
+        gap: $space-none $space-s;
+        @include respond-to("medium"){
+        padding: $space-none $space-m;
+          
+        }
         li {
           flex: 0 0 auto;
         }
@@ -115,73 +124,58 @@ Notes single
       margin-right: $space-xs;
     }
     &__link {
-        font-size: $font-xs;
-        color: $color--primary;
+        font-size: $font-s;
+        color: $color--dark;
         display: inline-flex;
         flex-flow: row nowrap;
         margin: 0;
         text-decoration: none;
-        padding: 0.25rem;
-        line-height: 1.4;
+        padding: rem(2) $space-s;
         transition: padding 1s ease;
-        background-color: rgba($color--primary,0.04);
+        background-color: rgba($color--dark,0.1);
         border-radius: 6px;
-        &::after {
-          content: "➞";
-          padding: 0 $space-s 0 0.5rem;
-          transition: padding 0.7s ease;
-          margin-left: auto;
-
-        }
+//         &::after {
+//           content: "➞";
+//           padding: 0 $space-s 0 0.5rem;
+//           transition: padding 0.7s ease;
+//           margin-left: auto;
+// 
+//         }
         &:hover {
           text-decoration: none;
-          background-color: rgba($color--primary,0.1);
+          background-color: rgba($color--lighter,0.1);
           &::after {
             padding: 0 $space-xs 0 1rem;
           }
         }
         .post_id {
-          font-family: $font--bold;
         }
     }
 }
 .singleArticle {
   margin: 0 auto;
   padding: $space-none $space-m;
-  max-width: rem(750);
-  font-variant-numeric: lining-nums;
-  @include respond-to("medium"){
-    padding: $space-none $space-l;
-  }
+  @include respond-to("medium"){}
     &__title {
-      font-family: $font--bold;
+      font-size: $font-xl;
     }
     &__number {
       display: inline-block;
-      font-size: $font-xs;
-      padding: $space-xs;
-      border-radius: 999px;
-      background-color: $color--primary;
-      color: $color--light;
+      font-size: $font-s;
+      padding: $space-none;
+      margin: $space-none $space-s $space-none $space-xs;
     }
     &__info {
-      font-size: $font-xs;
+      font-size: $font-s;
     }
-    &__time {
-      margin-right: 1rem;
-    }
-    &__reading {
-    }
-    &__wordcount {
-    }
+    &__time {}
+    &__reading {}
+    &__wordcount {}
     &__excerpt {
       margin: $space-m $space-none;
       p {
-        // font-variation-settings: "wght" 500;
         font-size: $font-l;
-        line-height: 1.4;
       }
     }
     &__content {}
-
 }

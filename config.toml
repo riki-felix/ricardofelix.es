@@ -23,11 +23,3 @@ theme = "mustard"
   changefreq = "monthly"
   filename = "sitemap.xml"
   priority = 0.5
-
-[menu]
-  [[menu.main]]
-    identifier = "notas"
-    name = "Notas"
-    pre = "Where is my mind?"
-  	url = "/notas"
-  	weight = 1
