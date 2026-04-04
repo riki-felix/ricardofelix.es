@@ -24,20 +24,24 @@ import Layout from '../layouts/Layout.astro';
   }
 
   const isAdmin = new URLSearchParams(window.location.search).has('admin');
+  let token: string | null = null;
 
-  function getToken(): string | null {
-    let token = sessionStorage.getItem('upload_secret');
+  // Admin mode: require secret before showing anything
+  if (isAdmin) {
+    token = sessionStorage.getItem('upload_secret');
     if (!token) {
       token = prompt('Secret:');
-      if (token) sessionStorage.setItem('upload_secret', token);
+      if (token) {
+        sessionStorage.setItem('upload_secret', token);
+      } else {
+        // No secret → redirect to public view
+        window.location.href = '/';
+      }
     }
-    return token;
   }
 
   async function deleteImage(key: string, figure: HTMLElement) {
-    const token = getToken();
     if (!token) return;
-
     if (!confirm('¿Eliminar esta imagen?')) return;
 
     const res = await fetch(`/api/image?key=${encodeURIComponent(key)}`, {
@@ -50,6 +54,7 @@ import Layout from '../layouts/Layout.astro';
     } else if (res.status === 401) {
       sessionStorage.removeItem('upload_secret');
       alert('Secret incorrecto');
+      window.location.reload();
     } else {
       alert('Error al eliminar');
     }
@@ -107,7 +112,7 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  loadImages();
+  if (!isAdmin || token) loadImages();
 </script>
 
 <style>
