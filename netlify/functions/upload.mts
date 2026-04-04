@@ -41,17 +41,23 @@ export default async (req: Request, _context: Context) => {
     });
   }
 
-  // Extract image data — handle string or object (iOS Shortcuts sends objects)
+  // Extract image data — handle string or nested object (iOS Shortcuts nests the dict)
   let rawImage: string | undefined;
+  let caption = "";
+  let location = "";
+
   if (typeof body.image === "string") {
     rawImage = body.image;
+    caption = typeof body.caption === "string" ? body.caption : "";
+    location = typeof body.location === "string" ? body.location : "";
   } else if (body.image && typeof body.image === "object") {
-    // iOS Shortcuts wraps dictionary values as objects — try to find the string
-    const img = body.image as Record<string, unknown>;
-    const candidate = img.Value || img.value || img.data || img.string;
-    if (typeof candidate === "string") {
-      rawImage = candidate;
+    // iOS Shortcuts nests the entire dictionary inside "image"
+    const nested = body.image as Record<string, unknown>;
+    if (typeof nested.image === "string") {
+      rawImage = nested.image;
     }
+    caption = typeof nested.caption === "string" ? nested.caption : "";
+    location = typeof nested.location === "string" ? nested.location : "";
   }
 
   if (!rawImage) {
@@ -67,9 +73,6 @@ export default async (req: Request, _context: Context) => {
       { status: 400, headers: { "Content-Type": "application/json" } }
     );
   }
-
-  const caption = typeof body.caption === "string" ? body.caption : "";
-  const location = typeof body.location === "string" ? body.location : "";
 
   // Parse base64 data URI
   let contentType = "image/jpeg";
