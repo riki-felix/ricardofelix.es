@@ -45,11 +45,13 @@ export default async (req: Request, _context: Context) => {
   let rawImage: string | undefined;
   let caption = "";
   let location = "";
+  let photoDate = "";
 
   if (typeof body.image === "string") {
     rawImage = body.image;
     caption = typeof body.caption === "string" ? body.caption : "";
     location = typeof body.location === "string" ? body.location : "";
+    photoDate = typeof body.date === "string" ? body.date : "";
   } else if (body.image && typeof body.image === "object") {
     // iOS Shortcuts nests the entire dictionary inside "image"
     const nested = body.image as Record<string, unknown>;
@@ -58,6 +60,7 @@ export default async (req: Request, _context: Context) => {
     }
     caption = typeof nested.caption === "string" ? nested.caption : "";
     location = typeof nested.location === "string" ? nested.location : "";
+    photoDate = typeof nested.date === "string" ? nested.date : "";
   }
 
   if (!rawImage) {
@@ -122,7 +125,7 @@ export default async (req: Request, _context: Context) => {
       contentType,
       caption,
       location,
-      date: now.toISOString(),
+      date: photoDate || now.toISOString(),
     },
   });
 
