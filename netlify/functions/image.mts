@@ -14,6 +14,25 @@ export default async (req: Request, _context: Context) => {
 
   const store = getStore("images");
 
+  // DELETE — requires auth
+  if (req.method === "DELETE") {
+    const secret = Netlify.env.get("UPLOAD_SECRET");
+    const auth = req.headers.get("authorization");
+    if (!secret || !auth || auth !== `Bearer ${secret}`) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    await store.delete(key);
+    return new Response(JSON.stringify({ success: true, deleted: key }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // GET — serve image
   const entry = await store.getWithMetadata(key, { type: "arrayBuffer" });
 
   if (!entry) {
