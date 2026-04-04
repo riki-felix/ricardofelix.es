@@ -31,6 +31,7 @@ export default async (_req: Request, _context: Context) => {
     headers: {
       "Content-Type": "application/json",
       "Cache-Control": "public, max-age=60",
+      "Access-Control-Allow-Origin": "*",
     },
   });
 };

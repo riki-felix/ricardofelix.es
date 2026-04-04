@@ -24,6 +24,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   const isAdmin = new URLSearchParams(window.location.search).has('admin');
+  const isLocal = window.location.hostname === 'localhost';
+  const api = isLocal ? 'https://www.ricardofelix.es' : '';
   let token: string | null = null;
 
   // Admin mode: require secret before showing anything
@@ -44,7 +46,7 @@ import Layout from '../layouts/Layout.astro';
     if (!token) return;
     if (!confirm('¿Eliminar esta imagen?')) return;
 
-    const res = await fetch(`/api/image?key=${encodeURIComponent(key)}`, {
+    const res = await fetch(`${api}/api/image?key=${encodeURIComponent(key)}`, {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -65,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
     const empty = document.getElementById('grid-empty')!;
 
     try {
-      const res = await fetch('/api/images');
+      const res = await fetch(`${api}/api/images`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const images: ImageEntry[] = await res.json();
 
@@ -81,7 +83,7 @@ import Layout from '../layouts/Layout.astro';
         figure.className = 'grid__item';
 
         const imgEl = document.createElement('img');
-        imgEl.src = `/api/image?key=${encodeURIComponent(img.key)}`;
+        imgEl.src = `${api}/api/image?key=${encodeURIComponent(img.key)}`;
         imgEl.alt = img.caption || '';
         imgEl.loading = 'lazy';
         imgEl.decoding = 'async';
