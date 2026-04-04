@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main>
+    <header class="header">
+      <h1>Ricardo Félix</h1>
+      <p>Bien.</p>
+    </header>
+
+    <section class="grid" id="grid">
+      <p class="grid__empty" id="grid-empty">Cargando…</p>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  interface ImageEntry {
+    key: string;
+    date: string;
+    caption?: string;
+    location?: string;
+  }
+
+  async function loadImages() {
+    const grid = document.getElementById('grid')!;
+    const empty = document.getElementById('grid-empty')!;
+
+    try {
+      const res = await fetch('/api/images');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const images: ImageEntry[] = await res.json();
+
+      if (images.length === 0) {
+        empty.textContent = '';
+        return;
+      }
+
+      empty.remove();
+
+      for (const img of images) {
+        const figure = document.createElement('figure');
+        figure.className = 'grid__item';
+
+        const imgEl = document.createElement('img');
+        imgEl.src = `/api/image?key=${encodeURIComponent(img.key)}`;
+        imgEl.alt = img.caption || '';
+        imgEl.loading = 'lazy';
+        imgEl.decoding = 'async';
+        figure.appendChild(imgEl);
+
+        if (img.caption || img.location) {
+          const caption = document.createElement('figcaption');
+          const parts: string[] = [];
+          if (img.caption) parts.push(img.caption);
+          if (img.location) parts.push(img.location);
+          caption.textContent = parts.join(' · ');
+          figure.appendChild(caption);
+        }
+
+        grid.appendChild(figure);
+      }
+    } catch {
+      empty.textContent = '';
+    }
+  }
+
+  loadImages();
+</script>
+
+<style>
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .header p {
+    color: #666;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid__empty {
+    grid-column: 1 / -1;
+    color: #999;
+  }
+
+  .grid__item {
+    overflow: hidden;
+    border-radius: 4px;
+    background: #eee;
+  }
+
+  .grid__item img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: opacity 0.3s;
+  }
+
+  .grid__item figcaption {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: #666;
+  }
+</style>
