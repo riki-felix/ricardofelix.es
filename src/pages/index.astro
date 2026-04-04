@@ -6,12 +6,12 @@ import Layout from '../layouts/Layout.astro';
   <main>
     <header class="header">
       <h1>Ricardo Félix</h1>
-      <p>Bien.</p>
+	  <p class="description">Almanaque.<br>Curiosidades,<br>momentos<br>y experiencias.</p>
     </header>
 
-    <section class="grid" id="grid">
+    <div class="weeks" id="weeks">
       <small class="grid__empty" id="grid-empty">Buscando…</small>
-    </section>
+    </div>
   </main>
 </Layout>
 
@@ -62,8 +62,41 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
+  const meses: Record<string, number> = {
+    ene:0, feb:1, mar:2, abr:3, may:4, jun:5,
+    jul:6, ago:7, sept:8, sep:8, oct:9, nov:10, dic:11
+  };
+
+  function parseDate(s: string): Date | null {
+    if (!s) return null;
+    // Try ISO first
+    let d = new Date(s);
+    if (!isNaN(d.getTime())) return d;
+    // Parse Spanish format: "3 ene 2025, 10:44"
+    const m = s.match(/^(\d{1,2})\s+(\w+)\s+(\d{4}),?\s*(\d{1,2}):(\d{2})$/);
+    if (m) {
+      const mon = meses[m[2].toLowerCase()];
+      if (mon != null) {
+        return new Date(+m[3], mon, +m[1], +m[4], +m[5]);
+      }
+    }
+    return null;
+  }
+
+  function getWeekKey(dateStr: string): string {
+    const d = parseDate(dateStr);
+    if (!d) return 'unknown';
+    // ISO week: Monday-based
+    const tmp = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    const dayNum = tmp.getUTCDay() || 7;
+    tmp.setUTCDate(tmp.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(tmp.getUTCFullYear(), 0, 1));
+    const weekNo = Math.ceil(((tmp.getTime() - yearStart.getTime()) / 864e5 + 1) / 7);
+    return `${tmp.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`;
+  }
+
   async function loadImages() {
-    const grid = document.getElementById('grid')!;
+    const container = document.getElementById('weeks')!;
     const empty = document.getElementById('grid-empty')!;
 
     try {
@@ -78,66 +111,68 @@ import Layout from '../layouts/Layout.astro';
 
       empty.remove();
 
+      // Group by week
+      const weeks = new Map<string, ImageEntry[]>();
       for (const img of images) {
-        const figure = document.createElement('figure');
-        figure.className = 'grid__item';
+        const wk = getWeekKey(img.date);
+        if (!weeks.has(wk)) weeks.set(wk, []);
+        weeks.get(wk)!.push(img);
+      }
 
-        const imgEl = document.createElement('img');
-        imgEl.src = `${api}/api/image?key=${encodeURIComponent(img.key)}`;
-        imgEl.alt = img.caption || '';
-        imgEl.loading = 'lazy';
-        imgEl.decoding = 'async';
-        imgEl.crossOrigin = 'anonymous';
-        figure.appendChild(imgEl);
+      for (const [, weekImages] of weeks) {
+        const section = document.createElement('section');
+        section.className = 'week-grid';
+        // Set column count based on number of images this week
+        section.style.setProperty('--week-cols', String(Math.min(weekImages.length, 4)));
 
-        if (img.caption || img.location || img.date) {
-          const caption = document.createElement('figcaption');
-          const parts: string[] = [];
-          if (img.caption) parts.push(img.caption);
-          if (img.location) {
-            const cpMatch = img.location.match(/\b\d{5}\b/);
-            if (cpMatch) parts.push(cpMatch[0]);
-          }
-          if (img.date) {
-            const d = new Date(img.date);
-            if (!isNaN(d.getTime())) {
-              parts.push(d.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }));
+        for (const img of weekImages) {
+          const figure = document.createElement('figure');
+          figure.className = 'grid__item';
+
+          const imgEl = document.createElement('img');
+          imgEl.src = `${api}/api/image?key=${encodeURIComponent(img.key)}`;
+          imgEl.alt = img.caption || '';
+          imgEl.loading = 'lazy';
+          imgEl.decoding = 'async';
+          imgEl.crossOrigin = 'anonymous';
+          figure.appendChild(imgEl);
+
+          if (img.caption || img.location || img.date) {
+            const caption = document.createElement('figcaption');
+            const parts: string[] = [];
+            if (img.caption) parts.push(img.caption);
+            if (img.location) {
+              const cpMatch = img.location.match(/\b\d{5}\b/);
+              if (cpMatch) parts.push(cpMatch[0]);
             }
+            if (img.date) {
+              const d = parseDate(img.date);
+              if (d) {
+                const hh = d.getHours();
+                const mm = String(d.getMinutes()).padStart(2, '0');
+                const dd = d.getDate();
+                const mo = d.getMonth() + 1;
+                const yy = d.getFullYear();
+                parts.push(`${hh}:${mm} ${dd}/${mo}/${yy}`);
+              }
+            }
+            caption.textContent = parts.join(' — ');
+            figure.appendChild(caption);
           }
-          caption.textContent = parts.join(' — ');
-          figure.appendChild(caption);
 
-          imgEl.addEventListener('load', () => {
-            try {
-              const canvas = document.createElement('canvas');
-              const ctx = canvas.getContext('2d');
-              if (!ctx) return;
-              // Draw only the bottom 15% scaled to 1×1 — browser averages all pixels for us
-              const sy = Math.floor(imgEl.naturalHeight * 0.85);
-              const sh = imgEl.naturalHeight - sy;
-              canvas.width = 1;
-              canvas.height = 1;
-              ctx.drawImage(imgEl, 0, sy, imgEl.naturalWidth, sh, 0, 0, 1, 1);
-              const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
-              const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-              const shift = 120;
-              caption.style.color = lum > 0.5
-                ? `rgb(${Math.max(r - shift, 0)}, ${Math.max(g - shift, 0)}, ${Math.max(b - shift, 0)})`
-                : `rgb(${Math.min(r + shift, 255)}, ${Math.min(g + shift, 255)}, ${Math.min(b + shift, 255)})`;
-            } catch { /* CORS or canvas error — keep default color */ }
-          });
+          if (isAdmin) {
+            const btn = document.createElement('button');
+            btn.className = 'grid__delete';
+            btn.textContent = '×';
+            btn.title = 'Eliminar imagen';
+            btn.addEventListener('click', () => deleteImage(img.key, figure));
+            figure.appendChild(btn);
+          }
+
+          section.appendChild(figure);
         }
 
-        if (isAdmin) {
-          const btn = document.createElement('button');
-          btn.className = 'grid__delete';
-          btn.textContent = '×';
-          btn.title = 'Eliminar imagen';
-          btn.addEventListener('click', () => deleteImage(img.key, figure));
-          figure.appendChild(btn);
-        }
-
-        grid.appendChild(figure);
+        container.appendChild(section);
       }
     } catch {
       empty.textContent = '';
@@ -155,34 +190,52 @@ import Layout from '../layouts/Layout.astro';
   .header {
 	position: fixed;
 	top: 0;
+	bottom: 0;
 	left: 0.5rem;
-  }
+	height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
 
-  .header h1 {
-    font-size: 2rem;
+}
+
+.header h1 {
+	font-size: 2rem;
 	font-weight: 300;
     margin-bottom: 0.25rem;
+}
+
+	.description {
+		margin-top: auto;
+		padding-bottom: 1rem;
+	}
+	p {
+	  font-size: 2rem;
+	  line-height: 1;
   }
 
-  .header p {}
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2px;
-	margin-top: 6rem;
+  .weeks {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 
   .grid__empty {
-    grid-column: 1 / -1;
-    color: #999;
+    color: var(--color-muted);
   }
 </style>
 
 <style is:global>
+  .week-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--week-cols, 1), minmax(0, 300px));
+    gap: 2px;
+    justify-content: center;
+  }
   .grid__item {
     overflow: hidden;
-    background: #eee;
+    background: var(--color-card-bg);
     position: relative;
   }
 
@@ -199,7 +252,7 @@ import Layout from '../layouts/Layout.astro';
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 1);
 }
 
   .grid__delete {

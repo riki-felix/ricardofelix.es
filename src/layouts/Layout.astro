@@ -42,6 +42,73 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="preconnect" href="https://cdn.fonts.net" />
     <script type="text/javascript" src="https://cdn.fonts.net/kit/edd6b279-8438-4a90-b239-dc655ce0159d/edd6b279-8438-4a90-b239-dc655ce0159d_enhanced.js" async></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.fonts.net/kit/edd6b279-8438-4a90-b239-dc655ce0159d/edd6b279-8438-4a90-b239-dc655ce0159d_enhanced.css" />
+
+    <!-- Daylight theme: sets data-theme on <html> before first paint -->
+    <script is:inline>
+    (function(){
+      // Timezone → approximate latitude lookup
+      var zones={
+        'Pacific/Honolulu':21,'America/Anchorage':61,'America/Los_Angeles':34,
+        'America/Denver':40,'America/Chicago':42,'America/New_York':41,
+        'America/Toronto':44,'America/Halifax':45,'America/Sao_Paulo':-23,
+        'America/Argentina/Buenos_Aires':-35,'America/Mexico_City':19,
+        'America/Bogota':5,'America/Lima':-12,'America/Santiago':-33,
+        'Atlantic/Reykjavik':64,'Europe/London':51,'Europe/Dublin':53,
+        'Europe/Paris':49,'Europe/Madrid':40,'Europe/Berlin':52,
+        'Europe/Rome':42,'Europe/Amsterdam':52,'Europe/Brussels':51,
+        'Europe/Zurich':47,'Europe/Stockholm':59,'Europe/Oslo':60,
+        'Europe/Helsinki':60,'Europe/Warsaw':52,'Europe/Prague':50,
+        'Europe/Vienna':48,'Europe/Athens':38,'Europe/Istanbul':41,
+        'Europe/Moscow':56,'Europe/Lisbon':39,
+        'Africa/Cairo':30,'Africa/Lagos':6,'Africa/Johannesburg':-26,
+        'Africa/Nairobi':-1,'Africa/Casablanca':34,
+        'Asia/Dubai':25,'Asia/Kolkata':19,'Asia/Bangkok':14,
+        'Asia/Shanghai':31,'Asia/Tokyo':36,'Asia/Seoul':38,
+        'Asia/Singapore':1,'Asia/Hong_Kong':22,'Asia/Jakarta':-6,
+        'Australia/Sydney':-34,'Australia/Melbourne':-38,
+        'Australia/Perth':-32,'Pacific/Auckland':-37
+      };
+
+      var tz='';
+      try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone}catch(e){}
+      var lat=zones[tz];
+      if(lat==null){
+        // Try continent match
+        var cont=tz.split('/')[0];
+        if(cont==='Europe')lat=48;
+        else if(cont==='America')lat=35;
+        else if(cont==='Asia')lat=30;
+        else if(cont==='Africa')lat=10;
+        else if(cont==='Australia')lat=-30;
+        else lat=40;
+      }
+
+      // Solar calculation (simplified sunrise/sunset)
+      var now=new Date();
+      var start=new Date(now.getFullYear(),0,1);
+      var doy=Math.floor((now-start)/864e5)+1;
+      var rad=Math.PI/180;
+      // Declination angle
+      var decl=23.45*Math.sin(rad*(360/365)*(doy-81));
+      // Hour angle
+      var cosH=-Math.tan(lat*rad)*Math.tan(decl*rad);
+      var isDark;
+      if(cosH<=-1){isDark=false}// midnight sun
+      else if(cosH>=1){isDark=true}// polar night
+      else{
+        var H=Math.acos(cosH)/rad;
+        var sunrise=12-H/15;
+        var sunset=12+H/15;
+        // Adjust for timezone offset from solar noon
+        var offsetH=-now.getTimezoneOffset()/60;
+        var solarNoonOffset=0; // already local time via Date
+        var hour=now.getHours()+now.getMinutes()/60;
+        isDark=hour<sunrise||hour>sunset;
+      }
+
+      document.documentElement.setAttribute('data-theme',isDark?'dark':'light');
+    })();
+    </script>
   </head>
   <body>
     <slot />
@@ -57,20 +124,34 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     padding: 0;
   }
 
+  html[data-theme='light'] {
+    --color-text: #2b2b2b;
+    --color-bg: #eceae8;
+    --color-muted: #999;
+    --color-card-bg: #e0dedc;
+  }
+
+  html[data-theme='dark'] {
+    --color-text: #e0dedc;
+    --color-bg: #1a1a1a;
+    --color-muted: #777;
+    --color-card-bg: #2a2a2a;
+  }
+
   html {
-    color: #2b2b2b;
+    color: var(--color-text);
     font-family: 'BentonModernD', Georgia, serif;
     font-style: normal;
     font-stretch: extra-condensed;
     font-weight: 300;
     line-height: 1.5;
-    letter-spacing: 2%;
     -webkit-font-smoothing: antialiased;
   }
 
   body {
     min-height: 100dvh;
-    background-color: #eceae8;
+    background-color: var(--color-bg);
+    transition: background-color 0.3s, color 0.3s;
   }
 
   img {
