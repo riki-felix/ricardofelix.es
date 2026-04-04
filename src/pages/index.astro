@@ -23,6 +23,38 @@ import Layout from '../layouts/Layout.astro';
     location?: string;
   }
 
+  const isAdmin = new URLSearchParams(window.location.search).has('admin');
+
+  function getToken(): string | null {
+    let token = sessionStorage.getItem('upload_secret');
+    if (!token) {
+      token = prompt('Secret:');
+      if (token) sessionStorage.setItem('upload_secret', token);
+    }
+    return token;
+  }
+
+  async function deleteImage(key: string, figure: HTMLElement) {
+    const token = getToken();
+    if (!token) return;
+
+    if (!confirm('¿Eliminar esta imagen?')) return;
+
+    const res = await fetch(`/api/image?key=${encodeURIComponent(key)}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (res.ok) {
+      figure.remove();
+    } else if (res.status === 401) {
+      sessionStorage.removeItem('upload_secret');
+      alert('Secret incorrecto');
+    } else {
+      alert('Error al eliminar');
+    }
+  }
+
   async function loadImages() {
     const grid = document.getElementById('grid')!;
     const empty = document.getElementById('grid-empty')!;
@@ -57,6 +89,15 @@ import Layout from '../layouts/Layout.astro';
           if (img.location) parts.push(img.location);
           caption.textContent = parts.join(' · ');
           figure.appendChild(caption);
+        }
+
+        if (isAdmin) {
+          const btn = document.createElement('button');
+          btn.className = 'grid__delete';
+          btn.textContent = '×';
+          btn.title = 'Eliminar imagen';
+          btn.addEventListener('click', () => deleteImage(img.key, figure));
+          figure.appendChild(btn);
         }
 
         grid.appendChild(figure);
@@ -107,6 +148,7 @@ import Layout from '../layouts/Layout.astro';
     overflow: hidden;
     border-radius: 4px;
     background: #eee;
+    position: relative;
   }
 
   .grid__item img {
@@ -120,5 +162,27 @@ import Layout from '../layouts/Layout.astro';
     padding: 0.5rem;
     font-size: 0.8rem;
     color: #666;
+  }
+
+  .grid__delete {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid__delete:hover {
+    background: rgba(200, 0, 0, 0.8);
   }
 </style>
