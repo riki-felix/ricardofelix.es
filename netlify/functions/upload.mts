@@ -53,12 +53,15 @@ export default async (req: Request, _context: Context) => {
   let base64Data = body.image;
 
   const dataUriMatch = body.image.match(
-    /^data:(image\/(?:jpeg|png|gif|webp|heic));base64,(.+)$/i
+    /^data:(image\/(?:jpeg|png|gif|webp|heic));base64,/i
   );
   if (dataUriMatch) {
     contentType = dataUriMatch[1].toLowerCase();
-    base64Data = dataUriMatch[2];
+    base64Data = body.image.slice(dataUriMatch[0].length);
   }
+
+  // Strip whitespace/newlines (iOS Shortcuts adds line breaks in base64)
+  base64Data = base64Data.replace(/[\s\r\n]/g, "");
 
   // Validate base64 characters
   if (!/^[A-Za-z0-9+/]+=*$/.test(base64Data)) {
