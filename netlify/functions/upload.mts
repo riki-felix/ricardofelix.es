@@ -31,7 +31,7 @@ export default async (req: Request, _context: Context) => {
   }
 
   // Parse body
-  let body: { image?: string; caption?: string; location?: string };
+  let body: Record<string, unknown>;
   try {
     body = await req.json();
   } catch {
@@ -41,30 +41,46 @@ export default async (req: Request, _context: Context) => {
     });
   }
 
-  if (!body.image || typeof body.image !== "string") {
+  // Extract image data — handle string or object (iOS Shortcuts sends objects)
+  let rawImage: string | undefined;
+  if (typeof body.image === "string") {
+    rawImage = body.image;
+  } else if (body.image && typeof body.image === "object") {
+    // iOS Shortcuts wraps dictionary values as objects — try to find the string
+    const img = body.image as Record<string, unknown>;
+    const candidate = img.Value || img.value || img.data || img.string;
+    if (typeof candidate === "string") {
+      rawImage = candidate;
+    }
+  }
+
+  if (!rawImage) {
     return new Response(
       JSON.stringify({
         error: "Missing or invalid 'image' field",
         debug: {
-          receivedKeys: Object.keys(body),
           imageType: typeof body.image,
-          imagePreview: body.image ? String(body.image).slice(0, 100) : null,
+          imageKeys: body.image && typeof body.image === "object" ? Object.keys(body.image as object) : null,
+          imagePreview: body.image ? JSON.stringify(body.image).slice(0, 200) : null,
         },
       }),
       { status: 400, headers: { "Content-Type": "application/json" } }
     );
   }
 
+  const caption = typeof body.caption === "string" ? body.caption : "";
+  const location = typeof body.location === "string" ? body.location : "";
+
   // Parse base64 data URI
   let contentType = "image/jpeg";
-  let base64Data = body.image;
+  let base64Data = rawImage;
 
-  const dataUriMatch = body.image.match(
+  const dataUriMatch = rawImage.match(
     /^data:(image\/(?:jpeg|png|gif|webp|heic));base64,/i
   );
   if (dataUriMatch) {
     contentType = dataUriMatch[1].toLowerCase();
-    base64Data = body.image.slice(dataUriMatch[0].length);
+    base64Data = rawImage.slice(dataUriMatch[0].length);
   }
 
   // Strip whitespace/newlines (iOS Shortcuts adds line breaks in base64)
@@ -101,8 +117,8 @@ export default async (req: Request, _context: Context) => {
   await store.set(key, bytes, {
     metadata: {
       contentType,
-      caption: body.caption || "",
-      location: body.location || "",
+      caption,
+      location,
       date: now.toISOString(),
     },
   });
