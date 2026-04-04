@@ -43,7 +43,14 @@ export default async (req: Request, _context: Context) => {
 
   if (!body.image || typeof body.image !== "string") {
     return new Response(
-      JSON.stringify({ error: "Missing or invalid 'image' field" }),
+      JSON.stringify({
+        error: "Missing or invalid 'image' field",
+        debug: {
+          receivedKeys: Object.keys(body),
+          imageType: typeof body.image,
+          imagePreview: body.image ? String(body.image).slice(0, 100) : null,
+        },
+      }),
       { status: 400, headers: { "Content-Type": "application/json" } }
     );
   }
