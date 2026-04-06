@@ -92,16 +92,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       var decl=23.45*Math.sin(rad*(360/365)*(doy-81));
       // Hour angle
       var cosH=-Math.tan(lat*rad)*Math.tan(decl*rad);
+      // Detect DST: compare current offset vs standard offset
+      var jan=new Date(now.getFullYear(),0,1);
+      var jul=new Date(now.getFullYear(),6,1);
+      var stdOffset=Math.max(jan.getTimezoneOffset(),jul.getTimezoneOffset());
+      var dstShift=now.getTimezoneOffset()<stdOffset?(stdOffset-now.getTimezoneOffset())/60:0;
+
       var isDark;
       if(cosH<=-1){isDark=false}// midnight sun
       else if(cosH>=1){isDark=true}// polar night
       else{
         var H=Math.acos(cosH)/rad;
-        var sunrise=12-H/15;
-        var sunset=12+H/15;
-        // Adjust for timezone offset from solar noon
-        var offsetH=-now.getTimezoneOffset()/60;
-        var solarNoonOffset=0; // already local time via Date
+        var sunrise=12-H/15+dstShift;
+        var sunset=12+H/15+dstShift;
         var hour=now.getHours()+now.getMinutes()/60;
         isDark=hour<sunrise||hour>sunset;
       }

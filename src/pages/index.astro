@@ -192,7 +192,7 @@ import Layout from '../layouts/Layout.astro';
 	top: 0;
 	bottom: 0;
 	left: 0.5rem;
-	height: 100vh;
+	height: 100dvh;
 	display: flex;
 	flex-flow: column nowrap;
 
@@ -229,9 +229,12 @@ import Layout from '../layouts/Layout.astro';
 <style is:global>
   .week-grid {
     display: grid;
-    grid-template-columns: repeat(var(--week-cols, 1), minmax(0, 300px));
+    grid-template-columns: repeat(var(--week-cols, 1), minmax(0, 320px));
     gap: 2px;
     justify-content: center;
+    @media (min-width: 750px) {
+      grid-template-columns: repeat(var(--week-cols, 1), minmax(0, 500px)); 
+    }
   }
   .grid__item {
     overflow: hidden;
