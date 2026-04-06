@@ -142,7 +142,7 @@ import Layout from '../layouts/Layout.astro';
             const parts: string[] = [];
             if (img.caption) parts.push(img.caption);
             if (img.location) {
-              const cpMatch = img.location.match(/\b\d{5}\b/);
+              const cpMatch = img.location.match(/\b\d{4,5}\b/);
               if (cpMatch) parts.push(cpMatch[0]);
             }
             if (img.date) {
